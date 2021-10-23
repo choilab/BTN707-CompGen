@@ -27,4 +27,10 @@
 - Reference program - [ORFfinder https://www.ncbi.nlm.nih.gov/orffinder/](https://www.ncbi.nlm.nih.gov/orffinder/)
 
 ---
+4. Gene Assembly Designer
+- Input: gene
+- Output: a pool of variable lengths of oligos (overlapped) for synthetic full gene
+- Options: overlap length/# of fragments/restriction site removal
+- What/Why is it important? How can it be designed/built/tested?
+- Reference program - [Assmebly PCR oligo Maker](https://academic.oup.com/nar/article/33/suppl_2/W521/2505480)
 

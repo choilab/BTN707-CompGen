@@ -3,14 +3,14 @@
 ### Term project guideline
 
 * Windows10 users - if you like to use `linux` (unix) environment, install [WSL Windows Subsystem for Linux](https://docs.microsoft.com/ko-kr/windows/wsl/install)
-* for python coding: use [`conda`](https://www.anaconda.com/products/individual) - virtual environment control - and [`Pycharm`](https://www.jetbrains.com/ko-kr/pycharm/download/) - Integrated Development Environment (IDE), 통합개발환경
+* For python coding: use [`conda`](https://www.anaconda.com/products/individual) - virtual environment control - and [`Pycharm`](https://www.jetbrains.com/ko-kr/pycharm/download/) - Integrated Development Environment (IDE), 통합개발환경
 * All individual projects will be maintained in the [Github `BTN707` repository](https://github.com/choilab/2021-compgen-class/)
 
 ---
 ### Term projects 
-- you can choose following topics or suggest your own term project
-- in following weeks, everyone will present and discuss about his/her intro/progress/issues/results, including i) what is the problem to solve?, ii) why is it important? (biological meaning), iii) how can you design/build/test?, 
-- following projects are mostly related to `indexing` and `pattern matching` of sequences
+- You can choose following topics or suggest your own term project
+- In following weeks, everyone will present and discuss about his/her intro/progress/issues/results, including i) what is the problem to solve? (_topic description/introduction_), ii) why is it important? (_biological meaning_), iii) how it can be solved (_algorithms/procedures_) - _how do you solve the problem?_ 
+- Some projects are mostly related to `indexing` and `pattern matching` of sequences, which was handled in the previous class hours.
 
 ---
 1. CRISPR Genome Editing - Prediction of On/Off Target & gRNA designer

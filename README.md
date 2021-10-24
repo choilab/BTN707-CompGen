@@ -1,7 +1,10 @@
-# 2021-compgen-class
+# 2021 Fall BTN707 Computational Genomics
 
 ## Term projects
 
+* Windows10 users - if you like to use `linux` (unix) environment, install [WSL Windows Subsystem for Linux](https://docs.microsoft.com/ko-kr/windows/wsl/install)
+* for python coding: use [`conda`](https://www.anaconda.com/products/individual) - virtual environment control - and [`Pycharm`](https://www.jetbrains.com/ko-kr/pycharm/download/) - Integrated Development Environment (IDE), 통합개발환경
+* All individual projects will be maintained in the [Github `BTN707` repository](https://github.com/choilab/2021-compgen-class/)
 ---
 1. CRISPR Genome Editing - Prediction of On/Off Target & gRNA designer
 - Input: microbial genome sequence (.fna/.fasta nucleotide)

@@ -21,7 +21,10 @@
 ---
 ### Term projects 
 - You can choose following topics or suggest your own term project
-- In following weeks, everyone will present and discuss about his/her intro/progress/issues/results, including i) what is the problem to solve? (_topic description/introduction_), ii) why is it important? (_biological meaning_), iii) how it can be solved (_algorithms/procedures_) - _how do you solve the problem?_ 
+- In following weeks, everyone will present and discuss about his/her intro/progress/issues/results, including 
+  - i) what is the problem to solve? (_topic description/introduction_), 
+  - ii) why is it important? (_biological meaning_), 
+  - iii) how it can be solved (_algorithms/procedures_) - _how do you solve the problem?_ 
 - Some projects are mostly related to `indexing` and `pattern matching` of sequences, which was handled in the previous class hours.
 
 ---

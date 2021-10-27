@@ -18,6 +18,7 @@
   * [Markdown tutorial - Korean](https://github.com/biospin/BigBio/blob/master/reference/%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4.md)
 * You can use [`jupyter notebook`](https://jupyter.org/) too
 * Check [library](https://library.korea.ac.kr/) - there are plenty of reference books for python codings
+* __Evaluation is on your *activity* rather than your *performance* (e.g. how frequently commit/update your codes/documents/discussions)__ 
 
 ---
 ### Term projects 

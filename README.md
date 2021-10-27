@@ -3,8 +3,14 @@
 ### Term project guideline
 
 * Windows10 users - if you like to use `linux` (unix) environment, install [WSL Windows Subsystem for Linux](https://docs.microsoft.com/ko-kr/windows/wsl/install)
-* For python coding: use [`conda`](https://www.anaconda.com/products/individual) - virtual environment control - and [`Pycharm`](https://www.jetbrains.com/ko-kr/pycharm/download/) - Integrated Development Environment (IDE), 통합개발환경
+* For python coding: use following tools (optional) 
+  * [`conda`](https://www.anaconda.com/products/individual) - virtual environment control
+  * [`Pycharm`](https://www.jetbrains.com/ko-kr/pycharm/download/) - Integrated Development Environment (IDE), 통합개발환경
 * All individual projects will be maintained in the [Github `BTN707` repository](https://github.com/choilab/2021-compgen-class/)
+  * What is `Git` and `Github`?
+    * [생활코딩 Git](https://opentutorials.org/module/3733/22434)
+    * [What is `Github`?](https://www.youtube.com/watch?v=w3jLJU7DT5E)
+    * __it is not an obligation__
 
 ---
 ### Term projects 

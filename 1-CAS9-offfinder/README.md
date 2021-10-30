@@ -25,7 +25,7 @@ iii) how can you design/build/test?...
 
 ---
 
-hyunju's memo that maybe introduction will include
+hyunju's memo that introduction will include
 - what CRISPR is
 - what we want to do by coding CAS off finder
 - how existing CAS off finder works

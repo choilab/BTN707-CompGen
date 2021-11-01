@@ -31,3 +31,9 @@ hyunju's memo that introduction will include
 - how existing CAS off finder works
 
 As I write it, it is similar to Thinkabouts,,,
+
+---
+
+Divide parts to explaining concept and telling CAS-off-finder.
+We should include our direction(what we are going to do refer to CAS-off-finder).
+

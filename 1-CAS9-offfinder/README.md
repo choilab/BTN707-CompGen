@@ -39,3 +39,11 @@ Divide parts to explaining basic concept and telling CAS-off-finder.
 
 We should include our direction(what we are going to do refer to CAS-off-finder).
 
+
+---
+
+![CAS-off-finder](https://user-images.githubusercontent.com/79410957/139711521-9a00c6ef-0f09-4256-9dfb-ffc57cbbcd53.png)
+- (A) The scheme of Cas-OFFinder. 
+- (B) The workflow of Cas-OFFinder. 
+- (C) Running time per target site as a function of the number of input target sites via CPU (black squares) and GPU (red circles)
+

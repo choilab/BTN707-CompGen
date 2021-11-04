@@ -59,6 +59,6 @@ table | a
 ---
 coursera "string" practical course
 - we may use string to read genome in python
-https://www.coursera.org/learn/dna-sequencing/lecture/QQsZP/practical-string-basics
+- https://www.coursera.org/learn/dna-sequencing/lecture/QQsZP/practical-string-basics
 
 ---

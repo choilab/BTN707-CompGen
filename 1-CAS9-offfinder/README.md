@@ -42,7 +42,7 @@ We should include our direction(what we are going to do refer to CAS-off-finder)
 ---
 table | ---
 ---   | ---
-1-----|2----
+1     |2
 
 ---
 

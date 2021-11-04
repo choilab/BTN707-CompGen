@@ -47,9 +47,18 @@ We should include our direction(what we are going to do refer to CAS-off-finder)
 - (C) Running time per target site as a function of the number of input target sites via CPU (black squares) and GPU (red circles)
 
 ---
+until this week,
+- we will make list of Cas system
+- we chose 30 types of Cas system
+- record in table format to read well
 
-table | ---
----   | ---
-1     |2
+table | a
+----- | ---
+1     | 2
+
+---
+coursera "string" practical course
+- we may use string to read genome in python
+https://www.coursera.org/learn/dna-sequencing/lecture/QQsZP/practical-string-basics
 
 ---

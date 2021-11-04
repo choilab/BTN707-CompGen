@@ -1,3 +1,5 @@
+Cas systme | detail sequence
+-----------|---
 SpCas9 from Streptococcus pyogenes: 5'-NGG-3'
 SpCas9 from Streptococcus pyogenes: 5'-NRG-3' (R = A or G)
 StCas9 from Streptococcus thermophilus: 5'-NNAGAAW-3' (W = A or T)

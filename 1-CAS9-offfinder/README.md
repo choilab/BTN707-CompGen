@@ -62,3 +62,6 @@ coursera "string" practical course
 - https://www.coursera.org/learn/dna-sequencing/lecture/QQsZP/practical-string-basics
 
 ---
+until next week,
+- we focus on how to use Cas OFFinder's off-target finding tool
+- off-target has meaning ? -> Is it meaningful ? -> Let's find readings which contain both "off-target" & "function"

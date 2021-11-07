@@ -59,7 +59,15 @@ table | a
 ---
 coursera "string" practical course
 - we may use string to read genome in python
-- https://www.coursera.org/learn/dna-sequencing/lecture/QQsZP/practical-string-basics
+- what process needs?
+1. get input file(FASTA format)
+2. parse FASTA with one long read
+3. choose one Cas sequence from Cas sequences storage
+4. compare by moving one base at a time
+5. print matched sequence & after some of bases that are predicted as PAM site.
+6. if PAM site is matched, it will be on-target.
+7. if PAM site is not matched, it will be off-target.
+8.  
 
 ---
 until next week,

@@ -30,4 +30,6 @@ Complementary SpCas9 from Streptococcus pyogenes                  | 5'-NCC-3'
 ThermoCas9 from Geobacillus thermodenitrificans T1                | 5'-NNNNCNR-3'
 ThermoCas9 from Geobacillus thermodenitrificans T1                | 5'-NNNNCNAA-3'
 
+
+   - Example program & literature[^offfinder] - [CAS-off-finder http://www.rgenome.net/cas-offinder/](http://www.rgenome.net/cas-offinder/)
    [^offfinder]:[Cas-OFFinder: a fast and versatile algorithm that searches for potential off-target sites of Cas9 RNA-guided endonucleases](https://academic.oup.com/bioinformatics/article/30/10/1473/267560)

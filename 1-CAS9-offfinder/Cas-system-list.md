@@ -34,4 +34,4 @@ ThermoCas9 from Geobacillus thermodenitrificans T1                | 5'-NNNNCNAA-
 
 
    - PAM Type Cpf1[^PAMseq Cpf1] - [PAM Type Cpf1](chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/viewer.html?pdfurl=https%3A%2F%2Fwww.cell.com%2Faction%2FshowPdf%3Fpii%3DS0092-8674%252815%252901200-3&clen=2238326)
-   [^PAMseq]:[(2015/09/30) - Cpf1 is added to PAM list](https://www.cell.com/cell/fulltext/S0092-8674(15)01200-3?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS0092867415012003%3Fshowall%3Dtrue)
+   [^PAMseq]:[Cpf1 : Cpf1 is added to PAM list in 09.30.2015](https://www.cell.com/cell/fulltext/S0092-8674(15)01200-3?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS0092867415012003%3Fshowall%3Dtrue)

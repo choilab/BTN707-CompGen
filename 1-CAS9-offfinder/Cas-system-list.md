@@ -1,3 +1,5 @@
+# PAM Type table
+
 Cas system                                                        | PAM sequence
 ------------------------------------------------------------------|------
 SpCas9 from Streptococcus pyogenes                                | 5'-NGG-3'
@@ -31,5 +33,5 @@ ThermoCas9 from Geobacillus thermodenitrificans T1                | 5'-NNNNCNR-3
 ThermoCas9 from Geobacillus thermodenitrificans T1                | 5'-NNNNCNAA-3'
 
 
-   - Example program & literature[^offfinder] - [CAS-off-finder http://www.rgenome.net/cas-offinder/](http://www.rgenome.net/cas-offinder/)
-   [^offfinder]:[Cas-OFFinder: a fast and versatile algorithm that searches for potential off-target sites of Cas9 RNA-guided endonucleases](https://academic.oup.com/bioinformatics/article/30/10/1473/267560)
+   - PAM Type Cpf1[^PAMseq Cpf1] - [PAM Type Cpf1](chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/viewer.html?pdfurl=https%3A%2F%2Fwww.cell.com%2Faction%2FshowPdf%3Fpii%3DS0092-8674%252815%252901200-3&clen=2238326)
+   [^PAMseq]:[(2015/09/30) - Cpf1 is added to PAM list](https://www.cell.com/cell/fulltext/S0092-8674(15)01200-3?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS0092867415012003%3Fshowall%3Dtrue)

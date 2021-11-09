@@ -10,6 +10,7 @@
 
 # ORF
 
+![image](https://user-images.githubusercontent.com/91528102/140896095-954a19e3-e637-4a8a-86dc-3174df088a82.png)
  - mRNA로 전사되어 단백질이 될 가능성이 있는 염기 서열.
  - 시작 코돈(AUG)에서부터 종결 코돈(UAA, UAG, UGA)까지의 서열.
  - ATG-[3n]-TAG와 같이 시작 코돈과 종결 코돈 사이에 3배수의 염기가 존재.

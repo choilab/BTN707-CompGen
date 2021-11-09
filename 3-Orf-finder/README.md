@@ -12,3 +12,5 @@ Options: strandedness/ATG/no-ATG
 Thinkabouts: i) what is the problem to solve?, ii) why is it important? (biological meaning), iii) how can you design/build/test?...
 
 Example program & literature3 - ORFfinder https://www.ncbi.nlm.nih.gov/orffinder/
+
+Borf: Improved ORF prediction in de-novo assembled transcriptome annotation

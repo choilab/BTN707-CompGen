@@ -13,3 +13,6 @@ Gene Assembly Designer
 -Sequence homology-based (Gibson assembly, SLIC, Overlap PCR, DNA assembler)
  -in vitro/in vivo
 -Bridging oligo-based (LCR)
+
+## Gene assembly design
+Condiseration: overlap length of fragment/Tm/n of fragments/specificity of overlap

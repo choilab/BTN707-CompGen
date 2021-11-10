@@ -16,3 +16,7 @@
 
 ## Gene assembly design
 * Condiseration: overlap length of fragment/Tm/n of fragments/specificity of overlap
+
+---
+## Reference
+* [NEB Golden Gate Assembly Tool](https://goldengate.neb.com/)

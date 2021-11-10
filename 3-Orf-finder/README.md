@@ -22,3 +22,4 @@ ORF program
  - https://sites.google.com/site/dwivediplanet/ORF-Investigator
  - https://bioinformatics.ysu.edu/tools/OrfPredictor.html
  - https://www.ncbi.nlm.nih.gov/orffinder/
+ - https://github.com/betsig/borf

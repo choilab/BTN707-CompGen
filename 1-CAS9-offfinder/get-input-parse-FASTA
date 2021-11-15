@@ -20,3 +20,7 @@ def open():
 my_btn = Button(root, text='파일열기', command=open).pack()
  
 root.mainloop()
+
+
+
+from https://toypapa.tistory.com/60

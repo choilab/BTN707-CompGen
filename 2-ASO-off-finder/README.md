@@ -25,3 +25,13 @@ ASO-off-finder is a program that finds potential off-targets in the genome seque
 * How should we solve the problem?
     1. Pre-existing methods to detect ASO off-targets
     2. New methods to try?
+
+## Used algorithm
+
+Problem | Query | Reference
+---- | ---- | ----
+Read alignment problem | Sequenced reads | Reference genome
+ASO off-target finder | ASO sequence | Target RNA sequence database
+
+* Finding ASO off-target sites is similar to the read alignment problem.
+* 

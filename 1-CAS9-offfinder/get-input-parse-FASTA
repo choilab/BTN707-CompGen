@@ -1,0 +1,8 @@
+from Bio import SeqIO
+ 
+seq = SeqIO.read("one.fasta","fasta")
+print(type(seq)) # <class 'Bio.SeqRecord.SeqRecord'>
+print(seq)
+
+
+referense from [생물정보학자의 블로그](https://korbillgates.tistory.com/202)

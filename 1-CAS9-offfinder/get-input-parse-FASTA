@@ -1,8 +1,22 @@
-from Bio import SeqIO
+### 창 열어서 input file 받기
+
+from tkinter import *
+from PIL import ImageTk, Image
+from tkinter import filedialog
  
-seq = SeqIO.read("one.fasta","fasta")
-print(type(seq)) # <class 'Bio.SeqRecord.SeqRecord'>
-print(seq)
-
-
-referense from [생물정보학자의 블로그](https://korbillgates.tistory.com/202)
+root = Tk()
+root.title('filedialog study')
+ 
+def open():
+    global my_image # 함수에서 이미지를 기억하도록 전역변수 선언 (안하면 사진이 안보임)
+    root.filename = filedialog.askopenfilename(initialdir='', title='파일선택', filetypes=(
+    ('png files', '*.png'), ('jpg files', '*.jpg'), ('all files', '*.*')))
+ 
+    Label(root, text=root.filename).pack() # 파일경로 view
+    my_image = ImageTk.PhotoImage(Image.open(root.filename))
+    Label(image=my_image).pack() #사진 view
+ 
+ 
+my_btn = Button(root, text='파일열기', command=open).pack()
+ 
+root.mainloop()

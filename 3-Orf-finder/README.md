@@ -24,12 +24,30 @@
 ![image](https://user-images.githubusercontent.com/91528102/142042011-4999c081-6da9-4cad-83c1-c3a0f985c040.png)
 
 # python code
- - dna=input("Enter a DNA sequence:") #DNA 서열 받기
- - rna=dna.replace("t","u") #DNA -> RNA 서열로 바꿔주기
- - def reverse_complement(rna):
-    complement = {'a': 'u', 'c': 'g', 'g': 'c', 'u': 'a'}
-    return ''.join([complement[base] for base in rna[::-1]]) #상보적 서열
- - reverse_rna=reverse_complement(rna)
+   dna=input("Enter a DNA sequence:") #DNA 서열 받기
+   rna=dna.replace("t","u") #DNA -> RNA 서열로 바꿔주기
+   def reverse_complement(rna):
+     complement = {'a': 'u', 'c': 'g', 'g': 'c', 'u': 'a'}
+     return ''.join([complement[base] for base in rna[::-1]]) #상보적 서열
+   reverse_rna=reverse_complement(rna)
+   start_codon=["aug"]
+   stop_codon=["uga","uag","uaa"] # start codon, stop codon 정의
+   start_position=[]
+   start=0
+   stop_position=[]
+   stop=0 # codon 시작 위치 0 자리부터 시작
+   frame1=[]
+    frame1.append([rna[i:i+3] for i in range(0,len(rna),3)]) # +1 frame
+   frame2=[]
+    frame2.append([rna[i:i+3] for i in range(1,len(rna),3)]) # +2 frame
+   frame3=[]
+    frame3.append([rna[i:i+3] for i in range(2,len(rna),3)]) # +3 frame
+   frame4=[]
+    frame4.append([reverse_rna[i:i+3] for i in range(0,len(reverse_rna),3)]) # -1 frame
+   frame5=[]
+    frame5.append([reverse_rna[i:i+3] for i in range(1,len(reverse_rna),3)]) # -2 frame
+   frame6=[]
+    frame6.append([reverse_rna[i:i+3] for i in range(2,len(reverse_rna),3)]) # -3 frame
 
 # option
  - 원하는 strand input(+1, +2, +3, -1, -2, -3 중에 선택)\

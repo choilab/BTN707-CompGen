@@ -23,6 +23,14 @@
 # algorithms
 ![image](https://user-images.githubusercontent.com/91528102/142042011-4999c081-6da9-4cad-83c1-c3a0f985c040.png)
 
+# python code
+ dna=input("Enter a DNA sequence:") #DNA 서열 받기
+ rna=dna.replace("t","u") #DNA -> RNA 서열로 바꿔주기
+ def reverse_complement(rna):
+    complement = {'a': 'u', 'c': 'g', 'g': 'c', 'u': 'a'}
+    return ''.join([complement[base] for base in rna[::-1]]) #상보적 서열
+reverse_rna=reverse_complement(rna)
+
 # option
  - 원하는 strand input(+1, +2, +3, -1, -2, -3 중에 선택)\
  - ORF length distribution

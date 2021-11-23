@@ -24,6 +24,8 @@
 ![image](https://user-images.githubusercontent.com/91528102/142042011-4999c081-6da9-4cad-83c1-c3a0f985c040.png)
 
 # python code
+http://localhost:8888/notebooks/ORF%20finder.ipynb
+
    dna=input("Enter a DNA sequence:") 
    #DNA 서열 받기
    

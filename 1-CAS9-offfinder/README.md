@@ -79,4 +79,11 @@ after 11/04 meet up,
 - we decided to focus on Mycoplasma-specific Cas system Finder
 - Why Mycoplasma? -> the smallest genome in the world
 - we have to find some meaning of off-target -> maybe interview C.H. Jung Prof.'s lab
-- 
+---
+
+after 11/22 meet up,
+- we decided not to focus on specific genome. It will be used on any kind of genomes which is FASTA.
+- we should include OFF target story on presentation.
+- we found CRISPR gDNA software(from Genious) which can find whole information about input gDNA.
+- so, we thought our project is combining Genious and OFFinder called "How is suit gDNA to CRISPR"
+- we made more detailed project flow.

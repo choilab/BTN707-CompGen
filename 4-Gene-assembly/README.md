@@ -29,9 +29,9 @@
 * - Rverse complement sequence
 * - Masures the GC content of the sequence
 * - Ceckes the primer sequence for proper annealing
-*   - Target melting temperature (usually >60 C and <80)
-*   - GC content is within bound (usually >40% and <60%)
-*   - 3 prime end contains a G or C
+*   * Target melting temperature (usually >60 C and <80)
+*   * GC content is within bound (usually >40% and <60%)
+*   * 3 prime end contains a G or C
 * - Checks GC content of a coding sequence
 * - Picks the codon for an amino acid that matches the mask
 * - Returns a coding DNA sequence for the amino acid sequence
@@ -39,11 +39,11 @@
 * - Overlapping dna sequence for Gibson assemnbly
 * - Annealing sequence (PCR region)
 * - Primer design
-*   - Step 1. Find restriction enzymes
-*   - Step 2. Pick out 2 enzymes for cutting the 5' and 3' end 
-*   - Step 3. Get overlap sequence for Gibson
-*   - Step 4. Design annealing region for primer on the insert
-*   - Step 5. Put together the primer
+*   * Step 1. Find restriction enzymes
+*   * Step 2. Pick out 2 enzymes for cutting the 5' and 3' end 
+*   * Step 3. Get overlap sequence for Gibson
+*   * Step 4. Design annealing region for primer on the insert
+*   * Step 5. Put together the primer
 * https://github.com/BjornFJohansson/pydna/blob/6dd22c4a3708552220c2c52c712a23d951eca743/tests/test_module_design.py
 ---
 ## Reference

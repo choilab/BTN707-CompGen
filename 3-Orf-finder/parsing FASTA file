@@ -1,0 +1,16 @@
+#parsing FASTA file
+sequences = []
+descr = None
+# here is the path of multifalsta file
+with open(fileName) as file:
+    line = file.readline()[:-1]  # always trim newline
+    while line:
+        if line[0] == '>':
+            if descr:  # any sequence found yet?
+                sequences.append((descr, seq))
+            descr = str(line[1:].split('>'))
+            seq = ''  # start a new sequence
+        else:
+            seq += line
+        line = file.readline()[:-1]
+    sequences.append((descr, seq))

@@ -40,15 +40,15 @@ By this method, ASOs can modify protein expression or activity of RNAs through s
 
 ### Different types of standard ASOs
 
-1\. Gapmer ASO
+**1\. Gapmer ASO**
 
 Gapmer ASOs have modifications in the phosphate backbone to support RNAse H activity and in the sugar (ribose) ring for higher affinity (e.g. LNA).
 
-Modified nucleotides are only present in the wing of ASOs. Normal nucleotides about 10 bases in the central region.[^2]
+Modified nucleotides are only present in the wing of ASOs. Normal nucleotides are present about 10 bases in the central region. Target RNA sequence is cleaved by RNAse H.[^2]
 
 [^2]: [DeVos, S. L., & Miller, T. M. (2013). Antisense oligonucleotides: treating neurodegeneration at the level of RNA. Neurotherapeutics, 10(3), 486-497.](https://doi.org/10.1007/s13311-013-0194-5)
 
-2\. Splice-switching ASO
+**2\. Splice-switching ASO**
 
 Splice-switching ASOs does not use RNAse H-mediated cleavage of target RNAs. Instead, it sterically blocks the target RNA and regulate pre-mRNA splicing and repairing of defective RNA.[^3]
 
@@ -56,8 +56,22 @@ Splice-switching ASOs does not use RNAse H-mediated cleavage of target RNAs. Ins
 
 ## Why is the problem biologically important?
 
-    1. How ASO is used in therapeutics?
-    2. Why is finding ASO off-target site important?
+### ASO therapy
+
+ASO can be used to inhibit RNA with specific sequences, which leads to the fact that ASOs could be helpful to treat diseases resulting from single mutant proteins. Several ASO therapies are already approved by FDA for rare genetic diseases:
+* Kynamro - Familial hypercholesterolemia
+* Tegsedi - Hereditary ATTR amyloidosis
+* Exondys 51 - Duchenne muscular dystrophy
+* Spinraza - Spinal muscular atrophy
+
+### Why find ASO off-target sites?
+
+Specific ASO binding to the target RNA sequence is needed for high selectivity. However, there is a chance that ASO might bind to off-target RNA molecules that have similar sequences to the original target RNA. This off-target binding of ASOs might cause unintended toxicity.
+
+Also, animal studies cannot be used for off-target finding of ASO applied to humans because of diiference in the genome sequence between.
+
+Thus, in silico analysis using the human RNA database followed by in vitro expression analysis using human cells are essential.
+
     3. How to find ASO off-target site?
 * How should we solve the problem?
     1. Pre-existing methods to detect ASO off-targets

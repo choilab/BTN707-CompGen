@@ -56,7 +56,7 @@ http://localhost:8888/notebooks/ORF%20finder.ipynb
     frame6.append([reverse_rna[i:i+3] for i in range(2,len(reverse_rna),3)]) # -3 frame
 
 # option
- - 원하는 strand input(+1, +2, +3, -1, -2, -3 중에 선택)\
+ - 원하는 strand input(+1, +2, +3, -1, -2, -3 중에 선택)
  - ORF length distribution
  - alternative start/stop codon
 

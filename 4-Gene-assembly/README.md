@@ -17,6 +17,14 @@
 ## Gene assembly design
 * Condiseration: overlap length of fragment/Tm/n of fragments/specificity of overlap
 
+## How to calculate Tm?
+* considerable factors: length of oligonucleotide, GC content of oligonucleotide, concentration of oligonucleotide, salt environment including concentrations of monovalent(sodium, potassium), divalent(magnesium), polyvalent cations and dNTPs.
+
+## Reference code of Primer Design for Gibson Assembly from Benchling
+* https://github.com/alenkran/Benchling_Gibson_Primer_Design/commit/792419b8fabaf867c9caad06bcb0c7badf33d88d
+
+## Reference code for testing Assembly Fragments
+* https://github.com/BjornFJohansson/pydna/blob/6dd22c4a3708552220c2c52c712a23d951eca743/tests/test_module_design.py
 ---
 ## Reference
 * [NEB Golden Gate Assembly Tool](https://goldengate.neb.com/)

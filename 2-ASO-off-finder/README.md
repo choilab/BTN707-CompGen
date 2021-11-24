@@ -1,6 +1,6 @@
 # Antisense oligonucleotide (ASO) off-target finder
 
-ASO-off-finder is a program that finds potential off-targets in the genome sequence for antisense oligonucleotide (ASO) sequences.
+ASO-off-finder is a program that finds target and potential off-target sites in the FASTA sequence for input antisense oligonucleotide (ASO) sequences.
 
 ## Students
 

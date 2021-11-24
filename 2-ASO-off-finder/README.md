@@ -7,6 +7,13 @@ ASO-off-finder is a program that finds target and potential off-target sites in 
 * [Students](#student)
 * [Program overview](#overview)
 * [Thinkabouts](#intro)
+  * What is the problem to solve?
+    * What is Antisense oligonucleotide (ASO)?
+    * Different types of standard ASOs
+  * Why is the problem biologically important?
+    * ASO therapy
+    * Why find ASO off-target sites?
+    * How to find ASO off-target site?
 * [Algorithm outline](#outline)
 
 <a name="student"></a>
@@ -24,8 +31,10 @@ ASO-off-finder is a program that finds target and potential off-target sites in 
 
 <a name="intro"></a>
 # Thinkabouts
-
 ## What is the problem to solve?
+
+Finding target and off-target site of antisense oligonucleotides.
+
 ### What is Antisense oligonucleotide (ASO)?
 
 Antisense oligonucleotide (ASO) is a short, synthetic, single-stranded oligonucleotide. ASOs are intended to bind to RNA (coding or non-coding) molecules with complementary sequences.[^1]
@@ -72,7 +81,6 @@ Also, animal studies cannot be used for off-target finding of ASO applied to hum
 
 Thus, in silico analysis using the human RNA database followed by in vitro expression analysis using human cells are essential.
 
-    3. How to find ASO off-target site?
 * How should we solve the problem?
     1. Pre-existing methods to detect ASO off-targets
     2. New methods to try?

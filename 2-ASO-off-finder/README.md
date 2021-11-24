@@ -81,9 +81,9 @@ Also, animal studies cannot be used for off-target finding of ASO applied to hum
 
 Thus, in silico analysis using the human RNA database followed by in vitro expression analysis using human cells are essential.
 
-* How should we solve the problem?
-    1. Pre-existing methods to detect ASO off-targets
-    2. New methods to try?
+## How could this problem be solved?
+### Pre-existing tools for ASO off-target site finding
+
 
 <a name="outline"></a>
 # Algorithm outline

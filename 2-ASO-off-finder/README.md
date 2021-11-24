@@ -7,13 +7,9 @@ ASO-off-finder is a program that finds target and potential off-target sites in 
 * [Students](#student)
 * [Program overview](#overview)
 * [Thinkabouts](#intro)
-  * What is the problem to solve?
-    * What is Antisense oligonucleotide (ASO)?
-    * Different types of standard ASOs
-  * Why is the problem biologically important?
-    * ASO therapy
-    * Why find ASO off-target sites?
-    * How to find ASO off-target site?
+  * [What is the problem to solve?](#intro2)
+  * [Why is the problem biologically important?](#intro3)
+  * [How could this problem be solved?](#intro4)
 * [Algorithm outline](#outline)
 
 <a name="student"></a>
@@ -31,6 +27,7 @@ ASO-off-finder is a program that finds target and potential off-target sites in 
 
 <a name="intro"></a>
 # Thinkabouts
+<a name="intro2"></a>
 ## What is the problem to solve?
 
 Finding target and off-target site of antisense oligonucleotides.
@@ -63,8 +60,8 @@ Splice-switching ASOs does not use RNAse H-mediated cleavage of target RNAs. Ins
 
 [^3]: [Havens, M. A., & Hastings, M. L. (2016). Splice-switching antisense oligonucleotides as therapeutic drugs. Nucleic acids research, 44(14), 6549-6563.](https://doi.org/10.1093/nar/gkw533)
 
+<a name="intro3"></a>
 ## Why is the problem biologically important?
-
 ### ASO therapy
 
 ASO can be used to inhibit RNA with specific sequences, which leads to the fact that ASOs could be helpful to treat diseases resulting from single mutant proteins. Several ASO therapies are already approved by FDA for rare genetic diseases:
@@ -81,7 +78,11 @@ Also, animal studies cannot be used for off-target finding of ASO applied to hum
 
 Thus, in silico analysis using the human RNA database followed by in vitro expression analysis using human cells are essential.
 
+<a name="intro4"></a>
 ## How could this problem be solved?
+
+
+
 ### Pre-existing tools for ASO off-target site finding
 
 

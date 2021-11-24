@@ -87,3 +87,9 @@ after 11/22 meet up,
 - we found CRISPR gDNA software(from Genious) which can find whole information about input gDNA.
 - so, we thought our project is combining Genious and OFFinder called "How is suit gDNA to CRISPR"
 - we made more detailed project flow.
+
+24 Nov. presentation 
+- What is CAS OFFinder 
+- How it works
+- What are the advantages 
+- Analysis of the results from two different software i.e. Geneious prime and CRISPR RGEN tools

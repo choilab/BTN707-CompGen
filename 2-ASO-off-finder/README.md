@@ -25,10 +25,37 @@ ASO-off-finder is a program that finds target and potential off-target sites in 
 <a name="intro"></a>
 # Thinkabouts
 
-* What is the problem to solve?
-    1. What is Antisense oligonucleotide (ASO)?
-    2. Different types of ASO
-* Why is it important? (biological meaning)
+## What is the problem to solve?
+### What is Antisense oligonucleotide (ASO)?
+
+Antisense oligonucleotide (ASO) is a short, synthetic, single-stranded oligonucleotide. ASOs are intended to bind to RNA (coding or non-coding) molecules with complementary sequences.[^1]
+[^1]: [Rinaldi, C., & Wood, M. J. (2018). Antisense oligonucleotides: the next frontier for treatment of neurological disorders. Nature Reviews Neurology, 14(1), 9-21.](https://doi.org/10.1038/nrneurol.2017.148)
+
+By this method, ASOs can modify protein expression or activity of RNAs through several different methods:
+* Target RNA degradation by RNAse H
+* Translational arrest
+* Inhibit RNA-binding proteins
+* RNA splicing modulation
+* Increased translational activity
+
+### Different types of standard ASOs
+
+1\. Gapmer ASO
+
+Gapmer ASOs have modifications in the phosphate backbone to support RNAse H activity and in the sugar (ribose) ring for higher affinity (e.g. LNA).
+
+Modified nucleotides are only present in the wing of ASOs. Normal nucleotides about 10 bases in the central region.[^2]
+
+[^2]: [DeVos, S. L., & Miller, T. M. (2013). Antisense oligonucleotides: treating neurodegeneration at the level of RNA. Neurotherapeutics, 10(3), 486-497.](https://doi.org/10.1007/s13311-013-0194-5)
+
+2\. Splice-switching ASO
+
+Splice-switching ASOs does not use RNAse H-mediated cleavage of target RNAs. Instead, it sterically blocks the target RNA and regulate pre-mRNA splicing and repairing of defective RNA.[^3]
+
+[^3]: [Havens, M. A., & Hastings, M. L. (2016). Splice-switching antisense oligonucleotides as therapeutic drugs. Nucleic acids research, 44(14), 6549-6563.](https://doi.org/10.1093/nar/gkw533)
+
+## Why is the problem biologically important?
+
     1. How ASO is used in therapeutics?
     2. Why is finding ASO off-target site important?
     3. How to find ASO off-target site?
@@ -46,3 +73,5 @@ ASO off-target finder | ASO sequence | Target RNA sequence database
 
 * Finding ASO off-target sites is similar to the read alignment problem.
 * Apply dynamic programming for approxiamte alignment for matching ASO sequence to target sequences
+
+

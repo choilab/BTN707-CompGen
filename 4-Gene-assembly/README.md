@@ -21,11 +21,11 @@
 * considerable factors: length of oligonucleotide, GC content of oligonucleotide, concentration of oligonucleotide, salt environment including concentrations of monovalent(sodium, potassium), divalent(magnesium), polyvalent cations and dNTPs.
 
 ## Reference code of Primer Design for Gibson Assembly from Benchling
-###Considered funcions:
+###Considered functions:
 *  Tm of sequence
-*  Rverse complement sequence
-*  Masures the GC content of the sequence
-*  Ceckes the primer sequence for proper annealing
+*  Reverse complement sequence
+*  Measures the GC content of the sequence
+*  Checkes the primer sequence for proper annealing
 *   - Target melting temperature (usually >60 C and <80)
 *   - GC content is within bound (usually >40% and <60%)
 *   - 3 prime end contains a G or C

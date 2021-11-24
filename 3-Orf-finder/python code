@@ -1,104 +1,67 @@
 #Input : genome sequence
-
 dna=input("Enter a DNA sequence:")
-#Make complementary sequence
 
+
+#Make complementary sequence
 def reverse_complement(dna):
      complement = {'a': 't', 'c': 'g', 'g': 'c', 't': 'a'}
      return ''.join([complement[base] for base in dna[::-1]]) #상보적 서열
 reverse_dna=reverse_complement(dna)
 
-reverse_dna
+
 #Decompose sequence into triplets(make 6 frames)
-
 frame1=[dna[i:i+3] for i in range(0,len(dna),3)] #+1 frame
-
 frame2=[dna[i:i+3] for i in range(1,len(dna),3)] #+2 frame
-
 frame3=[dna[i:i+3] for i in range(2,len(dna),3)] #+3 frame
-
 frame4=[reverse_dna[i:i+3] for i in range(0,len(reverse_dna),3)] #-1 frame
-
 frame5=[reverse_dna[i:i+3] for i in range(1,len(reverse_dna),3)] #-2 frame
-
 frame6=[reverse_dna[i:i+3] for i in range(2,len(reverse_dna),3)] #-3 frame
 
-print(frame1)
-print(frame2)
-print(frame3)
-print(frame4)
-print(frame5)
-print(frame6)
-#3개 nucleotide로 떨어지지 않는 마지막 지우기
 
+#3개 nucleotide로 떨어지지 않는 마지막 지우기
 if len(frame1[-1])<3:
     del frame1[-1]
-    
 if len(frame2[-1])<3:
     del frame2[-1]
-
 if len(frame3[-1])<3:
-    del frame3[-1]
-    
+    del frame3[-1]    
 if len(frame4[-1])<3:
-    del frame4[-1]
-    
+    del frame4[-1]    
 if len(frame5[-1])<3:
-    del frame5[-1]
-    
+    del frame5[-1]    
 if len(frame6[-1])<3:
     del frame6[-1]
     
-print(frame1)
-print(frame2)
-print(frame3)
-print(frame4)
-print(frame5)
-print(frame6)
-#Codon definition(3 nucleotide → amino acid)
 
-codon_table = {'ttt': 'F', 'ttc': 'F', 'tta': 'L', 'ttg': 'L', 'tct': 'S','tcc': 'S', 'tca': 'S', 'tcg': 'S', 'tat': 'Y', 'tac': 'Y',
-               'taa':'■','tag':'■', 'tga':'■', 'tgt': 'C', 'tgc': 'C', 'tgg': 'W', 'ctt': 'L', 'ctc': 'L', 'cta': 'L', 'ctg': 'L', 
-               'cct': 'P', 'ccc': 'P', 'cca': 'P', 'ccg': 'P', 'cat': 'H', 'cac': 'H', 'caa': 'Q', 'cag': 'Q','cgt': 'R', 'cgc': 'R', 
-               'cga': 'R', 'cgg': 'R', 'att': 'I', 'atc': 'I', 'ata': 'I','atg': 'M', 'act': 'T', 'acc': 'T','aca': 'T', 'acg': 'T',
-               'aat': 'N', 'aac': 'N', 'aaa': 'K','aag': 'K', 'agt': 'S', 'agc': 'S', 'aga': 'R', 'agg': 'R','gtt': 'V', 'gtc': 'V',
-               'gta': 'V', 'gtg': 'V', 'gct': 'A','gcc': 'A', 'gca': 'A', 'gcg': 'A', 'gat': 'D','gac': 'D','gaa': 'E', 'gag': 'E', 
-               'ggt': 'G', 'ggc': 'G', 'gga': 'G','ggg': 'G'}
+#Codon definition(3 nucleotide → amino acid)
+codon_table = {'ttt': 'F', 'ttc': 'F', 'tta': 'L', 'ttg': 'L', 'tct': 'S','tcc': 'S', 'tca': 'S', 'tcg': 'S', 'tat': 'Y', 'tac': 'Y', 'taa':'■','tag':'■', 'tga':'■', 
+'tgt': 'C', 'tgc': 'C', 'tgg': 'W', 'ctt': 'L', 'ctc': 'L', 'cta': 'L', 'ctg': 'L', 'cct': 'P', 'ccc': 'P', 'cca': 'P', 'ccg': 'P', 'cat': 'H', 'cac': 'H', 'caa': 'Q', 
+'cag': 'Q','cgt': 'R', 'cgc': 'R', 'cga': 'R', 'cgg': 'R', 'att': 'I', 'atc': 'I', 'ata': 'I','atg': 'M', 'act': 'T', 'acc': 'T','aca': 'T', 'acg': 'T', 'aat': 'N',
+'aac': 'N', 'aaa': 'K','aag': 'K', 'agt': 'S', 'agc': 'S', 'aga': 'R', 'agg': 'R','gtt': 'V', 'gtc': 'V', 'gta': 'V', 'gtg': 'V', 'gct': 'A','gcc': 'A', 'gca': 'A', 
+'gcg': 'A', 'gat': 'D','gac': 'D','gaa': 'E', 'gag': 'E', 'ggt': 'G', 'ggc': 'G', 'gga': 'G','ggg': 'G'}
+               
                
 #frame traslation
-
 f1=[codon_table[i] for i in frame1[:]]
 frame1_codon = ''.join(f1)
-
 f2=[codon_table[i] for i in frame2[:]]
 frame2_codon = ''.join(f2)
-
 f3=[codon_table[i] for i in frame3[:]]
 frame3_codon = ''.join(f3)
-
 f4=[codon_table[i] for i in frame4[:]]
 frame4_codon = ''.join(f4)
-
 f5=[codon_table[i] for i in frame5[:]]
 frame5_codon = ''.join(f5)
-
 f6=[codon_table[i] for i in frame6[:]]
 frame6_codon = ''.join(f6)
 
-print(frame1_codon)
-print(frame2_codon)
-print(frame3_codon)
-print(frame4_codon)
-print(frame5_codon)
-print(frame6_codon)
 
 #stop codon site
-
 stop_codon_site1=frame1_codon.find('■')
 stop_codon_site1
 
-#start codon~stop codon
 
+#start codon~stop codon
 i=0
 while i < stop_codon_site1 :
     i=i+1
@@ -106,5 +69,3 @@ while i < stop_codon_site1 :
         fr1=(frame1_codon[i:stop_codon_site1]) #amino acid seq
         fr1_s=(frame1[i:stop_codon_site1+1]) 
         fr1_seq=''.join(fr1_s) #DNA seq
-print(fr1)
-print(fr1_seq)

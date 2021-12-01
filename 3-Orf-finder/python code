@@ -84,7 +84,7 @@ frame6_codon = ''.join(f6)
 def splitAndSearch(sequence, seperator, starter) :
     splited = sequence.split(seperator)[0] + seperator
 
-    print("탐색할 시퀀스 : " + splited)
+    print("탐색할 서열 : " + splited)
 
     # indexList = []
     patterns = []
@@ -92,7 +92,7 @@ def splitAndSearch(sequence, seperator, starter) :
         if splited[i] == starter : 
             patterns.append(splited[i:])
 
-    print("발견된 문자열: " )
+    print("발견된 서열: " )
     for str in patterns : 
         print(str, len(str)*3)
 

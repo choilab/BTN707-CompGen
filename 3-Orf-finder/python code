@@ -40,7 +40,30 @@ codon_table = {'ttt': 'F', 'ttc': 'F', 'tta': 'L', 'ttg': 'L', 'tct': 'S','tcc':
 'cag': 'Q','cgt': 'R', 'cgc': 'R', 'cga': 'R', 'cgg': 'R', 'att': 'I', 'atc': 'I', 'ata': 'I','atg': 'M', 'act': 'T', 'acc': 'T','aca': 'T', 'acg': 'T', 'aat': 'N',
 'aac': 'N', 'aaa': 'K','aag': 'K', 'agt': 'S', 'agc': 'S', 'aga': 'R', 'agg': 'R','gtt': 'V', 'gtc': 'V', 'gta': 'V', 'gtg': 'V', 'gct': 'A','gcc': 'A', 'gca': 'A', 
 'gcg': 'A', 'gat': 'D','gac': 'D','gaa': 'E', 'gag': 'E', 'ggt': 'G', 'ggc': 'G', 'gga': 'G','ggg': 'G'}
-               
+
+#사용자가 codon table 생성
+dict_list = []
+while True :
+    sel = int(input('1번은 코돈 입력 계속, 2번은 종료 : '))
+    if sel == 1 :
+        print("===== 코돈 추가 중 =====")
+        my_dict = {} # empty dictionary
+        while True :
+            key = input('codon 입력 : ')
+            val = input('amino acid 입력 : ')
+            my_dict[key] = val
+            con = int(input('1번은 딕셔너리 요소 추가 계속, 2번은 종료 : '))
+            if con == 2 :
+                print("===== 코돈 추가 끝 =====", end="\n\n")
+                break
+        dict_list.append(my_dict)
+    elif sel == 2 :
+        print("종료합니다.")
+        break
+    else :
+        print("잘못 선택하셨습니다.")
+        break
+print("당신이 만든 codon table :", dict_list)
                
 #frame traslation
 f1=[codon_table[i] for i in frame1[:]]

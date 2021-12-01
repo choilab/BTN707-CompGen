@@ -9,22 +9,24 @@
 [^1]: [Borf: Improved ORF prediction in de-novo assembled transcriptome annotation](https://www.biorxiv.org/content/10.1101/2021.04.12.439551v1.full)
 
 # ORF
+![image](https://user-images.githubusercontent.com/91528102/144167591-4ffec221-4c0b-4845-af9e-bc25bf4e99fa.png)
 
 ![image](https://user-images.githubusercontent.com/91528102/142041888-94b1cc0d-f2f7-474a-a9c5-0669918e0ce6.png)
 
-![image](https://user-images.githubusercontent.com/91528102/140896095-954a19e3-e637-4a8a-86dc-3174df088a82.png)
  - mRNA로 전사되어 단백질이 될 가능성이 있는 염기 서열.
  - 시작 코돈(AUG)에서부터 종결 코돈(UAA, UAG, UGA)까지의 서열.
  - ATG-[3n]-TAG와 같이 시작 코돈과 종결 코돈 사이에 3배수의 염기가 존재.
 
 # why is it important?
- - 단백질로 번역되는 염기 서열을 찾기 위해 모든 DNA 서열을 직접 확인하기에는 시간과 비용이 많이 들기 때문에 ORF를 찾으면 더 쉽게 원하는 서열을 찾을 수 있다.
-
+ - 단백질로 번역되는 염기 서열을 찾기 위해 모든 DNA 서열을 직접 확인하기에는 시간과 비용이 많이 들기 때문에 ORF를 찾으면 비용적, 시간적 효과적이다.
+ - 특히 genome size가 클수록 ORF를 찾아서 연구를 진행하는 것이 더 효과적
+ - CDS는 start codon의 위치, ORF의 길이 등에 의해 결정
+ - 일반적으로 가능한 ORF 중 가장 긴 ORF는 CDS
+ - ORF 연구를 통해 병원체의 작동 원리를 파악할 수 있어 치료제와 백신 연구에 중요
+ - 
 # algorithms
-![image](https://user-images.githubusercontent.com/91528102/143163425-eb38753c-e4aa-4f5a-8e95-b6998008ebf1.png)
+![image](https://user-images.githubusercontent.com/91528102/144167833-39d0eeef-881a-4e87-a7df-0b25f5a5f826.png)
 
-# python code
-http://localhost:8888/notebooks/ORF%20finder.ipynb
 
 # option
  - 원하는 strand input(+1, +2, +3, -1, -2, -3 중에 선택)

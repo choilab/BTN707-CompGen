@@ -1,5 +1,6 @@
 #Input : genome sequence
-dna=input("Enter a DNA sequence:")
+DNA=input("Enter a DNA sequence:")
+dna=DNA.lower()
 
 
 #Make complementary sequence
@@ -34,7 +35,7 @@ if len(frame6[-1])<3:
     
 
 #Codon definition(3 nucleotide → amino acid)
-codon_table = {'ttt': 'F', 'ttc': 'F', 'tta': 'L', 'ttg': 'L', 'tct': 'S','tcc': 'S', 'tca': 'S', 'tcg': 'S', 'tat': 'Y', 'tac': 'Y', 'taa':'■','tag':'■', 'tga':'■', 
+codon_table = {'ttt': 'F', 'ttc': 'F', 'tta': 'L', 'ttg': 'L', 'tct': 'S','tcc': 'S', 'tca': 'S', 'tcg': 'S', 'tat': 'Y', 'tac': 'Y', 'taa':'*','tag':'*', 'tga':'*', 
 'tgt': 'C', 'tgc': 'C', 'tgg': 'W', 'ctt': 'L', 'ctc': 'L', 'cta': 'L', 'ctg': 'L', 'cct': 'P', 'ccc': 'P', 'cca': 'P', 'ccg': 'P', 'cat': 'H', 'cac': 'H', 'caa': 'Q', 
 'cag': 'Q','cgt': 'R', 'cgc': 'R', 'cga': 'R', 'cgg': 'R', 'att': 'I', 'atc': 'I', 'ata': 'I','atg': 'M', 'act': 'T', 'acc': 'T','aca': 'T', 'acg': 'T', 'aat': 'N',
 'aac': 'N', 'aaa': 'K','aag': 'K', 'agt': 'S', 'agc': 'S', 'aga': 'R', 'agg': 'R','gtt': 'V', 'gtc': 'V', 'gta': 'V', 'gtg': 'V', 'gct': 'A','gcc': 'A', 'gca': 'A', 
@@ -56,8 +57,40 @@ f6=[codon_table[i] for i in frame6[:]]
 frame6_codon = ''.join(f6)
 
 
+def splitAndSearch(sequence, seperator, starter) :
+    splited = sequence.split(seperator)[0] + seperator
+
+    print("탐색할 시퀀스 : " + splited)
+
+    # indexList = []
+    patterns = []
+    for i in range(len(splited)) : 
+        if splited[i] == starter : 
+            patterns.append(splited[i:])
+
+    print("발견된 문자열: " )
+    for str in patterns : 
+        print(str)
+
+
+entered_seq1 = frame1_codon
+entered_seq2 = frame2_codon
+entered_seq3 = frame3_codon
+entered_seq4 = frame4_codon
+entered_seq5 = frame5_codon
+entered_seq6 = frame6_codon
+seperator = '*' 
+start_ch = 'M' 
+splitAndSearch(entered_seq1, seperator, start_ch)
+splitAndSearch(entered_seq2, seperator, start_ch)
+splitAndSearch(entered_seq3, seperator, start_ch)
+splitAndSearch(entered_seq4, seperator, start_ch)
+splitAndSearch(entered_seq5, seperator, start_ch)
+splitAndSearch(entered_seq6, seperator, start_ch)
+
+#여기서부터는 사용하지 않음
 #stop codon site
-stop_codon_site1=frame1_codon.find('■')
+stop_codon_site1=frame1_codon.find('*')
 stop_codon_site1
 
 

@@ -80,6 +80,7 @@ f6=[codon_table[i] for i in frame6[:]]
 frame6_codon = ''.join(f6)
 
 
+#ORF find
 def splitAndSearch(sequence, seperator, starter) :
     splited = sequence.split(seperator)[0] + seperator
 
@@ -93,8 +94,7 @@ def splitAndSearch(sequence, seperator, starter) :
 
     print("발견된 문자열: " )
     for str in patterns : 
-        print(str)
-
+        print(str, len(str)*3)
 
 entered_seq1 = frame1_codon
 entered_seq2 = frame2_codon
@@ -104,12 +104,21 @@ entered_seq5 = frame5_codon
 entered_seq6 = frame6_codon
 seperator = '*' 
 start_ch = 'M' 
-splitAndSearch(entered_seq1, seperator, start_ch)
-splitAndSearch(entered_seq2, seperator, start_ch)
-splitAndSearch(entered_seq3, seperator, start_ch)
-splitAndSearch(entered_seq4, seperator, start_ch)
-splitAndSearch(entered_seq5, seperator, start_ch)
-splitAndSearch(entered_seq6, seperator, start_ch)
+splitAndSearch(frame1_codon, seperator, start_ch)
+splitAndSearch(frame2_codon, seperator, start_ch)
+splitAndSearch(frame3_codon, seperator, start_ch)
+splitAndSearch(frame4_codon, seperator, start_ch)
+splitAndSearch(frame5_codon, seperator, start_ch)
+splitAndSearch(frame6_codon, seperator, start_ch)
+
+
+#ORF length distribution
+import matplotlib.pyplot as plt
+length= [405, 390, 345, 186, 48, 108]
+plt.hist(length, bins=10)
+plt.show()
+print(max(length)) #가장 긴 ORF 
+
 
 #여기서부터는 사용하지 않음
 #stop codon site

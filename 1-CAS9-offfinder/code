@@ -1,23 +1,11 @@
+# Reading FASTA files
 
-from readfiles import *
-from tkinter.filedialog import askopenfilename
-from Bio import SeqIO
+def read_fasta(filename):
+    sequence = ''
+    with open(filename) as f:
+        for line in f:
+            if not line[0] == '>':
+                sequence += line.rstrip()
+                
+    return sequence
 
-
-def read_genome(filename):
-
-    sequences = []
-    handle = open(filename, 'r')
-
-    for record in SeqIO.parse(handle, 'fasta'):
-        sequences.append(str(record.seq))
-
-    handle.close()
-    seq = ''.join(sequences)
-
-    return seq
-
-
-filename = askopenfilename()
-seq = read_genome(filename)
-print(seq)

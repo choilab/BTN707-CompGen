@@ -18,6 +18,7 @@
 - *Homo sapiens* mitochondrion doesn't have any off target in geneious prime tool.
 - So we reject *Homo sapiens* mitochondrion as sample.
 
+----
 
 - Find *Homo sapiens* mitochondrion in RGEN tool.
 - We don't focus on off target anymore.

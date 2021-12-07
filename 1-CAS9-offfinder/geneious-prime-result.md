@@ -1,8 +1,8 @@
-- We chose "Homo sapiens mitochondrion, complete genome" as sample(size: 16596bp).
+- We chose "*Homo sapiens* mitochondrion, complete genome" as sample(size: 16596bp).
 - Pictures below is running result in geneious prime finding CRISPR site tool.
 
 
-### Result of genious prime in Homo sapiens mitochondrion
+### Result of genious prime in *Homo sapiens* mitochondrion
 ![image](https://user-images.githubusercontent.com/79410957/145025792-a4bc858a-44d9-40e6-8d87-97570c155693.png)
 
 ### It showed length, bases, used PAM site, Enzyme, Doench activity score & Zhang specificity score.
@@ -14,6 +14,10 @@
 ### Result in csv
 ![image](https://user-images.githubusercontent.com/79410957/145028755-c8d811c7-4f57-4447-b307-ec54827f49e7.png)
 
-- Homo sapiens mitochondrion is not in RGEN tool.
-- Homo sapiens mitochondrion doesn't have any off target in geneious prime tool.
-- So we reject Homo sapiens mitochondrion as sample.
+- *Homo sapiens* mitochondrion is not in RGEN tool.
+- *Homo sapiens* mitochondrion doesn't have any off target in geneious prime tool.
+- So we reject *Homo sapiens* mitochondrion as sample.
+
+
+- Find *Homo sapiens* mitochondrion in RGEN tool.
+- We don't focus on off target anymore.

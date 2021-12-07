@@ -11,8 +11,9 @@
 ### It not only showed CRISPR guide RNA but restriction site because of annotation system in geneious prime.
 ![image](https://user-images.githubusercontent.com/79410957/145026698-e934c122-3f71-4138-80d1-89b5ed9b4cca.png)
 
-### Some CRISPR guide RNA site is undefined result of Doench activity score.
-![image](https://user-images.githubusercontent.com/79410957/145026852-61e16def-1d4a-4a6c-9d4a-c00da84fdecf.png)
+### Result in csv
+![image](https://user-images.githubusercontent.com/79410957/145028755-c8d811c7-4f57-4447-b307-ec54827f49e7.png)
 
-
-
+- Homo sapiens mitochondrion is not in RGEN tool.
+- Homo sapiens mitochondrion doesn't have any off target in geneious prime tool.
+- So we reject Homo sapiens mitochondrion as sample.

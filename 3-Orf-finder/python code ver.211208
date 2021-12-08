@@ -1,0 +1,124 @@
+import matplotlib.pyplot as plt
+
+
+def read_fasta(filename):
+    output = {}
+    fasta_file = open(filename)
+
+    for line in fasta_file:
+        line = line.rstrip()
+        if line.startswith('>'):
+            sequence_name = line[1:]
+            output[sequence_name] = ''
+            continue
+        else:
+            output[sequence_name] += line
+
+    fasta_file.close()
+
+    return output
+
+read_fasta('example.fas')
+
+
+#Input : genome sequence
+DNA=input("Enter a DNA sequence:")
+dna_space=DNA.lower()
+dna=dna_space.replace(" ","")
+print(dna)
+
+
+#Make complementary sequence
+def reverse_complement(dna):
+     complement = {'a': 't', 'c': 'g', 'g': 'c', 't': 'a'}
+     return ''.join([complement[base] for base in dna[::-1]]) #상보적 서열
+
+reverse_dna=reverse_complement(dna)
+print(reverse_dna)
+
+
+def find_orf(frame, allow_nested = 'Y'):
+    frame_codon = [D_codon[tri] for tri in frame if tri in D_codon]
+    frame_trans = ''.join(frame_codon)
+
+    start_site = []
+    index = -1
+    while True:
+        index = frame_trans.find('M', index + 1)
+        if index == -1:
+            break
+        start_site.append(index)
+
+    output = []
+    orf_end = 0
+
+    for site in start_site:
+        if allow_nested != 'Y':
+            if site < orf_end:
+                continue
+
+        frame_cut = frame_trans[site:]
+
+        if '*' not in frame_cut:
+            continue
+
+        stop_codon = frame_cut.find('*') + site + 1
+        orf_sequence = ''.join(frame[site:stop_codon])
+        amino_sequence = frame_cut.split('*')[0]
+
+        output.append((orf_sequence, amino_sequence))
+        orf_end = site + len(amino_sequence) + 1
+
+    return output
+    
+    
+D_codon = {}
+table_selection = input("Select your Codon Table Number \n(1. The Standard Code \n2. The Vertebrate Mitochondrial Code \n3. The Yeast Mitochondrial Code \n4. The Mold, Protozoan, and Coelenterate Mitochondrial Code and the Mycoplasma/Spiroplasma Code \n5. The Invertebrate Mitochondrial Code \n6. The Ciliate, Dasycladacean and Hexamita Nuclear Code \n9. The Echinoderm and Flatworm Mitochondrial Code \n10. The Euplotid Nuclear Code \n11. The Bacterial, Archaeal and Plant Plastid Code \n12. The Alternative Yeast Nuclear Code \n13. The Ascidian Mitochondrial Code \n14. The Alternative Flatworm Mitochondrial Code \n16. Chlorophycean Mitochondrial Code \n21. Trematode Mitochondrial Code \n22. Scenedesmus obliquus Mitochondrial Code \n23. Thraustochytrium Mitochondrial Code \n24. Rhabdopleuridae Mitochondrial Code \n25. Candidate Division SR1 and Gracilibacteria Code \n26. Pachysolen tannophilus Nuclear Code \n27. Karyorelict Nuclear Code \n28. Condylostoma Nuclear Code \n29. Mesodinium Nuclear Code \n30. Peritrich Nuclear Code \n31. Blastocrithidia Nuclear Code \n33. Cephalodiscidae Mitochondrial UAA-Tyr Code)\n:")
+codon_file_name = 'transl_table_' + table_selection + '.txt'
+
+codon_table = open(str(codon_file_name))
+
+for line in codon_table:
+    line = line.rstrip()
+    line_split = line.split('\t')
+
+    for block in line_split:
+        block_split = block.split(' ')
+        codon = block_split[0]
+        amino_acid = block_split[1]
+
+        D_codon[codon] = amino_acid
+#여기까지 확인함
+
+
+input_fasta = read_fasta('example.fasta')
+output = open('output2.txt','w')
+
+minimum_length = 300
+length_list = []
+
+for sequence_name, sequence in input_fasta.items():
+	sequence_reverse = reverse_complement(sequence)
+
+	for repeat in range(6):
+		if repeat < 3:
+			frame = [sequence[i:i+3] for i in range(repeat%3, len(sequence), 3)] # forward
+		else:
+			frame = [sequence_reverse[i:i+3] for i in range(repeat%3, len(sequence), 3)] # reverse
+
+		if repeat < 3:
+			frame_number = '+%s' % (repeat + 1)
+		else:
+			frame_number = 2 - repeat
+
+		orf_list = find_orf(frame, 'Y')
+		for orf in orf_list:
+			nt = orf[0]
+			aa = orf[1]
+			if len(nt) <= minimum_length:
+				continue
+			output.write('>%s|%s\n%s\n%s*\n' % (sequence_name, frame_number, nt, aa))
+			length_list.append(len(nt))
+
+plt.hist(length_list, bins=10)
+plt.show()

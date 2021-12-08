@@ -1,12 +1,55 @@
 #Input : genome sequence
-dna=input("Enter a DNA sequence:")
+DNA=input("Enter a DNA sequence:")
+#대문자로 바꾸기
+dna_space=DNA.upper()
+#띄어쓰기 지우기
+dna=dna_space.replace(" ","")
 
 
 #Make complementary sequence
 def reverse_complement(dna):
-     complement = {'a': 't', 'c': 'g', 'g': 'c', 't': 'a'}
+     complement = {'A': 'T', 'C': 'G', 'G': 'C', 'T': 'A'}
      return ''.join([complement[base] for base in dna[::-1]]) #상보적 서열
 reverse_dna=reverse_complement(dna)
+
+
+#ORF find
+#triplet만 추가(1, 2개 nucleotide 버리기)
+def find_orf(frame):
+    frame_codon = [codon_table[triplet] for triplet in frame if triplet in codon_table]
+    frame_trans = ''.join(frame_codon)
+    
+#start site 찾기
+    start_site = []
+    index = -1
+    orf_end = 0
+    
+    while True:
+        index = frame_trans.find('M', index + 1)
+        if index == -1:
+            break
+        start_site.append(index)
+
+    for site in start_site:
+        if site < orf_end:
+            continue
+
+#start site부터 끊기(start codon site 앞 삭제)
+        frame_cut = frame_trans[site:]
+        
+#stop codon까지 끊기
+        if '*' not in frame_cut:
+                continue
+        stop_codon = frame_cut.find('*') + site + 1
+        orf_sequence = ''.join(frame[site:stop_codon])
+        amino_sequence = frame_cut.split('*')[0]
+
+        output.append((orf_sequence, amino_sequence))
+        orf_end = site + len(amino_sequence) + 1
+
+    return output
+
+
 
 
 #Decompose sequence into triplets(make 6 frames)

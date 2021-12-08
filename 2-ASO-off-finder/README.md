@@ -9,8 +9,8 @@ ASO-off-finder is a program that finds target and potential off-target sites in 
 * [Thinkabouts](#intro)
   * [What is the problem to solve?](#intro2)
   * [Why is the problem biologically important?](#intro3)
-  * [How could this problem be solved?](#intro4)
 * [Algorithm outline](#outline)
+* 
 
 <a name="student"></a>
 # Students
@@ -78,14 +78,6 @@ Also, animal studies cannot be used for off-target finding of ASO applied to hum
 
 Thus, in silico analysis using the human RNA database followed by in vitro expression analysis using human cells are essential.
 
-<a name="intro4"></a>
-## How could this problem be solved?
-
-
-
-### Pre-existing tools for ASO off-target site finding
-
-
 <a name="outline"></a>
 # Algorithm outline
 
@@ -97,4 +89,7 @@ ASO off-target finder | ASO sequence | Target RNA sequence database
 * Finding ASO off-target sites is similar to the read alignment problem.
 * Apply dynamic programming for approxiamte alignment for matching ASO sequence to target sequences
 
+# Code overview
+
+# Benchmark test
 

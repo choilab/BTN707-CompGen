@@ -58,16 +58,16 @@ codon_table = {'TTT': 'F', 'TTC': 'F', 'TTA': 'L', 'TTG': 'L', 'TCT': 'S','TCC':
 'GCG': 'A', 'GAT': 'D','GAC': 'D','GAA': 'E', 'GAG': 'E', 'GGT': 'G', 'GGC': 'G', 'GGA': 'G','GGG': 'G'}
                
 
-#find ORF
+#ORF minimum length 입력
 minimum_length = int(input("minimum ORF length:"))
+
+#find ORF
 length_list = []
-output=[]
+output=open('output.txt','w')
 
 for repeat in range(6):
-#forward frame(1, 2, 3)
     if repeat < 3:
         frame = [dna[i:i+3] for i in range(repeat%3, len(dna), 3)] 
-#reverse frame(-1, -2, -3)
     else:
         frame = [reverse_dna[i:i+3] for i in range(repeat%3, len(dna), 3)] 
 
@@ -82,12 +82,20 @@ for repeat in range(6):
         aa = orf[1]
         if len(nt) <= minimum_length:
             continue
-        output.append('ORF frame number: %s / ORF nucleotide seqeunce: %s / ORF amino acid seqeunce: %s / ORF lenth: %s' 
-                      % (frame_number, nt, aa, len(nt)))
+        output.write('>\n ORF frame number: %s\n ORF nucleotide seqeunce: %s\n ORF amino acid seqeunce: %s\n ORF nucleotide lenth: %s\n ORF amino acid length:%s\n \n' 
+                     % (frame_number, nt, aa, len(nt), len(aa)))
         length_list.append(len(nt))
+
+
+#jupyter notebook에서 결과 읽기
+out=open('output.txt', 'r', encoding='utf-8')
+for result in out:
+    print(result)
         
      
 #ORF 길이 분포
 import matplotlib.pyplot as plt
 plt.hist(length_list, bins=30)
+plt.xlabel('ORF length')
+plt.ylabel('frequency')
 plt.show()

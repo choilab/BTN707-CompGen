@@ -40,3 +40,4 @@
  - https://bioinformatics.ysu.edu/tools/OrfPredictor.html
  - https://www.ncbi.nlm.nih.gov/orffinder/
  - https://github.com/betsig/borf
+ - https://www.ncbi.nlm.nih.gov/Taxonomy/Utils/wprintgc.cgi?chapter=tgencodes#SG1

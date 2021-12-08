@@ -10,7 +10,7 @@ ASO-off-finder is a program that finds target and potential off-target sites in 
   * [What is the problem to solve?](#intro2)
   * [Why is the problem biologically important?](#intro3)
 * [Algorithm outline](#outline)
-* 
+* [Benchmark test](#benchmark)
 
 <a name="student"></a>
 # Students

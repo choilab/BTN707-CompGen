@@ -1,7 +1,8 @@
 #Input : genome sequence
 DNA=input("Enter a DNA sequence:")
-dna=DNA.lower()
-
+dna_space=DNA.lower()
+dna=dna_space.replace(" ","")
+print(dna)
 
 #Make complementary sequence
 def reverse_complement(dna):

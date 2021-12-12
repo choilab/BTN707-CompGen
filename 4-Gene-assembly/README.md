@@ -43,6 +43,168 @@
 *   - Step 5. Put together the primer
 * https://github.com/alenkran/Benchling_Gibson_Primer_Design/commit/792419b8fabaf867c9caad06bcb0c7badf33d88d
 
+## Code for Gene Assembly
+from Bio.Restriction import *
+from Bio.SeqUtils import MeltingTemp as mt
+from Bio.Seq import Seq
+import numpy as np
+import os
+import pandas as pd
+import re
+import requests
+import json
+
+COLOR = [255, 255, 0]
+ignore_enzyme_list = ['AsuNHI']
+
+my_seq = input ("DNA :")
+        
+seq=my_seq
+
+### calculate Tm of overlapped sequence
+def get_Tm(seq):
+    """   Calculate melting temperature for DNA oligomer
+    Melting tempearture is based on Primestar PCR Premix condition
+   
+    Args:
+       seq: string of DNA sequence
+    Returns:
+       Tm: melting temperature (Celcius)
+    """
+    my_seq = Seq(seq)
+
+print('%0.2f' % mt.Tm_NN(my_seq))
+
+### check reverse sequence
+def get_rc(seq):
+    """   Returns the reverse complement sequence """
+    return str(Seq(seq).reverse_complement())
+
+rc = get_rc(my_seq)
+print ("reverse complement :",rc)
+
+def check_GC(seq):
+    """   Measures the GC content of a sequence """
+    return (seq.upper().count('G') + seq.upper().count('C'))/float(len(seq))
+
+gc = check_GC(my_seq)
+print ("GC content :",gc)
+
+### check GC content
+def check_codon(seq, GC_bound=[0.4, 0.6]):
+    """ Checks GC content of a coding sequence
+    Args:
+        seq: string of DNA sequence
+        GC_bound: boundary for acceptable GC content [low, high]
+    Returns:
+        Boolean for GC content check
+    """
+
+    GC_content = check_GC(seq)
+    if GC_content < GC_bound[0] or GC_content > GC_bound[1]:
+        return False
+    return True
+
+cc = check_codon(my_seq)
+print("GC content of a coding sequence :",cc)
+
+### get fragments
+def get_fragments(seq):
+    """
+    get fragment sequence according to the number of fragments.
+    n is the number of fragments.
+    """
+
+my_seq = Seq("GATCGATGGGCCTATATAGGATCGAAAATCGGTGGCGATCGCCGAAGGAGTCCGCTCGAATCGGGCTCCTAGCTGATATTCGATCGATTGCCCCTAAGCTAGCTATCATCCCTAGCCTTAATATTCTCTCGCGCAGATCGATCGGGCAATATCGATCGGATCCGATCCGAAAGCCTAATCGAATCTCTAGAGCTAGCTAATTCGATCGATCTCCTAGAGCTCTAGCTAGCTTTGGGC")
+len(my_seq)
+
+n=4 #number of fragments
+
+#number_overlap = 20
+s=20
+n1=round(len(my_seq)/n)+s
+n2=round(len(my_seq)/n)*2+s
+n3=round(len(my_seq)/n)*3+s
+    
+#get_fragment sequence
+for i in range(0,n1):
+    dna0 = my_seq[0:(i+s)]
+    dna1 = my_seq[i:(i+n1)]
+    dna2 = my_seq[(i+n1-s):(i+n2)]
+    dna3 = my_seq[(i+n2-s):(i+n3)]
+    dna4 = my_seq[(i+n3-s):(len(my_seq))]+dna0 
+
+    #get_overlapped sequence
+    dna1_2_overlap = my_seq[(i+n1-s):(i+n1)]
+    dna2_3_overlap = my_seq[(i+n2-s):(i+n2)]
+    dna3_4_overlap = my_seq[(i+n3-s):(i+n3)]
+    dna4_1_overlap = my_seq[i:(i+s)]
+    
+    if i == 1:
+        print(dna1_2_overlap)
+        
+def get_fragments(seq):
+    """
+    get fragment sequence according to the number of fragments.
+    n is the number of fragments.
+    """
+
+my_seq = Seq("GATCGATGGGCCTATATAGGATCGAAAATCGGTGGCGATCGCCGAAGGAGTCCGCTCGAATCGGGCTCCTAGCTGATATTCGATCGATTGCCCCTAAGCTAGCTATCATCCCTAGCCTTAATATTCTCTCGCGCAGATCGATCGGGCAATATCGATCGGATCCGATCCGAAAGCCTAATCGAATCTCTAGAGCTAGCTAATTCGATCGATCTCCTAGAGCTCTAGCTAGCTTTGGGC")
+len(my_seq)
+
+n=4 #number of fragments
+
+#number_overlap = 20
+s=20
+n1=round(len(my_seq)/n)+s
+n2=round(len(my_seq)/n)*2+s
+n3=round(len(my_seq)/n)*3+s
+    
+#get_fragment sequence
+for i in range(0,n1):
+    dna0 = my_seq[0:(i+s)]
+    dna1 = my_seq[i:(i+n1)]
+    dna2 = my_seq[(i+n1-s):(i+n2)]
+    dna3 = my_seq[(i+n2-s):(i+n3)]
+    dna4 = my_seq[(i+n3-s):(len(my_seq))]+dna0 
+
+    #get_overlapped sequence
+    dna1_2_overlap = my_seq[(i+n1-s):(i+n1)]
+    dna2_3_overlap = my_seq[(i+n2-s):(i+n2)]
+    dna3_4_overlap = my_seq[(i+n3-s):(i+n3)]
+    dna4_1_overlap = my_seq[i:(i+s)]
+    
+    if i == 1:
+        print(dna1_2_overlap)
+        
+seq=dna1_2_overlap
+    
+def check_GC(seq):
+    """   Measures the GC content of a sequence """
+    return (seq.upper().count('G') + seq.upper().count('C'))/float(len(seq))
+
+gc = check_GC(seq)
+print ("GC content :",gc)
+
+def check_codon(seq, GC_bound=[0.4, 0.6]):
+    """ Checks GC content of a coding sequence
+    Args:
+        seq: string of DNA sequence
+        GC_bound: boundary for acceptable GC content [low, high]
+    Returns:
+        Boolean for GC content check
+    """
+
+    GC_content = check_GC(seq)
+    for i in range(0,n1):
+        while GC_content < GC_bound[0] or GC_content > GC_bound[1]:
+            return False
+            i += 1
+        else:
+            return True
+print(seq)
+
+
 ## Reference code for testing Assembly Fragments
 * https://github.com/BjornFJohansson/pydna/blob/6dd22c4a3708552220c2c52c712a23d951eca743/tests/test_module_design.py
 ---

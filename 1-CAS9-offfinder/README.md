@@ -105,3 +105,9 @@ After final presentation,
 
 
 "By default Geneious Prime will use the method of Doench et al. (2016) to score the activity of the CRISPR sites. Activity, or on-target scoring, models the sequence features of the gRNA site itself to predict activity. When you run the Doench et al. (2016) model for the first time, Geneious will install the required dependencies (python and R) prior to running the model so you may notice it take a little longer."
+
+---
+- Find target with PAM site
+- assume crRNA = "CAGCAACTCCAGGGGGCCGC" or "AAAGGAAACCATTGTGTTAA"(from CAS-OFFinder)
+- Find matched sequence with start site(this will be on target)
+

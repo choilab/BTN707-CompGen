@@ -114,34 +114,6 @@ def get_fragments(seq):
     get fragment sequence according to the number of fragments.
     n is the number of fragments.
     """
-
-my_seq = Seq("GATCGATGGGCCTATATAGGATCGAAAATCGGTGGCGATCGCCGAAGGAGTCCGCTCGAATCGGGCTCCTAGCTGATATTCGATCGATTGCCCCTAAGCTAGCTATCATCCCTAGCCTTAATATTCTCTCGCGCAGATCGATCGGGCAATATCGATCGGATCCGATCCGAAAGCCTAATCGAATCTCTAGAGCTAGCTAATTCGATCGATCTCCTAGAGCTCTAGCTAGCTTTGGGC")
-len(my_seq)
-
-n=4 #number of fragments
-
-#number_overlap = 20
-s=20
-n1=round(len(my_seq)/n)+s
-n2=round(len(my_seq)/n)*2+s
-n3=round(len(my_seq)/n)*3+s
-    
-#get_fragment sequence
-for i in range(0,n1):
-    dna0 = my_seq[0:(i+s)]
-    dna1 = my_seq[i:(i+n1)]
-    dna2 = my_seq[(i+n1-s):(i+n2)]
-    dna3 = my_seq[(i+n2-s):(i+n3)]
-    dna4 = my_seq[(i+n3-s):(len(my_seq))]+dna0 
-
-    #get_overlapped sequence
-    dna1_2_overlap = my_seq[(i+n1-s):(i+n1)]
-    dna2_3_overlap = my_seq[(i+n2-s):(i+n2)]
-    dna3_4_overlap = my_seq[(i+n3-s):(i+n3)]
-    dna4_1_overlap = my_seq[i:(i+s)]
-    
-    if i == 1:
-        print(dna1_2_overlap)
         
 def get_fragments(seq):
     """

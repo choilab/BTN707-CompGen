@@ -9,3 +9,24 @@ def read_fasta(filename):
                 
     return sequence
 
+
+# sequence matching
+
+from difflib import SequenceMatcher
+seq = SequenceMatcher()
+seq.set_seqs(one_genome, "CCATGCATTTGGTATTTTCG")
+print(one_genome.index('CCATGCATTTGGTATTTTCG'))
+
+import re
+for m in re.finditer('CCATGCATTTGGTATTTTCG', one_genome):
+    print('CCATGCATTTGGTATTTTCG found', m.start(), m.end())
+
+
+matched = one_genome.find("CCATGCATTTGGTATTTTCG")
+print(matched)
+while one_genome[matched+1:].find("CCATGCATTTGGTATTTTCG") != -1:
+    matched = one_genome[matched+1:].find("CCATGCATTTGGTATTTTCG") + matched + 1
+    print(matched)
+
+ratio = seq.ratio()
+print(ratio)

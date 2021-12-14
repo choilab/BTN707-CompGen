@@ -175,44 +175,44 @@ for i in range(0,n1):
 
 ## 황종현 
 
-### Sequence Input
-my_seq = Seq("GATCGATGGGCCTATATAGGATCGAAAATCGGTGGCGATCGCCGAAGGAGTCCGCTCGAATCGGGCTCCTAGCTGATATTCGATCGATTGCCCCTAAGCTAGCTATCATCCCTAGCCTTAATATTCTCTCGCGCAGATCGATCGGGCAATATCGATCGGATCCGATCCGAAAGCCTAATCGAATCTCTAGAGCTAGCTAATTCGATCGATCTCCTAGAGCTCTAGCTAGCTTTGGGC")
-print(len(my_seq))
+	### Sequence Input
+	my_seq = Seq("GATCGATGGGCCTATATAGGATCGAAAATCGGTGGCGATCGCCGAAGGAGTCCGCTCGAATCGGGCTCCTAGCTGATATTCGATCGATTGCCCCTAAGCTAGCTATCATCCCTAGCCTTAATATTCTCTCGCGCAGATCGATCGGGCAATATCGATCGGATCCGATCCGAAAGCCTAATCGAATCTCTAGAGCTAGCTAATTCGATCGATCTCCTAGAGCTCTAGCTAGCTTTGGGC")
+	print(len(my_seq))
 
-### Fragment Number Input
-n = int(input ("fragment 갯수 :"))
+	### Fragment Number Input
+	n = int(input ("fragment 갯수 :"))
 
-### Overlap Length Input
-#number_overlap = 20
-s = int(input ("overlap 길이 :"))
+	### Overlap Length Input
+	#number_overlap = 20
+	s = int(input ("overlap 길이 :"))
 
-### Overlap + DNA Fragment 서열 생성
-mod = sys.modules[__name__]
+	### Overlap + DNA Fragment 서열 생성
+	mod = sys.modules[__name__]
+	
+	for i in range(1,n+1):
+	    if i < n:
+	        a = round(len(my_seq)/n) * i + s
+  	      globals()['df_{}'.format(i)] = a
+    	if i == n:
+      	  a = len(my_seq)
+        	globals()['df_{}'.format(i)] = a
+    	print(a)
 
-for i in range(1,n+1):
-    if i < n:
-        a = round(len(my_seq)/n) * i + s
-        globals()['df_{}'.format(i)] = a
-    if i == n:
-        a = len(my_seq)
-        globals()['df_{}'.format(i)] = a
-    print(a)
-
-for x in range(0,n+1):
-    if x == 0:
-        globals()['dna_{}'.format(x)] = my_seq[0:s]
-        print("DNA : ", getattr(mod, 'dna_{}'.format(x)))
-    if x == 1:
-        globals()['dna_{}'.format(x)] = my_seq[0:(getattr(mod, 'df_{}'.format(x), x))]
-        print("DNA : ", getattr(mod, 'dna_{}'.format(x)))
-    if 1 < x < n: 
-        b = my_seq[((getattr(mod, 'df_{}'.format(x-1), x)-s)):(getattr(mod, 'df_{}'.format(x), x))]
-        globals()['dna_{}'.format(x)] = b
-        print("DNA : ", getattr(mod, 'dna_{}'.format(x)))
-    if x == n:
-        bb = my_seq[((getattr(mod, 'df_{}'.format(x), x))-s):(len(my_seq))] + dna_0
-        globals()['dna_{}'.format(x)] = bb
-        print("DNA : ", getattr(mod, 'dna_{}'.format(x)))
+	for x in range(0,n+1):
+  	  if x == 0:
+    	    globals()['dna_{}'.format(x)] = my_seq[0:s]
+      	  print("DNA : ", getattr(mod, 'dna_{}'.format(x)))
+    	if x == 1:
+      	  globals()['dna_{}'.format(x)] = my_seq[0:(getattr(mod, 'df_{}'.format(x), x))]
+        	print("DNA : ", getattr(mod, 'dna_{}'.format(x)))
+    	if 1 < x < n: 
+      	  b = my_seq[((getattr(mod, 'df_{}'.format(x-1), x)-s)):(getattr(mod, 'df_{}'.format(x), x))]
+        	globals()['dna_{}'.format(x)] = b
+        	print("DNA : ", getattr(mod, 'dna_{}'.format(x)))
+	    if x == n:
+  	      bb = my_seq[((getattr(mod, 'df_{}'.format(x), x))-s):(len(my_seq))] + dna_0
+    	    globals()['dna_{}'.format(x)] = bb
+      	  print("DNA : ", getattr(mod, 'dna_{}'.format(x)))
 
 
 ## Reference code for testing Assembly Fragments

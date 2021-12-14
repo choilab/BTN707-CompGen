@@ -171,8 +171,14 @@ print("GC content of a coding sequence :",cc)
         		else:
             		print(dna4)
             		print(seq)
-	    	
-	# get primer sequence
+
+	
+	### get assembled gene and compare with target input
+    gene = dna1[0:-s] + dna2[0:-s] + dna3[0:-s] + dna4[0:-s]
+    seq = my_seq[i-1:]+my_seq[0:i-1]
+    gene == seq
+	
+	### get primer sequence
 	def primer_sequence(seq):
         """ primer sequence for each frament """
          

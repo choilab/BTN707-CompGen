@@ -128,11 +128,11 @@ print("GC content of a coding sequence :",cc)
     
 	#get_fragment sequence
 	for i in range(0,n1):
-	    dna0 = my_seq[0:(i+s)]
-	    dna1 = my_seq[i:(i+n1)]
+		dna0 = my_seq[0:(i+s)]
+		dna1 = my_seq[i:(i+n1)]
 		dna2 = my_seq[(i+n1-s):(i+n2)]
 		dna3 = my_seq[(i+n2-s):(i+n3)]
-    	dna4 = my_seq[(i+n3-s):(len(my_seq))]+dna0 
+		dna4 = my_seq[(i+n3-s):(len(my_seq))]+dna0 
 
     	#get_overlapped sequence
     	dna1_2_overlap = my_seq[(i+n1-s):(i+n1)]

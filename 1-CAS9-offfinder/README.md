@@ -52,10 +52,6 @@ until this week,
 - we chose 30 types of Cas system
 - record in table format to read well
 
-table | a
------ | ---
-1     | 2
-
 ---
 coursera "string" practical course
 - we may use string to read genome in python
@@ -74,6 +70,8 @@ until next week,
 - we focus on how to use Cas OFFinder's off-target finding tool
 - off-target has meaning ? -> Is it meaningful ? -> Let's find readings which contain both "off-target" & "function"
 
+<img width="451" alt="short algorithm" src="https://user-images.githubusercontent.com/79410957/144918085-91f97f63-2d3e-4bfa-928f-d6c3d0a606d3.png">
+
 ---
 after 11/04 meet up,
 - we decided to focus on Mycoplasma-specific Cas system Finder
@@ -87,6 +85,9 @@ after 11/22 meet up,
 - we found CRISPR gDNA software(from Genious) which can find whole information about input gDNA.
 - so, we thought our project is combining Genious and OFFinder called "How is suit gDNA to CRISPR"
 - we made more detailed project flow.
+
+
+<img width="451" alt="result progress" src="https://user-images.githubusercontent.com/79410957/144918212-ae65b8e1-ca36-4f76-999b-b430df6a4305.png">
 
 24 Nov. presentation 
 - What is CAS OFFinder 

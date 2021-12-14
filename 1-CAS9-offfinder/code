@@ -30,3 +30,19 @@ while one_genome[matched+1:].find("CCATGCATTTGGTATTTTCG") != -1:
 
 ratio = seq.ratio()
 print(ratio)
+
+
+# Named Forward, Reversed sequence
+    Fw_Start_site = []
+    for i in range(len(Start_site)):
+        if i > 0:
+            Fw_Start_site.append(str(Start_site[i]) + 'Fw')
+
+    print(Fw_Start_site)
+    
+    Rev_Start_site = []
+    for i in range(len(Start_site)):
+        if i > 0:
+            Rev_Start_site.append(str(Start_site[i]) + 'Rev')
+    
+    print(Rev_Start_site)

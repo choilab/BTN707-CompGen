@@ -83,6 +83,7 @@ def get_rc(seq):
 rc = get_rc(my_seq)
 print ("reverse complement :",rc)
 
+### check GC content
 def check_GC(seq):
     """   Measures the GC content of a sequence """
     return (seq.upper().count('G') + seq.upper().count('C'))/float(len(seq))
@@ -90,7 +91,6 @@ def check_GC(seq):
 gc = check_GC(my_seq)
 print ("GC content :",gc)
 
-### check GC content
 def check_codon(seq, GC_bound=[0.4, 0.6]):
     """ Checks GC content of a coding sequence
     Args:
@@ -114,20 +114,14 @@ def get_fragments(seq):
     get fragment sequence according to the number of fragments.
     n is the number of fragments.
     """
-        
-def get_fragments(seq):
-    """
-    get fragment sequence according to the number of fragments.
-    n is the number of fragments.
-    """
 
 my_seq = Seq("GATCGATGGGCCTATATAGGATCGAAAATCGGTGGCGATCGCCGAAGGAGTCCGCTCGAATCGGGCTCCTAGCTGATATTCGATCGATTGCCCCTAAGCTAGCTATCATCCCTAGCCTTAATATTCTCTCGCGCAGATCGATCGGGCAATATCGATCGGATCCGATCCGAAAGCCTAATCGAATCTCTAGAGCTAGCTAATTCGATCGATCTCCTAGAGCTCTAGCTAGCTTTGGGC")
 len(my_seq)
 
 n=4 #number of fragments
 
-#number_overlap = 20
-s=20
+#number_overlap = 25
+s=25
 n1=round(len(my_seq)/n)+s
 n2=round(len(my_seq)/n)*2+s
 n3=round(len(my_seq)/n)*3+s
@@ -145,37 +139,39 @@ for i in range(0,n1):
     dna2_3_overlap = my_seq[(i+n2-s):(i+n2)]
     dna3_4_overlap = my_seq[(i+n3-s):(i+n3)]
     dna4_1_overlap = my_seq[i:(i+s)]
-    
-    if i == 1:
-        print(dna1_2_overlap)
         
-seq=dna1_2_overlap
-    
-def check_GC(seq):
-    """   Measures the GC content of a sequence """
-    return (seq.upper().count('G') + seq.upper().count('C'))/float(len(seq))
-
-gc = check_GC(seq)
-print ("GC content :",gc)
-
-def check_codon(seq, GC_bound=[0.4, 0.6]):
-    """ Checks GC content of a coding sequence
-    Args:
-        seq: string of DNA sequence
-        GC_bound: boundary for acceptable GC content [low, high]
-    Returns:
-        Boolean for GC content check
-    """
-
-    GC_content = check_GC(seq)
-    for i in range(0,n1):
-        while GC_content < GC_bound[0] or GC_content > GC_bound[1]:
-            return False
+    seq=dna1_2_overlap
+    if i == 0:
+        if gc < 0.4 or gc > 0.6 and Tm > 60:
             i += 1
         else:
-            return True
-print(seq)
-
+            print(dna1)
+            print(seq)
+    
+    seq=dna2_3_overlap
+    if i == 0:
+        if gc < 0.4 or gc > 0.6 and Tm > 60:
+            i += 1
+        else:
+            print(dna2)
+            print(seq)
+            
+    seq=dna3_4_overlap
+    if i == 0:
+        if gc < 0.4 or gc > 0.6 and Tm > 60:
+            i += 1
+        else:
+            print(dna3)
+            print(seq)
+            
+    seq=dna4_1_overlap
+    if i == 0:
+        if gc < 0.4 or gc > 0.6 and Tm > 60:
+            i += 1
+        else:
+            print(dna4)
+            print(seq)
+            
 
 ## 황종현 
 

@@ -190,7 +190,6 @@ print("GC content of a coding sequence :",cc)
 
 ## 황종현 
 
-	### Sequence Input
 	from Bio.Restriction import *
 	from Bio.SeqUtils import MeltingTemp as mt
 	from Bio.Seq import Seq
@@ -200,50 +199,98 @@ print("GC content of a coding sequence :",cc)
 	import re
 	import requests
 	import json
-
+	
 	### Sequence Input
 	my_seq = Seq("GATCGATGGGCCTATATAGGATCGAAAATCGGTGGCGATCGCCGAAGGAGTCCGCTCGAATCGGGCTCCTAGCTGATATTCGATCGATTGCCCCTAAGCTAGCTATCATCCCTAGCCTTAATATTCTCTCGCGCAGATCGATCGGGCAATATCGATCGGATCCGATCCGAAAGCCTAATCGAATCTCTAGAGCTAGCTAATTCGATCGATCTCCTAGAGCTCTAGCTAGCTTTGGGC")
-	print(len(my_seq))
-	
+	print("Sequence length :",len(my_seq))
+
 	### Fragment Number Input
 	n = int(input ("fragment 갯수 :"))
-	
+
 	### Overlap Length Input
 	s = int(input ("overlap 길이 :"))
+
+	### check GC content
+	def check_GC(seq):
+	    """   Measures the GC content of a sequence """
+	    return (seq.upper().count('G') + seq.upper().count('C'))/float(len(seq))
 	
+	gc = check_GC(my_seq)
+	print ("GC content :",gc)
+
+	def check_codon(seq, GC_bound=[0.4, 0.6]):
+	    """ Checks GC content of a coding sequence
+	    Args:
+	        seq: string of DNA sequence
+	        GC_bound: boundary for acceptable GC content [low, high]
+	    Returns:
+	        Boolean for GC content check
+	    """
+
+ 	   GC_content = check_GC(seq)
+	    if GC_content < GC_bound[0] or GC_content > GC_bound[1]:
+			return False
+	    return True
+
+	print("\n")
+
 	### Overlap + DNA Fragment 서열 생성
 	mod = sys.modules[__name__]
-	
+
 	#get_fragment start site
 	for i in range(1,n+1):
-    	if i < n:
-        	a = round(len(my_seq)/n) * i + s
-        	globals()['df_{}'.format(i)] = a
-    	if i == n:
-        	a = len(my_seq)
-        	globals()['df_{}'.format(i)] = a
-    	print("fragment start site : %d" % a)
+	    if i < n:
+	        a = round(len(my_seq)/n) * i + s
+	        globals()['df_{}'.format(i)] = a
+	    if i == n:
+	        a = len(my_seq)
+	        globals()['df_{}'.format(i)] = a
+	    print("fragment start site %d:" % i, a)
+    
+	print("\n")
 
 	###get_overlap + DNA sequence
-	for x in range(0,n+1):
-    	if x == 0:
-        	globals()['dna__overlap_{}'.format(x)] = my_seq[0:s]
-        	globals()['overlap_{}'.format(x)] = my_seq[0:s]
-    	if x == 1:
-        	globals()['dna__overlap_{}'.format(x)] = my_seq[0:(getattr(mod, 'df_{}'.format(x), x))]
-        	globals()['overlap_{}'.format(x)] = my_seq[((getattr(mod, 'df_{}'.format(x), x)-s)):(getattr(mod, 'df_{}'.format(x), x))]
-        	print("DNA %d: " % x, getattr(mod, 'dna__overlap_{}'.format(x)),"\n", "overlap %d :" % x, getattr(mod, 'overlap_{}'.format(x)))
-    	if 1 < x < n: 
-        	b = my_seq[((getattr(mod, 'df_{}'.format(x-1), x)-s)):(getattr(mod, 'df_{}'.format(x), x))]
-        	globals()['dna__overlap_{}'.format(x)] = b
-        	c = my_seq[((getattr(mod, 'df_{}'.format(x), x)-s)):(getattr(mod, 'df_{}'.format(x), x))]
-        	globals()['overlap_{}'.format(x)] = c
-        	my_seq[((getattr(mod, 'df_{}'.format(x), x)-s)):(getattr(mod, 'df_{}'.format(x), x))]
-        	print("DNA %d: " % x, getattr(mod, 'dna__overlap_{}'.format(x)),"\n", "overlap %d :" % x, getattr(mod, 'overlap_{}'.format(x)))
-    	if x == n:
-    	    bb = my_seq[((getattr(mod, 'df_{}'.format(x), x))-s):(len(my_seq))] + (dna__overlap_0)
+	for x in range (0,n+1):
+ 	   y = 0
+ 	   if x == 0:
+	        globals()['dna__overlap_{}'.format(x)] = my_seq[0:y+s]
+	    if x == 1:
+	        b = my_seq[y:(getattr(mod, 'df_{}'.format(x), x))]
+	        globals()['dna__overlap_{}'.format(x)] = b
+ 	       c = my_seq[(y+((getattr(mod, 'df_{}'.format(x), x))-s)):(y+(getattr(mod, 'df_{}'.format(x), x)))]
+ 	       globals()['overlap_{}'.format(x)] = c
+        
+  	      seq = getattr(mod, 'overlap_{}'.format(x))
+ 	       if gc < 0.4 or gc > 0.6 and Tm > 60:
+ 	           y += 1
+ 	       else:
+ 	           print("DNA %d: " % x, getattr(mod, 'dna__overlap_{}'.format(x)),"\n", "overlap %d & %d :" % (x, x+1), seq,"\n")
+            
+ 	   if 1 < x < n: 
+ 	       bb = my_seq[(y+(getattr(mod, 'df_{}'.format(x-1), x)-s)):(y-1+(getattr(mod, 'df_{}'.format(x), x)))]
 	        globals()['dna__overlap_{}'.format(x)] = bb
-	        print("DNA %d: " % x, getattr(mod, 'dna__overlap_{}'.format(x)),"\n", "overlap %d :" % x, dna__overlap_0)
+	        cc = my_seq[(y+(getattr(mod, 'df_{}'.format(x), x)-s)):(y-1+(getattr(mod, 'df_{}'.format(x), x)))]
+	        globals()['overlap_{}'.format(x)] = cc
+        
+ 	       seq = getattr(mod, 'overlap_{}'.format(x))
+        
+ 	       if gc < 0.4 or gc > 0.6 and Tm > 60:
+ 	           x += 1
+ 	       else:
+ 	           print("DNA %d: " % x, getattr(mod, 'dna__overlap_{}'.format(x)),"\n", "overlap %d & %d :" % (x, x+1), seq,"\n")
+            
+ 	   if x == n:
+  	      bbb = my_seq[(y+(getattr(mod, 'df_{}'.format(x-1), x)-s)):(len(my_seq))] + (dna__overlap_0)
+  	      globals()['dna__overlap_{}'.format(x)] = bbb
+  	      ccc = my_seq[y:(y+s)]
+  	      globals()['overlap_{}'.format(x)] = ccc 
+        
+   	     seq = getattr(mod, 'overlap_{}'.format(x))
+        
+   	     if gc < 0.4 or gc > 0.6 and Tm > 60:
+   	         y += 1
+   	     else:
+   	         print("DNA %d: " % x, getattr(mod, 'dna__overlap_{}'.format(x)),"\n", "overlap %d & %d :" % (x, 1), seq,"\n")
     
 
 ## Reference code for testing Assembly Fragments

@@ -171,7 +171,22 @@ print("GC content of a coding sequence :",cc)
         else:
             print(dna4)
             print(seq)
-            
+	    
+    # get primer sequence
+    def primer_sequence(seq):
+        """ primer sequence for each frament """
+         
+    for x in range(1,n0-s):
+         if tm < 60:
+            primer1_F = dna4_1_overlap + dna1[s:s+x]
+            seq = primer1_F
+            tm = mt.Tm_NN(seq, dnac1 = 50, Na = 10, K = 10, Mg = 2, dNTPs = 0.6)
+            x += 1
+        else:
+            print(seq)
+            print(tm)
+            print(x)
+            break             
 
 ## 황종현 
 

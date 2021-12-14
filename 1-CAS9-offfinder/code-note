@@ -97,7 +97,7 @@ for i in range(len(value_list)):
     #print(i)
 
     results2 = SeqUtils.nt_search(str(sequence2),pattern)
-    Used_PAM_seq = 'CAGCAACTCCAGGGGGCCGC' + results2[0]
+    Used_PAM_seq = results2[0]
     Start_site2 = results2[1:]
 
 

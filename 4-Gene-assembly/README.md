@@ -108,31 +108,31 @@ def check_codon(seq, GC_bound=[0.4, 0.6]):
 cc = check_codon(my_seq)
 print("GC content of a coding sequence :",cc)
 
-### get fragments
-def get_fragments(seq):
-    """
-    get fragment sequence according to the number of fragments.
-    n is the number of fragments.
-    """
+	### get fragments
+	def get_fragments(seq):
+	    """
+    	get fragment sequence according to the number of fragments.
+    	n is the number of fragments.
+    	"""
 
-my_seq = Seq("GATCGATGGGCCTATATAGGATCGAAAATCGGTGGCGATCGCCGAAGGAGTCCGCTCGAATCGGGCTCCTAGCTGATATTCGATCGATTGCCCCTAAGCTAGCTATCATCCCTAGCCTTAATATTCTCTCGCGCAGATCGATCGGGCAATATCGATCGGATCCGATCCGAAAGCCTAATCGAATCTCTAGAGCTAGCTAATTCGATCGATCTCCTAGAGCTCTAGCTAGCTTTGGGC")
-len(my_seq)
+	my_seq = Seq("GATCGATGGGCCTATATAGGATCGAAAATCGGTGGCGATCGCCGAAGGAGTCCGCTCGAATCGGGCTCCTAGCTGATATTCGATCGATTGCCCCTAAGCTAGCTATCATCCCTAGCCTTAATATTCTCTCGCGCAGATCGATCGGGCAATATCGATCGGATCCGATCCGAAAGCCTAATCGAATCTCTAGAGCTAGCTAATTCGATCGATCTCCTAGAGCTCTAGCTAGCTTTGGGC")
+	len(my_seq)
 
-n=4 #number of fragments
+	n=4 #number of fragments
 
-#number_overlap = 25
-s=25
-n1=round(len(my_seq)/n)+s
-n2=round(len(my_seq)/n)*2+s
-n3=round(len(my_seq)/n)*3+s
+	#number_overlap = 25
+	s=25
+	n1=round(len(my_seq)/n)+s
+	n2=round(len(my_seq)/n)*2+s
+	n3=round(len(my_seq)/n)*3+s
     
-#get_fragment sequence
-for i in range(0,n1):
-    dna0 = my_seq[0:(i+s)]
-    dna1 = my_seq[i:(i+n1)]
-    dna2 = my_seq[(i+n1-s):(i+n2)]
-    dna3 = my_seq[(i+n2-s):(i+n3)]
-    dna4 = my_seq[(i+n3-s):(len(my_seq))]+dna0 
+	#get_fragment sequence
+	for i in range(0,n1):
+	    dna0 = my_seq[0:(i+s)]
+	    dna1 = my_seq[i:(i+n1)]
+    	dna2 = my_seq[(i+n1-s):(i+n2)]
+    	dna3 = my_seq[(i+n2-s):(i+n3)]
+    	dna4 = my_seq[(i+n3-s):(len(my_seq))]+dna0 
 
     #get_overlapped sequence
     dna1_2_overlap = my_seq[(i+n1-s):(i+n1)]

@@ -46,3 +46,83 @@ print(ratio)
             Rev_Start_site.append(str(Start_site[i]) + 'Rev')
     
     print(Rev_Start_site)
+    
+
+
+# Find matched sequence <'CAGCAACTCCAGGGGGCCGC' as crRNA and 29 types of PAM site > 
+from Bio.Seq import Seq
+from Bio import SeqUtils
+sequence1 = Seq(reverse_one_genome)
+sequence2 = Seq(one_genome)
+
+match_num1 = []
+match_num2 = []
+
+for i in range(len(value_list)):
+    pattern = Seq('CAGCAACTCCAGGGGGCCGC' + value_list[i])
+    #print(i)
+
+    results1 = SeqUtils.nt_search(str(sequence1),pattern)
+    Used_PAM_seq = results1[0]
+    Start_site1 = results1[1:]
+
+
+    print(results1)
+    print(Used_PAM_seq)
+    #print(Start_site1)
+
+    remove_set = {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18}
+    Start_site1 = [i for i in Start_site1 if i not in remove_set]
+    #print(Start_site1)
+    #print(len(Start_site1))
+
+    Rev_Start_site = []
+    for i in range(len(Start_site1)):
+        if i > 0:
+            Rev_Start_site.append(str(Start_site1[i]) + 'Rev')
+    
+    print(Rev_Start_site)
+
+    match_num1.append(len(Start_site1))
+    print()
+
+print(match_num1)
+print(max(match_num1))
+print(match_num1.index(max(match_num1)))
+print()
+
+
+for i in range(len(value_list)):
+    pattern = Seq('CAGCAACTCCAGGGGGCCGC'+ value_list[i])
+    #print(i)
+
+    results2 = SeqUtils.nt_search(str(sequence2),pattern)
+    Used_PAM_seq = 'CAGCAACTCCAGGGGGCCGC' + results2[0]
+    Start_site2 = results2[1:]
+
+
+    print(results2)
+    print(Used_PAM_seq)
+    #print(Start_site2)
+
+    remove_set = {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18}
+    Start_site2 = [i for i in Start_site2 if i not in remove_set]
+    #print(Start_site2)
+    #print(len(Start_site2))
+
+    Fw_Start_site = []
+    for i in range(len(Start_site2)):
+        if i > 0:
+            Fw_Start_site.append(str(Start_site2[i]) + 'Fw')
+
+    print(Fw_Start_site)
+
+    match_num2.append(len(Start_site2))
+    print()
+
+print(match_num2)
+print(max(match_num2))
+print(match_num2.index(max(match_num2)))
+print()
+
+

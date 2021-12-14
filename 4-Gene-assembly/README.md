@@ -175,18 +175,18 @@ for i in range(0,n1):
 
 ## 황종현 
 
-# Sequence Input
+### Sequence Input
 my_seq = Seq("GATCGATGGGCCTATATAGGATCGAAAATCGGTGGCGATCGCCGAAGGAGTCCGCTCGAATCGGGCTCCTAGCTGATATTCGATCGATTGCCCCTAAGCTAGCTATCATCCCTAGCCTTAATATTCTCTCGCGCAGATCGATCGGGCAATATCGATCGGATCCGATCCGAAAGCCTAATCGAATCTCTAGAGCTAGCTAATTCGATCGATCTCCTAGAGCTCTAGCTAGCTTTGGGC")
 print(len(my_seq))
 
-# Fragment Number Input
+### Fragment Number Input
 n = int(input ("fragment 갯수 :"))
 
-# Overlap Length Input
+### Overlap Length Input
 #number_overlap = 20
 s = int(input ("overlap 길이 :"))
 
-# Overlap + DNA Fragment 서열 생성
+### Overlap + DNA Fragment 서열 생성
 mod = sys.modules[__name__]
 
 for i in range(1,n+1):

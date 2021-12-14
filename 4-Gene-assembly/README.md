@@ -134,11 +134,11 @@ print("GC content of a coding sequence :",cc)
     	dna3 = my_seq[(i+n2-s):(i+n3)]
     	dna4 = my_seq[(i+n3-s):(len(my_seq))]+dna0 
 
-    #get_overlapped sequence
-    dna1_2_overlap = my_seq[(i+n1-s):(i+n1)]
-    dna2_3_overlap = my_seq[(i+n2-s):(i+n2)]
-    dna3_4_overlap = my_seq[(i+n3-s):(i+n3)]
-    dna4_1_overlap = my_seq[i:(i+s)]
+    	#get_overlapped sequence
+    	dna1_2_overlap = my_seq[(i+n1-s):(i+n1)]
+    	dna2_3_overlap = my_seq[(i+n2-s):(i+n2)]
+    	dna3_4_overlap = my_seq[(i+n3-s):(i+n3)]
+    	dna4_1_overlap = my_seq[i:(i+s)]
         
     seq=dna1_2_overlap
     if i == 0:
@@ -183,7 +183,6 @@ print("GC content of a coding sequence :",cc)
 	n = int(input ("fragment 갯수 :"))
 
 	### Overlap Length Input
-	#number_overlap = 20
 	s = int(input ("overlap 길이 :"))
 
 	### Overlap + DNA Fragment 서열 생성

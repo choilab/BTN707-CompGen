@@ -135,42 +135,42 @@ print("GC content of a coding sequence :",cc)
 		dna4 = my_seq[(i+n3-s):(len(my_seq))]+dna0 
 
     	#get_overlapped sequence
-    	dna1_2_overlap = my_seq[(i+n1-s):(i+n1)]
-    	dna2_3_overlap = my_seq[(i+n2-s):(i+n2)]
-    	dna3_4_overlap = my_seq[(i+n3-s):(i+n3)]
-    	dna4_1_overlap = my_seq[i:(i+s)]
+    		dna1_2_overlap = my_seq[(i+n1-s):(i+n1)]
+    		dna2_3_overlap = my_seq[(i+n2-s):(i+n2)]
+    		dna3_4_overlap = my_seq[(i+n3-s):(i+n3)]
+    		dna4_1_overlap = my_seq[i:(i+s)]
         
-    	seq=dna1_2_overlap
-    	if i == 0:
-        	if gc < 0.4 or gc > 0.6 and Tm > 60:
-            	i += 1
-        	else:
-            	print(dna1)
-            	print(seq)
+    		seq=dna1_2_overlap
+    		if i == 0:
+        		if gc < 0.4 or gc > 0.6 and Tm > 60:
+            		i += 1
+        		else:
+            		print(dna1)
+            		print(seq)
     
-    	seq=dna2_3_overlap
-    	if i == 0:
-        	if gc < 0.4 or gc > 0.6 and Tm > 60:
-            	i += 1
-        	else:
-            	print(dna2)
-            	print(seq)
+    		seq=dna2_3_overlap
+    		if i == 0:
+        		if gc < 0.4 or gc > 0.6 and Tm > 60:
+            		i += 1
+        		else:
+            		print(dna2)
+            		print(seq)
             
-    	seq=dna3_4_overlap
-    	if i == 0:
-        	if gc < 0.4 or gc > 0.6 and Tm > 60:
-            	i += 1
-        	else:
-            	print(dna3)
-            	print(seq)
+    		seq=dna3_4_overlap
+    		if i == 0:
+        		if gc < 0.4 or gc > 0.6 and Tm > 60:
+            		i += 1
+        		else:
+            		print(dna3)
+            		print(seq)
             
-    	seq=dna4_1_overlap
-    	if i == 0:
-        	if gc < 0.4 or gc > 0.6 and Tm > 60:
-            	i += 1
-        	else:
-            	print(dna4)
-            	print(seq)
+    		seq=dna4_1_overlap
+    		if i == 0:
+        		if gc < 0.4 or gc > 0.6 and Tm > 60:
+            		i += 1
+        		else:
+            		print(dna4)
+            		print(seq)
 	    	
 	# get primer sequence
 	def primer_sequence(seq):

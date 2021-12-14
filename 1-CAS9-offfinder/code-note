@@ -1,4 +1,4 @@
-# Reading FASTA files
+### Reading FASTA files
 
 def read_fasta(filename):
     sequence = ''
@@ -10,7 +10,7 @@ def read_fasta(filename):
     return sequence
 
 
-# sequence matching
+### sequence matching
 
 from difflib import SequenceMatcher
 seq = SequenceMatcher()
@@ -32,7 +32,7 @@ ratio = seq.ratio()
 print(ratio)
 
 
-# Named Forward, Reversed sequence
+### Named Forward, Reversed sequence
     Fw_Start_site = []
     for i in range(len(Start_site)):
         if i > 0:
@@ -49,7 +49,7 @@ print(ratio)
     
 
 
-# Find matched sequence <'CAGCAACTCCAGGGGGCCGC' as crRNA and 29 types of PAM site > 
+### Find matched sequence <'CAGCAACTCCAGGGGGCCGC' as crRNA and 29 types of PAM site > 
 from Bio.Seq import Seq
 from Bio import SeqUtils
 sequence1 = Seq(reverse_one_genome)

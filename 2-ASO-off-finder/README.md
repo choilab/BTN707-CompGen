@@ -167,7 +167,7 @@ CD4 | GTTTGGGGCCGGCCCAGGCCT | 20 nt
 
 Program version | Running time
 ---- | ----
-ASO-off-finder v1.1 | > 3 min
+ASO-off-finder v1.1 | > 5 min
 ASO-off-finder v2.0 | 1 min 36 seq
 
 * Running time was compared between ASO-off-finder v1.1 and v2.0 when run with dataset and sequence above

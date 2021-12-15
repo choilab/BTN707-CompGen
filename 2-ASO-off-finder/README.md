@@ -81,9 +81,9 @@ ASO can be used to inhibit RNA with specific sequences, which leads to the fact 
 
 Specific ASO binding to the target RNA sequence is needed for high selectivity. However, there is a chance that ASO might bind to off-target RNA molecules that have similar sequences to the original target RNA. This off-target binding of ASOs might cause unintended toxicity.
 
-Also, animal studies cannot be used for off-target finding of ASO applied to humans because of diiference in the genome sequence between.
+Also, animal studies cannot be used for off-target finding of ASO applied to humans because of diiferences in the genome sequence.
 
-Thus, in silico analysis using the human RNA database followed by in vitro expression analysis using human cells are essential.
+Thus, in silico analysis using the human RNA database followed by in vitro expression analysis using human cells is essential.
 
 <a name="history"></a>
 # Update history

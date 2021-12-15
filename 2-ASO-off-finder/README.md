@@ -98,7 +98,8 @@ Thus, in silico analysis using the human RNA database followed by in vitro expre
 * Human spliced/pre-spliced mRNA sequences can be downloaded from [D3G database](https://d3g.riken.jp/release/18.04/)
 
 ## ASO-off-finder v2.0 (2021/12/08)
-* Index RNA sequences and skip sequences with any available index matches.
+* Index RNA sequences and skip sequences with any available index matches
+* Aligned sequences are shown in output file
 
 <a name="outline"></a>
 # Algorithm outline

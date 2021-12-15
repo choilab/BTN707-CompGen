@@ -44,20 +44,4 @@
  - https://www.ncbi.nlm.nih.gov/Taxonomy/Utils/wprintgc.cgi?chapter=tgencodes#SG1
 
 # Benchmark
-		ORF finder	NCBI ORF finder
-input	input data	genome sequence	genome sequence
-	minimal ORF length	O	O
-	codon table	31개	31개
-	start codon	only start codon(Met)	start codon
-			alterative initiation codon
-			any sense codon
-	ignore nested ORF	X	O
-output		frame number	frame number
-		nucleotide sequence	nucleotide sequence
-		amino acid sequence	amino acid sequence
-		nucleotide length	nucleotide length
-		amino acid length	amino acid length
-		ORF length distribution graph	ORF location graph
-			start site
-			stop site
 ![image](https://user-images.githubusercontent.com/91528102/146115168-617f9813-a60a-41cb-81cf-5cb4bd3cc23b.png)

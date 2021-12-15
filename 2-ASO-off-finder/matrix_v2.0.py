@@ -1,10 +1,48 @@
-from comf import *
+# Import module for CPU multiprocessing
 from concurrent.futures import ProcessPoolExecutor
 from concurrent.futures import as_completed
 
 
+# Define function for reading file
+def import_file(input_file):
+	with open(input_file) as f_in:
+		txt = (line.rstrip() for line in f_in)
+		txt = list(line for line in txt if line)
+
+	return txt
+
+
+# Define function for reading FASTA file
+def read_fasta(file_name):
+	txt = import_file(file_name)
+
+	D = {}
+	start = []
+
+	for i in range(len(txt)):
+		line = txt[i]
+		if line.startswith('>'):
+			start.append(i)
+
+	for i in range(1, len(start)):
+		site = start[i-1]
+		site2 = start[i]
+
+		seq = ''.join(txt[site+1:site2])
+
+		header = txt[site].split(' ')[0][1:]
+
+		D[header] = seq
+
+	last_header = txt[start[-1]].split(' ')[0][1:]
+	D[last_header] = ''.join(txt[start[-1]+1:])
+
+	return D
+
+
+# Define function for ASO sequence alignment
 def find_match(aso, genome, allowed_difference):
-	fragment_length = int(round(len(aso) / (allowed_difference+1)))
+	fragment_length = int(round(len(aso) / (allowed_difference+1))) # Split ASO sequence
 	frag_list = []
 	match_result = []
 	for i in range(allowed_difference+1):
@@ -16,21 +54,21 @@ def find_match(aso, genome, allowed_difference):
 	index_result = []
 	for fragment in frag_list:
 		index = -1
-		while True:
+		while True: # Index RNA sequence and find matching coordinate
 			index = genome.find(fragment, index+1)
 			if index == -1:
 				break
 			index_result.append(index)
 
-	if len(index_result) == 0:
-		return match_result
+	if len(index_result) == 0: # No perfect alignment
+		return match_result # Return empty list
 
 	for index_hit in index_result:
 		start = max(0, index_hit-len(aso))
 		end = min(len(genome), index_hit+len(aso))
 		genome = genome[start:end]
 
-		# Create distance matrix
+		# Create distance, traceback matrix
 		D = []
 		T = []
 		for i in range(len(aso)+1):
@@ -80,12 +118,13 @@ def find_match(aso, genome, allowed_difference):
 			if distance > allowed_difference:
 				continue
 
+			# Start traceback and find aligned sequences
 			xseq = []
 			yseq = []
 			i = len(aso)
 			j = position
 
-			while (i > 0 or j > 0):
+			while (i > 0 and j > 0):
 				if T[i][j] == 'diag':
 					xseq.append(aso[i-1])
 					yseq.append(genome[j-1])
@@ -105,15 +144,16 @@ def find_match(aso, genome, allowed_difference):
 			x = ''.join(xseq[::-1])
 			y = ''.join(yseq[::-1])
 
+			# Append sequence tuple to result list
 			match_result.append((x,y))
 
 	return match_result
 
 
 p = 'GTTTGGGGCCGGCCCAGGCCT'
-rna = mkdic('old_splice.fasta')
+rna = read_fasta('human_RNA.fasta')
 
-output = open('aso_result8.txt','w')
+output = open('output.txt','w')
 
 with ProcessPoolExecutor(max_workers=40) as pool:
 	jobs = []

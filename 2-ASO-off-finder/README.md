@@ -24,7 +24,7 @@ ASO-off-finder is a program that finds target and potential off-target sites in 
 
 * Input: target RNA sequence and oligonucleotide sequence (FASTA format)
 * Output: target and off-target site coordinate, the number of mismatches in the alignment
-* Options: number of allowed mismatches/indels
+* Options: # of allowed mismatches/indels
 
 <a name="intro"></a>
 # Thinkabouts
@@ -40,7 +40,7 @@ Antisense oligonucleotide (ASO) is a short, synthetic, single-stranded oligonucl
 
 ![](./supplement/ASO_mechanism.png)
 
-By these mechanisms, ASOs can modify protein expression or activity of RNAs through several different methods[^1]:
+By this method, ASOs can modify protein expression or activity of RNAs through several different methods[^1]:
 * Target RNA degradation by RNAse H
 * Translational arrest
 * Inhibit RNA-binding proteins
@@ -81,9 +81,9 @@ ASO can be used to inhibit RNA with specific sequences, which leads to the fact 
 
 Specific ASO binding to the target RNA sequence is needed for high selectivity. However, there is a chance that ASO might bind to off-target RNA molecules that have similar sequences to the original target RNA. This off-target binding of ASOs might cause unintended toxicity.
 
-Also, animal studies cannot be used for off-target finding of ASO applied to humans because of diiferences in the genome sequence.
+Also, animal studies cannot be used for off-target finding of ASO applied to humans because of diiference in the genome sequence between.
 
-Thus, in silico analysis using the human RNA database followed by in vitro expression analysis using human cells is essential.
+Thus, in silico analysis using the human RNA database followed by in vitro expression analysis using human cells are essential.
 
 <a name="history"></a>
 # Update history
@@ -125,6 +125,42 @@ Original gene | Sequence | Length
 CD4 | GTTTGGGGCCGGCCCAGGCCT | 20 nt
 CXCL1 | CACCCCAGCCCTATCCCTTT | 21 nt
 
-![](.v1.1/gggenome_result_CD4.png)
+![](./v1.1/gggenome_result_CD4.png)
+
+    match_site	mismatch_number	alignment_number
+    NM_000616.4,NM_001195014.2,NM_001195015.2,NM_001195016.2,NM_001195017.2	2	2
+    NM_000616.4,NM_001195014.2,NM_001195015.2,NM_001195016.2,NM_001195017.2	1	2
+    NM_000616.4,NM_001195014.2,NM_001195015.2,NM_001195016.2,NM_001195017.2	0	1
+    NM_014240.2	2	1
+
+* ASO-off-finder successfully found the same perfect match from CD4 mRNAs and match from LIMD1 (NM_014240.2) mRNA with 1 mismatch and 1 indel
+
+![](./v1.1/gggenome_result_CXCL1.png)
+
+    match_site	mismatch_number	alignment_number
+    NM_001511.3,NR_046035.1	2	2
+    NM_001511.3,NR_046035.1	1	2
+    NM_001511.3,NR_046035.1	0	1
+    NM_002090.2	2	1
+    NM_002089.3	2	3
+
+* Same result from perfect match from CXCL1 mRNAs and match from CXCL2/3 mRNAs with 2 mismatches
 
 ## ASO-off-finder v2.0
+* Same dataset (RefSeq Human spliced mRNA aggregated, release 18.04) was used for benchmark test
+* Used sequence from CD4 gene from the ASO-off-finder v1.1 benchmark test
+
+Original gene | Sequence | Length
+---- | ---- | ----
+CD4 | GTTTGGGGCCGGCCCAGGCCT | 20 nt
+
+![](./v1.1/gggenome_result_CD4.png)
+
+    NM_000616.4,NM_001195014.2,NM_001195015.2,NM_001195016.2,NM_001195017.2
+    GTTTGGGGCCGGCCCAGGCCT
+    GTTTGGGGCCGGCCCAGGCCT
+    NM_014240.2
+    GTTTGGGGCCGGCCCAGGCCT
+    GTTTGGGGCTGGCC-AGGCCT
+    
+* ASO-off-finder v2.0 shows the same alignment for LIMD1 (NM_014240.2) mRNA with 1 mismatch ('C' > 'T') and 1 indel ('C' > '-')

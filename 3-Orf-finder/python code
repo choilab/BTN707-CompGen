@@ -72,6 +72,7 @@ def find_orf(frame):
 #ORF minimum length 입력
 minimum_length = int(input("minimum ORF length:"))
 
+
 #find ORF
 length_list = []
 output=open('output.txt','w')

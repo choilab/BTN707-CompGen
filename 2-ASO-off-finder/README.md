@@ -44,7 +44,9 @@ Finding target and off-target site of antisense oligonucleotides.
 Antisense oligonucleotide (ASO) is a short, synthetic, single-stranded oligonucleotide. ASOs are intended to bind to RNA (coding or non-coding) molecules with complementary sequences.[^1]
 [^1]: [Rinaldi, C., & Wood, M. J. (2018). Antisense oligonucleotides: the next frontier for treatment of neurological disorders. Nature Reviews Neurology, 14(1), 9-21.](https://doi.org/10.1038/nrneurol.2017.148)
 
-By this method, ASOs can modify protein expression or activity of RNAs through several different methods:
+![](./supplement/ASO_mechanism.png)
+
+By this method, ASOs can modify protein expression or activity of RNAs through several different methods[^1]:
 * Target RNA degradation by RNAse H
 * Translational arrest
 * Inhibit RNA-binding proteins
@@ -55,6 +57,8 @@ By this method, ASOs can modify protein expression or activity of RNAs through s
 
 **1\. Gapmer ASO**
 
+![](./supplement/Gapmer_ASO.png)
+
 Gapmer ASOs have modifications in the phosphate backbone to support RNAse H activity and in the sugar (ribose) ring for higher affinity (e.g. LNA).
 
 Modified nucleotides are only present in the wing of ASOs. Normal nucleotides are present about 10 bases in the central region. Target RNA sequence is cleaved by RNAse H.[^2]
@@ -62,6 +66,8 @@ Modified nucleotides are only present in the wing of ASOs. Normal nucleotides ar
 [^2]: [DeVos, S. L., & Miller, T. M. (2013). Antisense oligonucleotides: treating neurodegeneration at the level of RNA. Neurotherapeutics, 10(3), 486-497.](https://doi.org/10.1007/s13311-013-0194-5)
 
 **2\. Splice-switching ASO**
+
+![](./supplement/Splice_ASO.png)
 
 Splice-switching ASOs does not use RNAse H-mediated cleavage of target RNAs. Instead, it sterically blocks the target RNA and regulate pre-mRNA splicing and repairing of defective RNA.[^3]
 

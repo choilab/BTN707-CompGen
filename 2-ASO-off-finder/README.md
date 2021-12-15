@@ -24,7 +24,7 @@ ASO-off-finder is a program that finds target and potential off-target sites in 
 
 * Input: target RNA sequence and oligonucleotide sequence (FASTA format)
 * Output: target and off-target site coordinate, the number of mismatches in the alignment
-* Options: # of allowed mismatches/indels
+* Options: number of allowed mismatches/indels
 
 <a name="intro"></a>
 # Thinkabouts
@@ -40,7 +40,7 @@ Antisense oligonucleotide (ASO) is a short, synthetic, single-stranded oligonucl
 
 ![](./supplement/ASO_mechanism.png)
 
-By this method, ASOs can modify protein expression or activity of RNAs through several different methods[^1]:
+By these mechanisms, ASOs can modify protein expression or activity of RNAs through several different methods[^1]:
 * Target RNA degradation by RNAse H
 * Translational arrest
 * Inhibit RNA-binding proteins

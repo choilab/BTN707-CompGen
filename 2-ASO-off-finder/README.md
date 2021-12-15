@@ -111,8 +111,8 @@ Problem | Query | Reference
 Read alignment problem | Sequenced reads | Reference genome
 ASO off-target finder | ASO sequence | Target RNA sequence database
 
-* Finding ASO off-target sites is similar to the read alignment problem.
-* Apply dynamic programming for approxiamte alignment for matching ASO sequence to target sequences
+* Finding ASO off-target sites is similar to the read alignment problem
+* Apply dynamic programming for approxiamte alignment for matching ASO sequence to target RNA sequences
 
 # Benchmark test
 ## ASO-off-finder v1.1
@@ -125,4 +125,50 @@ Original gene | Sequence | Length
 CD4 | GTTTGGGGCCGGCCCAGGCCT | 20 nt
 CXCL1 | CACCCCAGCCCTATCCCTTT | 21 nt
 
+![](./v1.1/gggenome_result_CD4.png)
+
+    match_site	mismatch_number	alignment_number
+    NM_000616.4,NM_001195014.2,NM_001195015.2,NM_001195016.2,NM_001195017.2	2	2
+    NM_000616.4,NM_001195014.2,NM_001195015.2,NM_001195016.2,NM_001195017.2	1	2
+    NM_000616.4,NM_001195014.2,NM_001195015.2,NM_001195016.2,NM_001195017.2	0	1
+    NM_014240.2	2	1
+
+* ASO-off-finder successfully found the same perfect match from CD4 mRNAs and match from LIMD1 (NM_014240.2) mRNA with 1 mismatch and 1 indel
+
+![](./v1.1/gggenome_result_CXCL1.png)
+
+    match_site	mismatch_number	alignment_number
+    NM_001511.3,NR_046035.1	2	2
+    NM_001511.3,NR_046035.1	1	2
+    NM_001511.3,NR_046035.1	0	1
+    NM_002090.2	2	1
+    NM_002089.3	2	3
+
+* Same result from perfect match from CXCL1 mRNAs and match from CXCL2/3 mRNAs with 2 mismatches
+
 ## ASO-off-finder v2.0
+* Same dataset (RefSeq Human spliced mRNA aggregated, release 18.04) was used for benchmark test
+* Used sequence from CD4 gene from the ASO-off-finder v1.1 benchmark test
+
+Original gene | Sequence | Length
+---- | ---- | ----
+CD4 | GTTTGGGGCCGGCCCAGGCCT | 20 nt
+
+![](./v1.1/gggenome_result_CD4.png)
+
+    NM_000616.4,NM_001195014.2,NM_001195015.2,NM_001195016.2,NM_001195017.2
+    GTTTGGGGCCGGCCCAGGCCT
+    GTTTGGGGCCGGCCCAGGCCT
+    NM_014240.2
+    GTTTGGGGCCGGCCCAGGCCT
+    GTTTGGGGCTGGCC-AGGCCT
+    
+* ASO-off-finder v2.0 shows the same alignment for LIMD1 (NM_014240.2) mRNA with 1 mismatch ('C' > 'T') and 1 indel ('C' > '-')
+
+Program version | Running time
+---- | ----
+ASO-off-finder v1.1 | > 3 min
+ASO-off-finder v2.0 | 1 min 36 seq
+
+* Running time was compared between ASO-off-finder v1.1 and v2.0 when run with dataset and sequence above
+* Also, ASO-off-finder v2.0 is more than two times faster than version 1.1

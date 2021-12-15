@@ -28,8 +28,8 @@ ASO-off-finder is a program that finds target and potential off-target sites in 
 <a name="overview"></a>
 # Program overview
 
-* Input: target genome sequence and oligonucleotide sequence (FASTA format)
-* Output: target and off-target site coordinate, the number of mismatches, the number of ASO sequences in the DNA sequence
+* Input: target RNA sequence and oligonucleotide sequence (FASTA format)
+* Output: target and off-target site coordinate, the number of mismatches in the alignment
 * Options: # of allowed mismatches/indels
 
 <a name="intro"></a>

@@ -67,7 +67,7 @@ Modified nucleotides are only present in the wing of ASOs. Normal nucleotides ar
 
 **2\. Splice-switching ASO**
 
-![](./supplement/Splice_ASO.png)
+![](./supplement/Splice_ASO.)
 
 Splice-switching ASOs does not use RNAse H-mediated cleavage of target RNAs. Instead, it sterically blocks the target RNA and regulate pre-mRNA splicing and repairing of defective RNA.[^3]
 

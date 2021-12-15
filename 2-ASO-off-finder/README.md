@@ -104,7 +104,7 @@ Thus, in silico analysis using the human RNA database followed by in vitro expre
 <a name="outline"></a>
 # Algorithm outline
 
-* ![image](https://user-images.githubusercontent.com/69707020/145952837-ab7720ff-69f8-452b-97dc-b3e0a8fd890d.png)
+![image](https://user-images.githubusercontent.com/69707020/145952837-ab7720ff-69f8-452b-97dc-b3e0a8fd890d.png)
 
 Problem | Query | Reference
 ---- | ---- | ----
@@ -116,3 +116,7 @@ ASO off-target finder | ASO sequence | Target RNA sequence database
 
 # Benchmark test
 
+## ASO-off-finder v1.1
+
+
+## ASO-off-finder v2.0

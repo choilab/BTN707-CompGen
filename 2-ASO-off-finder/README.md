@@ -88,6 +88,10 @@ Thus, in silico analysis using the human RNA database followed by in vitro expre
 <a name="history"></a>
 # Update history
 ## ASO-off-finder v1.0 (2021/11/03)
+* First version of ASO-off-finder
+* Uses dynamic programming for approximate sequence alignment.
+* [Description slides from Cousera lecture](./supplement/Dynamic_programming.pdf)
+* Jupyter notebook file of ASO-off-finder could be found in [v1.0 folder](./v1.0/aso_off_target.ipynb).
 
 <a name="outline"></a>
 # Algorithm outline

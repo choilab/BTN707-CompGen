@@ -1,30 +1,26 @@
-# Team
-* Nisha/이현주
+# Project Description 
+* Nisha
+* 이현주
 
 ---
+## Project - Prediction of On/Off Targets & gRNA designer for CRISPR Genome Editing
 
-1. CRISPR Genome Editing - Prediction of On/Off Target & gRNA designer
-
-   - Input: genome sequence/target gene/oligo (.fna/.fasta nucleotide)
-   - Output: target/off-target site (.coordinate)
-
-
-   - Options: # of mismatches/positional mismatches/insertion/deletion/base ambiguity
-
-
-   - Thinkabouts: 
-i) what is the problem to solve?, 
-
-ii) why is it important? (biological meaning), 
-
-iii) how can you design/build/test?... 
-
-
-   - Example program & literature[^offfinder] - [CAS-off-finder http://www.rgenome.net/cas-offinder/](http://www.rgenome.net/cas-offinder/)
+### Usage example:
+- Input: genome sequence/target gene/oligo (.fna/.fasta nucleotide)
+- Output: target/off-target site (.coordinate)
+- Options: # of mismatches/positional mismatches/insertion/deletion/base ambiguity
+- Example program & literature[^offfinder] - [CAS-off-finder http://www.rgenome.net/cas-offinder/](http://www.rgenome.net/cas-offinder/)
    [^offfinder]:[Cas-OFFinder: a fast and versatile algorithm that searches for potential off-target sites of Cas9 RNA-guided endonucleases](https://academic.oup.com/bioinformatics/article/30/10/1473/267560)
 
+### Contents
+#### i) what is the problem to solve? 
+#### ii) why is it important? (biological meaning) 
+#### iii) how can we design/build/test?
 ---
+### Design of guide RNA and Off-target effect in CRISPR Genome Editing
+With discovery of microbial CRISPR-CAS systems, now any genome can be editied by RNA-guided DNA endonuclease from the modified CRISPR system. This genome editing requires guide RNA for targeting specific genomic locus. When we design the guide RNA, a few rules can be applied. Although CRISPR systems are very efficient genome editing tools, off-target editing can be made at very low rate. For gene therapeutic usage, we should design a gude RNA for specific target in genome and evaluate the designed guide RNA by its off-target possibility. 
 
+---
 hyunju's memo that introduction will include
 - what CRISPR is
 - what we want to do by coding CAS off finder

@@ -140,38 +140,74 @@ print("GC content of a coding sequence :",cc)
     		dna3_4_overlap = my_seq[(i+n3-s):(i+n3)]
     		dna4_1_overlap = my_seq[i:(i+s)]
         
-    		seq=dna1_2_overlap
     		if i == 0:
-        		if gc < 0.4 or gc > 0.6 and Tm > 60:
-            		i += 1
-        		else:
-            		print(dna1)
-            		print(seq)
+       			seq = dna1_2_overlap
+     		        tm1 = m = mt.Tm_NN(seq, dnac1 = 50, Na = 10, K = 10, Mg = 2, dNTPs = 0.6)
+        	        print(tm1)
+        	        gc1 = check_GC(seq)
+        		print ("gc1 :",gc1)
+        
+        		seq = dna2_3_overlap
+        		tm2 = mt.Tm_NN(seq, dnac1 = 50, Na = 10, K = 10, Mg = 2, dNTPs = 0.6)
+        		print(tm2)
+        		gc2 = check_GC(seq)
+        		print ("gc2 :",gc2)
+        
+        		seq = dna3_4_overlap
+        		tm3 = mt.Tm_NN(seq, dnac1 = 50, Na = 10, K = 10, Mg = 2, dNTPs = 0.6)
+        		print(tm3)
+        		gc3 = check_GC(seq)
+        		print ("gc3 :",gc3)
     
-    		seq=dna2_3_overlap
-    		if i == 0:
-        		if gc < 0.4 or gc > 0.6 and Tm > 60:
-            		i += 1
-        		else:
-            		print(dna2)
-            		print(seq)
-            
-    		seq=dna3_4_overlap
-    		if i == 0:
-        		if gc < 0.4 or gc > 0.6 and Tm > 60:
-            		i += 1
-        		else:
-            		print(dna3)
-            		print(seq)
-            
-    		seq=dna4_1_overlap
-    		if i == 0:
-        		if gc < 0.4 or gc > 0.6 and Tm > 60:
-            		i += 1
-        		else:
-            		print(dna4)
-            		print(seq)
+        		seq = dna4_1_overlap
+        		tm4 = mt.Tm_NN(seq, dnac1 = 50, Na = 10, K = 10, Mg = 2, dNTPs = 0.6)
+        		print(tm4)
+        		gc4 = check_GC(seq)
+        		print ("gc4 :",gc4)
+        
+        		while tm1 > 60 or tm2 > 60 or tm3 > 60 or tm4 > 60 or gc1 < 0.4 or gc2 < 0.4 or gc3 < 0.4 or gc4 < 0.4 or gc1 > 0.6 or gc2 > 0.6 or gc3 > 0.6 or gc4 > 0.6:
+            		dna1 = my_seq[i:(i+n1)]
+            		dna1_2_overlap = my_seq[(i+n1-s):(i+n1)]
+            		seq = dna1_2_overlap
+            		tm1 = mt.Tm_NN(seq, dnac1 = 50, Na = 10, K = 10, Mg = 2, dNTPs = 0.6)
+            		gc1 = check_GC(seq)
+            		dna2 = my_seq[(i+n1-s):(i+n2)]
+            		dna2_3_overlap = my_seq[(i+n2-s):(i+n2)]
+            		seq = dna2_3_overlap
+            		tm2 = mt.Tm_NN(seq, dnac1 = 50, Na = 10, K = 10, Mg = 2, dNTPs = 0.6)
+            		gc2 = check_GC(seq)
+            		dna3 = my_seq[(i+n2-s):(i+n3)]
+            		dna3_4_overlap = my_seq[(i+n3-s):(i+n3)]
+            		seq = dna3_4_overlap
+            		tm3 = mt.Tm_NN(seq, dnac1 = 50, Na = 10, K = 10, Mg = 2, dNTPs = 0.6)
+            		gc3 = check_GC(seq)
+            		dna0 = my_seq[0:(i+s)]
+            		dna4 = my_seq[(i+n3-s):(len(my_seq))]+dna0
+            		dna4_1_overlap = my_seq[i:(i+s)]
+            		seq = dna4_1_overlap
+            		tm = mt.Tm_NN(seq, dnac1 = 50, Na = 10, K = 10, Mg = 2, dNTPs = 0.6)
+            		gc4 = check_GC(seq)
+           		i += 1
 
+            else:
+            		print(i)
+            		print(tm1)
+            		print(gc1)
+            		print("dna1:",dna1)
+            		print("dna1_2_overlap:",dna1_2_overlap)
+            		print(tm2)
+            		print(gc2)
+            		print("dna2:",dna2)
+            		print("dna2_3_overlap:",dna2_3_overlap)
+            		print(tm3)
+            		print(gc3)
+            		print("dna3:",dna3)
+            		print("dna3_4_overlap:",dna3_4_overlap)
+            		print(tm4)
+           		print(gc4)
+            		print("dna4:",dna4)
+            		print("dna4_1_overlap:",dna4_1_overlap)
+            		break
 	
 	### get assembled gene and compare with target input
     gene = dna1[0:-s] + dna2[0:-s] + dna3[0:-s] + dna4[0:-s]
@@ -182,17 +218,162 @@ print("GC content of a coding sequence :",cc)
 	def primer_sequence(seq):
         """ primer sequence for each frament """
          
-    for x in range(1,n0-s):
-         if tm < 60:
-            primer1_F = dna4_1_overlap + dna1[s:s+x]
-            seq = primer1_F
-            tm = mt.Tm_NN(seq, dnac1 = 50, Na = 10, K = 10, Mg = 2, dNTPs = 0.6)
-            x += 1
-        else:
-            print(seq)
-            print(tm)
-            print(x)
-            break             
+	s = 22
+
+	for x in range(0, n0-s):
+    		primer1_F = dna4_1_overlap + dna1[s:s+x]
+    		seq = primer1_F
+    		tm = mt.Tm_NN(seq, dnac1 = 50, Na = 10, K = 10, Mg = 2, dNTPs = 0.6)
+    		x = 0
+    		while tm < 60:
+        		primer1_F = dna4_1_overlap + dna1[s:s+x]
+        		seq = primer1_F
+        		tm = mt.Tm_NN(seq, dnac1 = 50, Na = 10, K = 10, Mg = 2, dNTPs = 0.6) 
+        		x += 1
+    		else:
+        		print("primer1_F:",primer1_F)
+        		print(x)
+        		print(tm)
+        		break
+        
+
+	for x in range(0, n0-s):
+    		primer2_F = dna1_2_overlap + dna2[s:s+x]
+    		seq = primer2_F
+    		tm = mt.Tm_NN(seq, dnac1 = 50, Na = 10, K = 10, Mg = 2, dNTPs = 0.6)
+    		x = 0
+    		while tm < 60:
+        		primer2_F = dna1_2_overlap + dna2[s:s+x]
+        		seq = primer2_F
+        		tm = mt.Tm_NN(seq, dnac1 = 50, Na = 10, K = 10, Mg = 2, dNTPs = 0.6) 
+        		x += 1
+   		else:
+        		print("primer2_F:",primer2_F)
+        		print(x)
+        		print(tm)
+        		break
+                
+        
+	for x in range(0, n0-s):
+    		primer3_F = dna2_3_overlap + dna3[s:s+x]
+    		seq = primer3_F
+    		tm = mt.Tm_NN(seq, dnac1 = 50, Na = 10, K = 10, Mg = 2, dNTPs = 0.6)
+    		x = 0
+    		while tm < 60:
+        		primer3_F = dna2_3_overlap + dna3[s:s+x]
+        		seq = primer3_F
+        		tm = mt.Tm_NN(seq, dnac1 = 50, Na = 10, K = 10, Mg = 2, dNTPs = 0.6) 
+        		x += 1
+    		else:
+        		print("primer3_F:",primer3_F)
+        		print(x)
+        		print(tm)
+        		break
+
+
+	for x in range(0, n0-s):
+    		primer4_F = dna3_4_overlap + dna4[s:s+x]
+    		seq = primer4_F
+    		tm = mt.Tm_NN(seq, dnac1 = 50, Na = 10, K = 10, Mg = 2, dNTPs = 0.6)
+    		x = 0
+    		while tm < 60:
+        		primer4_F = dna3_4_overlap + dna4[s:s+x]
+        		seq = primer4_F
+        		tm = mt.Tm_NN(seq, dnac1 = 50, Na = 10, K = 10, Mg = 2, dNTPs = 0.6) 
+        		x += 1
+    		else:
+        		print("primer4_F:",primer4_F)
+        		print(x)
+        		print(tm)
+        		break 
+	
+	### check reverse sequence
+	def get_rc(seq):
+    	"""   Returns the reverse complement sequence """
+    		return str(Seq(seq).reverse_complement())
+	seq = primer3_F
+	rc = get_rc(seq)
+	print ("reverse complement :",rc)
+	
+	# get reverse primer sequence
+	def get_primer_R(seq):
+    	""" get reverse primer sequence for each fragment """
+
+	for y in range (0,n0-s):
+    		R1 = dna1[-s-y:-s] + dna1_2_overlap
+   		seq = R1
+    		primer1_R = get_rc(seq)
+    		tm = mt.Tm_NN(seq, dnac1 = 50, Na = 10, K = 10, Mg = 2, dNTPs = 0.6)
+   
+    		y = 0
+    		while tm < 60:
+        		R1 = dna1[-s-y:-s] + dna1_2_overlap
+        		seq = R1
+        		primer1_R = get_rc(seq)
+        		tm = mt.Tm_NN(seq, dnac1 = 50, Na = 10, K = 10, Mg = 2, dNTPs = 0.6) 
+        		y += 1
+    		else:
+        		print("primer1_R:",primer1_R)
+        		print(y)
+        		print(tm)
+        		break
+
+	for y in range (0,n0-s):
+    		R2 = dna2[-s-y:-s] + dna2_3_overlap
+    		seq = R2
+    		primer2_R = get_rc(seq)
+    		tm = mt.Tm_NN(seq, dnac1 = 50, Na = 10, K = 10, Mg = 2, dNTPs = 0.6)
+   
+    		y = 0
+    		while tm < 60:
+        		R2 = dna2[-s-y:-s] + dna2_3_overlap
+        		seq = R2
+        		primer2_R = get_rc(seq)
+        		tm = mt.Tm_NN(seq, dnac1 = 50, Na = 10, K = 10, Mg = 2, dNTPs = 0.6) 
+        		y += 1
+    		else:
+        		print("primer2_R:",primer2_R)
+        		print(y)
+        		print(tm)
+        		break
+
+	for y in range (0,n0-s):
+    		R3 = dna3[-s-y:-s] + dna3_4_overlap
+    		seq = R3
+    		primer3_R = get_rc(seq)
+    		tm = mt.Tm_NN(seq, dnac1 = 50, Na = 10, K = 10, Mg = 2, dNTPs = 0.6)
+   
+    		y = 0
+    		while tm < 60:
+        		R3 = dna3[-s-y:-s] + dna3_4_overlap
+        		seq = R3
+        		primer3_R = get_rc(seq)
+        		tm = mt.Tm_NN(seq, dnac1 = 50, Na = 10, K = 10, Mg = 2, dNTPs = 0.6) 
+        		y += 1
+    		else:
+        		print("primer3_R:",primer3_R)
+        		print(y)
+        		print(tm)
+        		break
+        
+	for y in range (0,n0-s):
+    		R4 = dna4[-s-y:-s] + dna4_1_overlap
+    		seq = R4
+    		primer4_R = get_rc(seq)
+    		tm = mt.Tm_NN(seq, dnac1 = 50, Na = 10, K = 10, Mg = 2, dNTPs = 0.6)
+   
+   	 	y = 0
+    		while tm < 60:
+        		R4 = dna4[-s-y:-s] + dna4_1_overlap
+        		seq = R4
+        		primer4_R = get_rc(seq)
+        		tm = mt.Tm_NN(seq, dnac1 = 50, Na = 10, K = 10, Mg = 2, dNTPs = 0.6) 
+        		y += 1
+    	else:
+        		print("primer4_R:",primer4_R)
+        		print(y)
+        		print(tm)
+        		break
 
 ## 황종현 
 

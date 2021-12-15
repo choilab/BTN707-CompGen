@@ -75,6 +75,7 @@ minimum_length = int(input("minimum ORF length:"))
 
 #find ORF
 length_list = []
+orf_nt_list = []
 output=open('output.txt','w')
 
 for repeat in range(6):
@@ -97,6 +98,7 @@ for repeat in range(6):
         output.write('>\n ORF frame number: %s\n ORF nucleotide seqeunce: %s\n ORF amino acid seqeunce: %s\n ORF nucleotide lenth: %s\n ORF amino acid length:%s\n \n' 
                      % (frame_number, nt, aa, len(nt), len(aa)))
         length_list.append(len(nt))
+        orf_nt_list.append(str(nt))
 
 
 #jupyter notebook에서 결과 읽기
@@ -111,3 +113,6 @@ plt.hist(length_list, bins=30)
 plt.xlabel('ORF length')
 plt.ylabel('frequency')
 plt.show()
+
+#가장 긴 ORF 서열 찾기
+print(max(orf_nt_list, key = len))

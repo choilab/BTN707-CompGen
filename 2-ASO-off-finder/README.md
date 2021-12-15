@@ -87,11 +87,15 @@ Thus, in silico analysis using the human RNA database followed by in vitro expre
 
 <a name="history"></a>
 # Update history
-## ASO-off-finder v1.0 (2021/11/03)
+## ASO-off-finder v1.0 (2021/11/17)
 * First version of ASO-off-finder
-* Uses dynamic programming for approximate sequence alignment.
-* [Description slides from Cousera lecture](./supplement/Dynamic_programming.pdf)
+* Uses dynamic programming for approximate sequence alignment. [Description slides from Cousera lecture](./supplement/Dynamic_programming.pdf)
 * Jupyter notebook file of ASO-off-finder could be found in [v1.0 folder](./v1.0/aso_off_target.ipynb).
+
+## ASO-off-finder v1.1 (2021/12/01)
+* Shorter run time using CPU multiprocessing by implementing `concurrent.futures` module
+* Input multiple RNA/ASO sequences by FASTA format files
+* Human spliced/pre-spliced mRNA sequences can be downloaded from [D3G database](https://d3g.riken.jp/release/18.04/)
 
 <a name="outline"></a>
 # Algorithm outline

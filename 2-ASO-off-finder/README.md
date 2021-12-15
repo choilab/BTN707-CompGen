@@ -38,7 +38,7 @@ Finding target and off-target site of antisense oligonucleotides.
 Antisense oligonucleotide (ASO) is a short, synthetic, single-stranded oligonucleotide. ASOs are intended to bind to RNA (coding or non-coding) molecules with complementary sequences.[^1]
 [^1]: [Rinaldi, C., & Wood, M. J. (2018). Antisense oligonucleotides: the next frontier for treatment of neurological disorders. Nature Reviews Neurology, 14(1), 9-21.](https://doi.org/10.1038/nrneurol.2017.148)
 
-![](./supplement/ASO_mechanism.png)
+[Fig. 1 Types and functions of ASOs](https://media.springernature.com/lw685/springer-static/image/art%3A10.1038%2Fnrneurol.2017.148/MediaObjects/41582_2018_Article_BFnrneurol2017148_Fig2_HTML.jpg)
 
 By this method, ASOs can modify protein expression or activity of RNAs through several different methods[^1]:
 * Target RNA degradation by RNAse H
@@ -51,7 +51,7 @@ By this method, ASOs can modify protein expression or activity of RNAs through s
 
 **1\. Gapmer ASO**
 
-![](./supplement/Gapmer_ASO.png)
+[Fig. 2 ....](./supplement/Gapmer_ASO.png)
 
 Gapmer ASOs have modifications in the phosphate backbone to support RNAse H activity and in the sugar (ribose) ring for higher affinity (e.g. LNA).
 
@@ -61,7 +61,7 @@ Modified nucleotides are only present in the wing of ASOs. Normal nucleotides ar
 
 **2\. Splice-switching ASO**
 
-![](./supplement/Splice_ASO.jpeg)
+[Fig. 3 ....](./supplement/Splice_ASO.jpeg)
 
 Splice-switching ASOs does not use RNAse H-mediated cleavage of target RNAs. Instead, it sterically blocks the target RNA and regulate pre-mRNA splicing and repairing of defective RNA.[^3]
 
@@ -113,12 +113,14 @@ ASO off-target finder | ASO sequence | Target RNA sequence database
 
 * Finding ASO off-target sites is similar to the read alignment problem
 * Apply dynamic programming for approxiamte alignment for matching ASO sequence to target RNA sequences
+---
 
 # Benchmark test
+
 ## ASO-off-finder v1.1
-* Used dataset: RefSeq Human aggregated spliced mRNA sequence, release 18.04 [D3G database](https://d3g.riken.jp/release/18.04/)
-* Compare result from reference tool, [gggenome](https://gggenome.dbcls.jp/), and ASO-off-finder's output
-* Use first 20~21 nucleotide sequence from human mRNA sequence as artificial ASO sequences for benchmark test
+1. Used dataset: RefSeq Human aggregated spliced mRNA sequence, release 18.04 [D3G database](https://d3g.riken.jp/release/18.04/)
+2. Compare result from reference tool, [gggenome](https://gggenome.dbcls.jp/), and ASO-off-finder's output
+3. Use first 20~21 nucleotide sequence from human mRNA sequence as artificial ASO sequences for benchmark test
 
 Original gene | Sequence | Length
 ---- | ---- | ----

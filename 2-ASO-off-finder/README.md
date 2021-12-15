@@ -10,12 +10,6 @@ ASO-off-finder is a program that finds target and potential off-target sites in 
   * [What is the problem to solve?](#intro2)
   * [Why is the problem biologically important?](#intro3)
 * [Update history](#history)
-  * 2021/11/03
-  * 2021/11/10
-  * 2021/11/17
-  * 2021/11/24
-  * 2021/12/01
-  * 2021/12/08
 * [Algorithm outline](#outline)
 * [Benchmark test](#benchmark)
 
@@ -93,7 +87,7 @@ Thus, in silico analysis using the human RNA database followed by in vitro expre
 
 <a name="history"></a>
 # Update history
-##
+## ASO-off-finder v1.0 (2021/11/03)
 
 <a name="outline"></a>
 # Algorithm outline

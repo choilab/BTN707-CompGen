@@ -13,6 +13,25 @@ def reverse_complement(dna):
 reverse_dna=reverse_complement(dna)
 
 
+#codon table
+codon_table = {}
+table_selection = input("Select your Codon Table Number \n(1. The Standard Code \n2. The Vertebrate Mitochondrial Code \n3. The Yeast Mitochondrial Code \n4. The Mold, Protozoan, and Coelenterate Mitochondrial Code and the Mycoplasma/Spiroplasma Code \n5. The Invertebrate Mitochondrial Code \n6. The Ciliate, Dasycladacean and Hexamita Nuclear Code \n9. The Echinoderm and Flatworm Mitochondrial Code \n10. The Euplotid Nuclear Code \n11. The Bacterial, Archaeal and Plant Plastid Code \n12. The Alternative Yeast Nuclear Code \n13. The Ascidian Mitochondrial Code \n14. The Alternative Flatworm Mitochondrial Code \n16. Chlorophycean Mitochondrial Code \n21. Trematode Mitochondrial Code \n22. Scenedesmus obliquus Mitochondrial Code \n23. Thraustochytrium Mitochondrial Code \n24. Rhabdopleuridae Mitochondrial Code \n25. Candidate Division SR1 and Gracilibacteria Code \n26. Pachysolen tannophilus Nuclear Code \n27. Karyorelict Nuclear Code \n28. Condylostoma Nuclear Code \n29. Mesodinium Nuclear Code \n30. Peritrich Nuclear Code \n31. Blastocrithidia Nuclear Code \n33. Cephalodiscidae Mitochondrial UAA-Tyr Code)\n:")
+codon_file_name = 'transl_table_' + table_selection + '.txt'
+
+codon_table1 = open(str(codon_file_name))
+
+for line in codon_table1:
+    line = line.rstrip()
+    line_split = line.split('\t')
+
+    for block in line_split:
+        block_split = block.split(' ')
+        codon = block_split[0]
+        amino_acid = block_split[1]
+
+        codon_table[codon] = amino_acid
+
+
 #ORF find 함수 정의
 #triplet만 추가(1, 2개 nucleotide 버리기)
 def find_orf(frame):
@@ -48,14 +67,6 @@ def find_orf(frame):
         orf_end = site + len(amino_sequence) + 1
 
     return output
-    
-
-#Codon definition
-codon_table = {'TTT': 'F', 'TTC': 'F', 'TTA': 'L', 'TTG': 'L', 'TCT': 'S','TCC': 'S', 'TCA': 'S', 'TCG': 'S', 'TAT': 'Y', 'TAC': 'Y', 'TAA':'*','TAG':'*', 'TGA':'*', 
-'TGT': 'C', 'TGC': 'C', 'TGG': 'W', 'CTT': 'L', 'CTC': 'L', 'CTA': 'L', 'CTG': 'L', 'CCT': 'P', 'CCC': 'P', 'CCA': 'P', 'CCG': 'P', 'CAT': 'H', 'CAC': 'H', 'CAA': 'Q', 
-'CAG': 'Q','CGT': 'R', 'CGC': 'R', 'CGA': 'R', 'CGG': 'R', 'ATT': 'I', 'ATC': 'I', 'ATA': 'I','ATG': 'M', 'ACT': 'T', 'ACC': 'T','ACA': 'T', 'ACG': 'T', 'AAT': 'N',
-'AAC': 'N', 'AAA': 'K','AAG': 'K', 'AGT': 'S', 'AGC': 'S', 'AGA': 'R', 'AGG': 'R','GTT': 'V', 'GTC': 'V', 'GTA': 'V', 'GTG': 'V', 'GCT': 'A','GCC': 'A', 'GCA': 'A', 
-'GCG': 'A', 'GAT': 'D','GAC': 'D','GAA': 'E', 'GAG': 'E', 'GGT': 'G', 'GGC': 'G', 'GGA': 'G','GGG': 'G'}
                
 
 #ORF minimum length 입력

@@ -125,4 +125,6 @@ Original gene | Sequence | Length
 CD4 | GTTTGGGGCCGGCCCAGGCCT | 20 nt
 CXCL1 | CACCCCAGCCCTATCCCTTT | 21 nt
 
+![](.v1.1/gggenome_result_CD4.png)
+
 ## ASO-off-finder v2.0

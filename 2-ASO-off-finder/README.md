@@ -91,8 +91,14 @@ Also, animal studies cannot be used for off-target finding of ASO applied to hum
 
 Thus, in silico analysis using the human RNA database followed by in vitro expression analysis using human cells are essential.
 
+<a name="history"></a>
+# Update history
+##
+
 <a name="outline"></a>
 # Algorithm outline
+
+* ![image](https://user-images.githubusercontent.com/69707020/145952837-ab7720ff-69f8-452b-97dc-b3e0a8fd890d.png)
 
 Problem | Query | Reference
 ---- | ---- | ----
@@ -101,10 +107,6 @@ ASO off-target finder | ASO sequence | Target RNA sequence database
 
 * Finding ASO off-target sites is similar to the read alignment problem.
 * Apply dynamic programming for approxiamte alignment for matching ASO sequence to target sequences
-* ![image](https://user-images.githubusercontent.com/69707020/145952837-ab7720ff-69f8-452b-97dc-b3e0a8fd890d.png)
-
-
-# Code overview
 
 # Benchmark test
 

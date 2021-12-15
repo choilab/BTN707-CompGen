@@ -135,37 +135,37 @@ print("GC content of a coding sequence :",cc)
 		dna4 = my_seq[(i+n3-s):(len(my_seq))]+dna0 
 
     	#get_overlapped sequence
-    		dna1_2_overlap = my_seq[(i+n1-s):(i+n1)]
-    		dna2_3_overlap = my_seq[(i+n2-s):(i+n2)]
-    		dna3_4_overlap = my_seq[(i+n3-s):(i+n3)]
-    		dna4_1_overlap = my_seq[i:(i+s)]
+    	dna1_2_overlap = my_seq[(i+n1-s):(i+n1)]
+    	dna2_3_overlap = my_seq[(i+n2-s):(i+n2)]
+    	dna3_4_overlap = my_seq[(i+n3-s):(i+n3)]
+    	dna4_1_overlap = my_seq[i:(i+s)]
         
-    		if i == 0:
-       			seq = dna1_2_overlap
-     		        tm1 = m = mt.Tm_NN(seq, dnac1 = 50, Na = 10, K = 10, Mg = 2, dNTPs = 0.6)
-        	        print(tm1)
-        	        gc1 = check_GC(seq)
-        		print ("gc1 :",gc1)
+    	if i == 0:
+       	    seq = dna1_2_overlap
+     	    tm1 = m = mt.Tm_NN(seq, dnac1 = 50, Na = 10, K = 10, Mg = 2, dNTPs = 0.6)
+        	    print(tm1)
+        	    gc1 = check_GC(seq)
+                print ("gc1 :",gc1)
         
-        		seq = dna2_3_overlap
-        		tm2 = mt.Tm_NN(seq, dnac1 = 50, Na = 10, K = 10, Mg = 2, dNTPs = 0.6)
-        		print(tm2)
-        		gc2 = check_GC(seq)
-        		print ("gc2 :",gc2)
+        	    seq = dna2_3_overlap
+        	    tm2 = mt.Tm_NN(seq, dnac1 = 50, Na = 10, K = 10, Mg = 2, dNTPs = 0.6)
+        	    print(tm2)
+        	    gc2 = check_GC(seq)
+        	    print ("gc2 :",gc2)
         
-        		seq = dna3_4_overlap
-        		tm3 = mt.Tm_NN(seq, dnac1 = 50, Na = 10, K = 10, Mg = 2, dNTPs = 0.6)
-        		print(tm3)
-        		gc3 = check_GC(seq)
-        		print ("gc3 :",gc3)
+        	    seq = dna3_4_overlap
+        	    tm3 = mt.Tm_NN(seq, dnac1 = 50, Na = 10, K = 10, Mg = 2, dNTPs = 0.6)
+        	    print(tm3)
+        	    gc3 = check_GC(seq)
+        	    print ("gc3 :",gc3)
     
-        		seq = dna4_1_overlap
-        		tm4 = mt.Tm_NN(seq, dnac1 = 50, Na = 10, K = 10, Mg = 2, dNTPs = 0.6)
-        		print(tm4)
-        		gc4 = check_GC(seq)
-        		print ("gc4 :",gc4)
+        	    seq = dna4_1_overlap
+        	    tm4 = mt.Tm_NN(seq, dnac1 = 50, Na = 10, K = 10, Mg = 2, dNTPs = 0.6)
+        	    print(tm4)
+        	    gc4 = check_GC(seq)
+        	    print ("gc4 :",gc4)
         
-        		while tm1 > 60 or tm2 > 60 or tm3 > 60 or tm4 > 60 or gc1 < 0.4 or gc2 < 0.4 or gc3 < 0.4 or gc4 < 0.4 or gc1 > 0.6 or gc2 > 0.6 or gc3 > 0.6 or gc4 > 0.6:
+        	    while max([tm1,tm2,tm3,tm4]) > 60 or min([gc1,gc2,gc3,gc4]) < 0.4 or max([gc1,gc2,gc3,gc4]) > 0.6:
             		dna1 = my_seq[i:(i+n1)]
             		dna1_2_overlap = my_seq[(i+n1-s):(i+n1)]
             		seq = dna1_2_overlap
@@ -187,9 +187,9 @@ print("GC content of a coding sequence :",cc)
             		seq = dna4_1_overlap
             		tm = mt.Tm_NN(seq, dnac1 = 50, Na = 10, K = 10, Mg = 2, dNTPs = 0.6)
             		gc4 = check_GC(seq)
-           		i += 1
+           			i += 1
 
-            else:
+                    else:
             		print(i)
             		print(tm1)
             		print(gc1)
@@ -204,7 +204,7 @@ print("GC content of a coding sequence :",cc)
             		print("dna3:",dna3)
             		print("dna3_4_overlap:",dna3_4_overlap)
             		print(tm4)
-           		print(gc4)
+           			print(gc4)
             		print("dna4:",dna4)
             		print("dna4_1_overlap:",dna4_1_overlap)
             		break

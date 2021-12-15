@@ -29,8 +29,9 @@
 # algorithms
 ![image](https://user-images.githubusercontent.com/91528102/146112346-113b2c40-063a-44c2-b2e5-531f4e68ccdf.png)
 
-# option
+# Option
  - choose codon table
+ - minimum ORF length
  - ORF length distribution
 
 # ORF program

@@ -25,10 +25,9 @@
  - CDS는 start codon의 위치, ORF의 길이 등에 의해 결정
  - 일반적으로 가능한 ORF 중 가장 긴 ORF는 CDS
  - ORF 연구를 통해 병원체의 작동 원리를 파악할 수 있어 치료제와 백신 연구에 중요
- - 
+ 
 # algorithms
-![image](https://user-images.githubusercontent.com/91528102/144167833-39d0eeef-881a-4e87-a7df-0b25f5a5f826.png)
-
+![image](https://user-images.githubusercontent.com/91528102/146112346-113b2c40-063a-44c2-b2e5-531f4e68ccdf.png)
 
 # option
  - choose codon table

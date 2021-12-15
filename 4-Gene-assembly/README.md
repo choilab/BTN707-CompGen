@@ -142,7 +142,7 @@ print("GC content of a coding sequence :",cc)
         
     	if i == 0:
        	    seq = dna1_2_overlap
-     	    tm1 = m = mt.Tm_NN(seq, dnac1 = 50, Na = 10, K = 10, Mg = 2, dNTPs = 0.6)
+     	    tm1 = mt.Tm_NN(seq, dnac1 = 50, Na = 10, K = 10, Mg = 2, dNTPs = 0.6)
         	    print(tm1)
         	    gc1 = check_GC(seq)
                 print ("gc1 :",gc1)

@@ -111,8 +111,8 @@ Problem | Query | Reference
 Read alignment problem | Sequenced reads | Reference genome
 ASO off-target finder | ASO sequence | Target RNA sequence database
 
-* Finding ASO off-target sites is similar to the read alignment problem.
-* Apply dynamic programming for approxiamte alignment for matching ASO sequence to target sequences
+* Finding ASO off-target sites is similar to the read alignment problem
+* Apply dynamic programming for approxiamte alignment for matching ASO sequence to target RNA sequences
 
 # Benchmark test
 ## ASO-off-finder v1.1
@@ -164,3 +164,9 @@ CD4 | GTTTGGGGCCGGCCCAGGCCT | 20 nt
     GTTTGGGGCTGGCC-AGGCCT
     
 * ASO-off-finder v2.0 shows the same alignment for LIMD1 (NM_014240.2) mRNA with 1 mismatch ('C' > 'T') and 1 indel ('C' > '-')
+
+Program version | Running time
+---- | ----
+ASO-off-finder v1.1 | > 3 min
+ASO-off-finder v2.0 | 1 min 36 seq
+gggenome website | < 10 seq

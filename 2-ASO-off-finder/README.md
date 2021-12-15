@@ -115,8 +115,14 @@ ASO off-target finder | ASO sequence | Target RNA sequence database
 * Apply dynamic programming for approxiamte alignment for matching ASO sequence to target sequences
 
 # Benchmark test
-
 ## ASO-off-finder v1.1
+* Used dataset: RefSeq Human aggregated spliced mRNA sequence, release 18.04 [D3G database](https://d3g.riken.jp/release/18.04/)
+* Compare result from reference tool, [gggenome](https://gggenome.dbcls.jp/), and ASO-off-finder's output
+* Use first 20~21 nucleotide sequence from human mRNA sequence as artificial ASO sequences for benchmark test
 
+Original gene | Sequence | Length
+---- | ---- | ----
+CD4 | GTTTGGGGCCGGCCCAGGCCT | 20 nt
+CXCL1 | CACCCCAGCCCTATCCCTTT | 21 nt
 
 ## ASO-off-finder v2.0

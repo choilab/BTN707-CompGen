@@ -8,14 +8,16 @@
  * Example program & literature[^1] - ORFfinder https://www.ncbi.nlm.nih.gov/orffinder/
 [^1]: [Borf: Improved ORF prediction in de-novo assembled transcriptome annotation](https://www.biorxiv.org/content/10.1101/2021.04.12.439551v1.full)
 
-# ORF
+# ORF(open reading frame)
 ![image](https://user-images.githubusercontent.com/91528102/144167591-4ffec221-4c0b-4845-af9e-bc25bf4e99fa.png)
 
 ![image](https://user-images.githubusercontent.com/91528102/142041888-94b1cc0d-f2f7-474a-a9c5-0669918e0ce6.png)
 
  - mRNA로 전사되어 단백질이 될 가능성이 있는 염기 서열.
- - 시작 코돈(AUG)에서부터 종결 코돈(UAA, UAG, UGA)까지의 서열.
- - ATG-[3n]-TAG와 같이 시작 코돈과 종결 코돈 사이에 3배수의 염기가 존재.
+ - 시작 코돈(일반적으로 AUG)에서부터 종결 코돈(일반적으로 UAA, UAG, UGA)까지의 서열.
+ - 1개의 codon은 3개의 nucleotide에 의해 지정.
+ - 시작 코돈과 종결 코돈 사이에 3배수의 염기가 존재.
+ - 총 6개의 가능한 ORF가 존재(+1, +2, +3, -1, -2, -3 frame)
 
 # why is it important?
  - 단백질로 번역되는 염기 서열을 찾기 위해 모든 DNA 서열을 직접 확인하기에는 시간과 비용이 많이 들기 때문에 ORF를 찾으면 비용적, 시간적 효과적이다.
@@ -29,9 +31,8 @@
 
 
 # option
- - 원하는 strand input(+1, +2, +3, -1, -2, -3 중에 선택)
+ - choose codon table
  - ORF length distribution
- - alternative start/stop codon
 
 # ORF program
  

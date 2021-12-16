@@ -3,7 +3,7 @@
 * 이현주
 
 ---
-## Project - Prediction of On/Off Targets & gRNA designer for CRISPR Genome Editing
+## Prediction of On/Off Targets & gRNA designer for CRISPR Genome Editing
 
 ### Usage example:
 - Input: genome sequence/target gene/oligo (.fna/.fasta nucleotide)

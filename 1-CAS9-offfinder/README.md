@@ -109,10 +109,11 @@ After final presentation,
 - Find matched sequence with start site(this will be on target)
 - Find similar tool named [CRISPOR](http://crispor.tefor.net/crispor.py?batchId=3TeBYMvGLsICUasefwi6)
 - Tried Homo sapiens (hg19), chr7:5569177-5569415, reverse genomic strand with N(20)NGG : PAM site.
+- More detail of result is in [CRISPOR-result](https://github.com/choilab/BTN707-2021-Fall/blob/main/1-CAS9-offfinder/CRSIPOR-result-guides_hg19-chr7-5569176-5569415.xls)
+
 ![image](https://user-images.githubusercontent.com/79410957/146033455-c61df314-6ecd-4399-b9ea-2cdce03cae41.png)
 - It showed whole result we want which is Guide Sequence + PAM and four types of specificity socring algorithms.
 ![image](https://user-images.githubusercontent.com/79410957/146033856-ccc17a6f-e74f-4def-921c-1e5811cb38ae.png)
-- More detail of result is in [CRISPOR-result](https://github.com/choilab/BTN707-2021-Fall/blob/main/1-CAS9-offfinder/CRSIPOR-result-guides_hg19-chr7-5569176-5569415.xls)
 
 ---
 #### CRISPOR has four scoring algorithms shown below.

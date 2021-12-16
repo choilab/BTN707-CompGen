@@ -14,14 +14,22 @@
 
 ### Contents
 #### i) what is the problem to solve? 
+- CRISPR Cas OFFinder put input of PAM site, target genome, query sequence and get how many off target in target genome based on query sequence and PAM site.
+- It should have all information of target genome, query sequence and PAM site.
+- So we decide our program put only target genome and query sequence and compare all PAM DB to find what PAM system is the most matched and least off-target.
 #### ii) why is it important? (biological meaning) 
+- It will get whole off target about one target genome based on PAM site.
+- It's convenient that doesn't have to compare all PAM system and get most profit PAM system.
 #### iii) how can we design/build/test?
+- It will be shown below that how to design, build, test our project.
+
+
 ---
 ### Design of guide RNA and Off-target effect in CRISPR Genome Editing
 With discovery of microbial CRISPR-CAS systems, now any genome can be editied by RNA-guided DNA endonuclease from the modified CRISPR system. This genome editing requires guide RNA for targeting specific genomic locus. When we design the guide RNA, a few rules can be applied. Although CRISPR systems are very efficient genome editing tools, off-target editing can be made at very low rate. For gene therapeutic usage, we should design a gude RNA for specific target in genome and evaluate the designed guide RNA by its off-target possibility. 
 
 ---
-<Following is CAS-off-finder>
+### Following is CAS-off-finder
 
 [Fig. 1 Algorithmic flow of the CAS-off-finder program](https://user-images.githubusercontent.com/79410957/139711521-9a00c6ef-0f09-4256-9dfb-ffc57cbbcd53.png)
 - Figure-1-(A) means the scheme of Cas-OFFinder. It finds 20bp of matched query sequence and 3bp of PAM site in SpCas9.
@@ -29,7 +37,7 @@ With discovery of microbial CRISPR-CAS systems, now any genome can be editied by
 - Figure-1-(C) is running time per target site as a function of the number of input target sites via CPU (black squares) and GPU (red circles).
 
 ---
-coursera "string" practical course
+### coursera "string" practical course
 - we may use string to read genome in python
 - what process needs?
 1. get input file(FASTA format)
@@ -42,6 +50,7 @@ coursera "string" practical course
 
 
 ---
+### Focus Flow of project
 
 - we focus on how to use Cas OFFinder's off-target finding tool
 - off-target has meaning ? -> Is it meaningful ? -> Let's find readings which contain both "off-target" & "function"
@@ -49,30 +58,19 @@ coursera "string" practical course
 <img width="451" alt="short algorithm" src="https://user-images.githubusercontent.com/79410957/144918085-91f97f63-2d3e-4bfa-928f-d6c3d0a606d3.png">
 
 ---
-after 11/04 meet up,
-- we decided to focus on Mycoplasma-specific Cas system Finder
-- Why Mycoplasma? -> the smallest genome in the world -> so good to use as sample
-- we have to find some meaning of off-target -> maybe interview C.H. Jung Prof.'s lab
----
+- we first think about sample sequence as Mycoplasma because of small size.
+- however, after find some other software, we decided not to focus on specific genome. It will be used on any kind of genomes which is FASTA.
 
-after 11/22 meet up,
-- we decided not to focus on specific genome. It will be used on any kind of genomes which is FASTA.
-- we should include OFF target story on presentation.
+- we have to find some meaning of off-target -> maybe interview C.H. Jung Prof.'s lab
+   
 - we found CRISPR gDNA software(from Genious) which can find whole information about input gDNA.
 - so, we thought our project is combining Genious and OFFinder called "How is suit gDNA to CRISPR"
 - we made more detailed project flow.
 
 
 <img width="451" alt="result progress" src="https://user-images.githubusercontent.com/79410957/144918212-ae65b8e1-ca36-4f76-999b-b430df6a4305.png">
-
-24 Nov. presentation 
-- What is CAS OFFinder 
-- How it works
-- What are the advantages 
-- Analysis of the results from two different software i.e. Geneious prime and CRISPR RGEN tools
-
-
 ---
+
 After final presentation, 
 
 - genome, gene -> gene knockout editing oligo set

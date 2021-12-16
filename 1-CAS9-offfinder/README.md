@@ -38,9 +38,9 @@ We should include our direction(what we are going to do refer to CAS-off-finder)
 ---
 
 [Fig. 1 Algorithmic flow of the CAS-off-finder program](https://user-images.githubusercontent.com/79410957/139711521-9a00c6ef-0f09-4256-9dfb-ffc57cbbcd53.png)
-- (A) The scheme of Cas-OFFinder. 
-- (B) The workflow of Cas-OFFinder. 
-- (C) Running time per target site as a function of the number of input target sites via CPU (black squares) and GPU (red circles)
+- Figure-1-(A) means the scheme of Cas-OFFinder. It finds 20bp of matched query sequence and 3bp of PAM site in SpCas9.
+- Figure-1-(B) means the workflow algorithm of Cas-OFFinder. It has three wrappers and kenel(searching, comparing) is between the wrappers.
+- Figure-1-(C) is running time per target site as a function of the number of input target sites via CPU (black squares) and GPU (red circles).
 
 ---
 until this week,

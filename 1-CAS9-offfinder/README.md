@@ -21,32 +21,12 @@
 With discovery of microbial CRISPR-CAS systems, now any genome can be editied by RNA-guided DNA endonuclease from the modified CRISPR system. This genome editing requires guide RNA for targeting specific genomic locus. When we design the guide RNA, a few rules can be applied. Although CRISPR systems are very efficient genome editing tools, off-target editing can be made at very low rate. For gene therapeutic usage, we should design a gude RNA for specific target in genome and evaluate the designed guide RNA by its off-target possibility. 
 
 ---
-hyunju's memo that introduction will include
-- what CRISPR is
-- what we want to do by coding CAS off finder
-- how existing CAS off finder works
-
-As I write it, it is similar to Thinkabouts,,,
-
----
-
-Divide parts to explaining basic concept and telling CAS-off-finder.
-
-
-We should include our direction(what we are going to do refer to CAS-off-finder).
-
----
+<Following is CAS-off-finder>
 
 [Fig. 1 Algorithmic flow of the CAS-off-finder program](https://user-images.githubusercontent.com/79410957/139711521-9a00c6ef-0f09-4256-9dfb-ffc57cbbcd53.png)
 - Figure-1-(A) means the scheme of Cas-OFFinder. It finds 20bp of matched query sequence and 3bp of PAM site in SpCas9.
 - Figure-1-(B) means the workflow algorithm of Cas-OFFinder. It has three wrappers and kenel(searching, comparing) is between the wrappers.
 - Figure-1-(C) is running time per target site as a function of the number of input target sites via CPU (black squares) and GPU (red circles).
-
----
-until this week,
-- we will make list of Cas system
-- we chose 30 types of Cas system
-- record in table format to read well
 
 ---
 coursera "string" practical course
@@ -59,10 +39,10 @@ coursera "string" practical course
 5. print matched sequence & after some of bases that are predicted as PAM site.
 6. if PAM site is matched, it will be on-target.
 7. if PAM site is not matched, it will be off-target.
-8.  
+
 
 ---
-until next week,
+
 - we focus on how to use Cas OFFinder's off-target finding tool
 - off-target has meaning ? -> Is it meaningful ? -> Let's find readings which contain both "off-target" & "function"
 
@@ -71,7 +51,7 @@ until next week,
 ---
 after 11/04 meet up,
 - we decided to focus on Mycoplasma-specific Cas system Finder
-- Why Mycoplasma? -> the smallest genome in the world
+- Why Mycoplasma? -> the smallest genome in the world -> so good to use as sample
 - we have to find some meaning of off-target -> maybe interview C.H. Jung Prof.'s lab
 ---
 

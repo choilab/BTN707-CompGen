@@ -115,16 +115,17 @@ After final presentation,
 - More detail of result is in [CRISPOR-result](https://github.com/choilab/BTN707-2021-Fall/blob/main/1-CAS9-offfinder/CRSIPOR-result-guides_hg19-chr7-5569176-5569415.xls)
 
 ---
-#### MIT Specificity Score 
+#### CRISPOR has four scoring algorithms shown below.
+##### MIT Specificity Score 
 - The higher the specificity score, the lower are off-target effects in the genome.
 - The specificity score ranges from 0-100 and measures the uniqueness of a guide in the genome. See [Hsu et al. Nat Biotech 2013](https://www.nature.com/articles/nbt.2647). We recommend values >50, where possible. See the [CRISPOR manual](http://crispor.tefor.net/manual/#offs)
 
-#### CFD spec. Score
+##### CFD spec. Score
 - The CFD specificity score, inspired like guidescan.com, behaves like the MIT specificity score, but it is based on the more accurate CFD off-target model, from [Doench 2016](https://www.nature.com/articles/nbt.3437), which is also used by Crispor to rank the off-targets. The CFD specificity score correlates better than the MIT score with the total off-target cleavage fraction of a guide, see [Tycko et al, Nat Comm 2019](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6731277/) and also the [CRISPOR manual](http://crispor.tefor.net/manual/#faq).
 
-#### Predicted Efficiency - Doench 16
+##### Predicted Efficiency - Doench 16
 - Aka the 'Fusi-Score', since V4.4 using the version 'Azimuth', scores are slightly different than before April 2018 but very similar (click 'show all' to see the old scores). Range: 0-100. Boosted Regression Tree model, trained on data produced by Doench et al (881 guides, MOLM13/NB4/TF1 cells + unpublished additional data). Delivery: lentivirus. See [Fusi et al. 2015](https://www.biorxiv.org/content/10.1101/021568v1) and [Doench et al](https://www.nature.com/articles/nbt.3437). 2016 and crispr.ml. Recommended for guides expressed in cells (U6 promoter). Click to sort the table by this score.
 
-#### Predicted Efficiency - Mor Mateos
+##### Predicted Efficiency - Mor Mateos
 - Also called 'CrisprScan'. Range: mostly 0-100. Linear regression model, trained on data from 1000 guides on >100 genes, from zebrafish 1-cell stage embryos injected with mRNA. See [Moreno-Mateos et al.](https://www.nature.com/articles/nmeth.3543). Recommended for guides transcribed in-vitro (T7 promoter). Click to sort by this score. Note that under 'Show all scores', you can find a Doench2016 model trained on Zebrafish scores, Azimuth in-vitro, which should be slightly better than this model for zebrafish.
 

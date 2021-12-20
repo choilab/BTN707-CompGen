@@ -9,13 +9,31 @@
 * Example program & literature4 - Assmebly PCR oligo Maker
 
 ## Gene Assembly
+
+![image](https://user-images.githubusercontent.com/82203595/146798776-bafd28ce-5034-4963-b5be-120ee5717463.png)
+
+Fig.1 gene-assembly
+
+![image](https://user-images.githubusercontent.com/82203595/146800227-f17cf6e9-b6d8-4c6b-a251-bfd3951df017.png)
+
+Fig.2 types of gene assembly methods
+
 - Restriction enzyme-based (BioBrick assembly, Golden Gate assembly)
 - Sequence homology-based (Gibson assembly, SLIC, Overlap PCR, DNA assembler)
   - in vitro/in vivo
 - Bridging oligo-based (LCR)
 
+## Importance of gene-assembly
+- Discover novel natrual product
+- Design and characterize gene circuit
+- Synthesize genomes
+- Lower error rate
+- Cost-effective
+
 ## Gene assembly design
-* Condiseration: overlap length of fragment/Tm/n of fragments/specificity of overlap
+![image](https://user-images.githubusercontent.com/82203595/146803889-71f0a18d-965f-436b-9990-f722a97ca695.png)
+
+Fig.3 Algorithm of gene assembly design
 
 ## How to calculate Tm?
 * considerable factors: length of oligonucleotide, GC content of oligonucleotide, concentration of oligonucleotide, salt environment including concentrations of monovalent(sodium, potassium), divalent(magnesium), polyvalent cations and dNTPs.
@@ -374,6 +392,10 @@ print("GC content of a coding sequence :",cc)
         		print(y)
         		print(tm)
         		break
+## Benchmark
+![benchmark](https://user-images.githubusercontent.com/82203595/146804483-3baad573-8adb-46f4-ba37-733387ac46f9.PNG)
+
+Fig.4 Assemble input sequence with output fragments
 
 ## 황종현 
 

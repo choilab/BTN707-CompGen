@@ -11,7 +11,7 @@
 # ORF(open reading frame)
 https://user-images.githubusercontent.com/91528102/144167591-4ffec221-4c0b-4845-af9e-bc25bf4e99fa.png
 
-https://user-images.githubusercontent.com/91528102/142041888-94b1cc0d-f2f7-474a-a9c5-0669918e0ce6.png
+https://imghub.insilicogen.com/media/photos/6frame.png
 
  - ORF란 mRNA로 전사되어 단백질이 될 가능성이 있는, 시작 코돈(일반적으로 AUG)에서부터 종결 코돈(일반적으로 UAA, UAG, UGA)까지의 서열을 말한다.
  - 시작 코돈과 종결 코돈 사이에는 3배수의 염기가 존재하며, 그 이유는 1개의 codon이 3개의 nucleotide에 의해 지정되기 때문이다.

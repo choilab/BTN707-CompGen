@@ -161,8 +161,10 @@ CXCL1 | CACCCCAGCCCTATCCCTTT | 21 nt
 * Same result from perfect match from CXCL1 mRNAs and match from CXCL2/3 mRNAs with 2 mismatches
 
 ## ASO-off-finder v2.0
+### Sequence alignment
 * Same dataset (RefSeq Human spliced mRNA aggregated, release 18.04) was used for benchmark test
 * Used sequence from CD4 gene from the ASO-off-finder v1.1 benchmark test
+* Compare aligned sequences between gggenome and ASO-off-finder output
 
 Original gene | Sequence | Length
 ---- | ---- | ----
@@ -179,10 +181,14 @@ CD4 | GTTTGGGGCCGGCCCAGGCCT | 20 nt
     
 * ASO-off-finder v2.0 shows the same alignment for LIMD1 (NM_014240.2) mRNA with 1 mismatch ('C' > 'T') and 1 indel ('C' > '-')
 
+----
+### Running time
+* Examine the impact of sequence indexing used in ASO-off-finder 2.0 on running time
+* RNA dataset and used query sequence is same from above
+
 Program version | Running time
 ---- | ----
 ASO-off-finder v1.1 | > 5 min
 ASO-off-finder v2.0 | 1 min 36 seq
 
-* Running time was compared between ASO-off-finder v1.1 and v2.0 when run with dataset and sequence above
-* Also, ASO-off-finder v2.0 is more than two times faster than version 1.1
+* ASO-off-finder v2.0 is more than two times faster than v1.1

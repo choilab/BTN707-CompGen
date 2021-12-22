@@ -77,6 +77,8 @@ minimum_length = int(input("minimum ORF length:"))
 #find ORF
 length_list = []
 orf_nt_list = []
+orf_aa_list = []
+aa_length_list = []
 output=open('output.txt','w')
 
 for repeat in range(6):
@@ -100,8 +102,9 @@ for repeat in range(6):
                      % (frame_number, nt, aa, len(nt), len(aa)))
         length_list.append(len(nt))
         orf_nt_list.append(str(nt))
-
-
+        orf_aa_list.append(str(aa))
+        aa_length_list.append(len(aa))
+        
 #jupyter notebook에서 결과 읽기
 out=open('output.txt', 'r', encoding='utf-8')
 for result in out:

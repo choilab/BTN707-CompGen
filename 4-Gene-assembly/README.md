@@ -14,9 +14,13 @@
 
 Fig.1 gene-assembly
 
+reference:https://www.wikiwand.com/en/Polymerase_cycling_assembly
+
 ![image](https://user-images.githubusercontent.com/82203595/146800227-f17cf6e9-b6d8-4c6b-a251-bfd3951df017.png)
 
 Fig.2 types of gene assembly methods
+
+reference:Chao, Ran et al. “Recent advances in DNA assembly technologies.” FEMS yeast research 15 1 (2015): 1-9 .
 
 - Restriction enzyme-based (BioBrick assembly, Golden Gate assembly)
 - Sequence homology-based (Gibson assembly, SLIC, Overlap PCR, DNA assembler)
@@ -31,9 +35,17 @@ Fig.2 types of gene assembly methods
 - Cost-effective
 
 ## Gene assembly design
+### Gibson assembly
+![image](https://user-images.githubusercontent.com/82203595/147029867-648b8fa8-b71f-4dc2-8cce-1810f4770d3c.png)
+
+Fig3. Gibson assembly mechanism
+
+reference:https://barricklab.org/twiki/bin/view/Lab/ProtocolsGibsonCloning
+
+### Algorithm
 ![image](https://user-images.githubusercontent.com/82203595/146803889-71f0a18d-965f-436b-9990-f722a97ca695.png)
 
-Fig.3 Algorithm of gene assembly design
+Fig.4 Algorithm of gene assembly design
 
 ## How to calculate Tm?
 * considerable factors: length of oligonucleotide, GC content of oligonucleotide, concentration of oligonucleotide, salt environment including concentrations of monovalent(sodium, potassium), divalent(magnesium), polyvalent cations and dNTPs.

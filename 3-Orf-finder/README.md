@@ -11,7 +11,7 @@
 # ORF(open reading frame)
 https://user-images.githubusercontent.com/91528102/144167591-4ffec221-4c0b-4845-af9e-bc25bf4e99fa.png
 
-https://imghub.insilicogen.com/media/photos/6frame.png[^2]
+https://imghub.insilicogen.com/media/photos/6frame.png [^2]
 [^2]: [ORF-INCODOM wiki](http://www.incodom.kr/ORF)
 
  - ORF란 mRNA로 전사되어 단백질이 될 가능성이 있는, 시작 코돈(일반적으로 AUG)에서부터 종결 코돈(일반적으로 UAA, UAG, UGA)까지의 서열을 말한다.

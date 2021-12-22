@@ -1,1 +1,6 @@
-
+#input data
+ - NM_000059
+ - Homo sapiens BRCA2 DNA repair associated (BRCA2), mRNA
+ - minimal ORF length: 150nt
+ - codon table: standard
+ - start codon: ATG only

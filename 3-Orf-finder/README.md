@@ -9,11 +9,11 @@
 [^1]: [Borf: Improved ORF prediction in de-novo assembled transcriptome annotation](https://www.biorxiv.org/content/10.1101/2021.04.12.439551v1.full)
 
 # ORF(open reading frame)
-https://user-images.githubusercontent.com/91528102/144167591-4ffec221-4c0b-4845-af9e-bc25bf4e99fa.png
-
 https://imghub.insilicogen.com/media/photos/6frame.png [^2]
 [^2]: [ORF-INCODOM wiki](http://www.incodom.kr/ORF)
 
+http://www.scfbio-iitd.res.in/research/ORF_clip_image002.jpg [^3]
+[^3]: [What is Open Reading Frame (ORF) ?](http://www.scfbio-iitd.res.in/research/orf.html)
  - ORF란 mRNA로 전사되어 단백질이 될 가능성이 있는, 시작 코돈(일반적으로 AUG)에서부터 종결 코돈(일반적으로 UAA, UAG, UGA)까지의 서열을 말한다.
  - 시작 코돈과 종결 코돈 사이에는 3배수의 염기가 존재하며, 그 이유는 1개의 codon이 3개의 nucleotide에 의해 지정되기 때문이다.
  - 이에 따라 하나의 서열은 6가지 방법(frame)으로 읽을 수 있고 읽는 방법에 따라 6개의 ORF가 존재할 수 있다. (+1, +2, +3, -1, -2, -3 frame)

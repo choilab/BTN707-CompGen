@@ -141,22 +141,22 @@ CXCL1 | CACCCCAGCCCTATCCCTTT | 21 nt
 
 ![](./v1.1/gggenome_result_CD4.png)
 
-    match_site	mismatch_number	alignment_number
-    NM_000616.4,NM_001195014.2,NM_001195015.2,NM_001195016.2,NM_001195017.2	2	2
-    NM_000616.4,NM_001195014.2,NM_001195015.2,NM_001195016.2,NM_001195017.2	1	2
-    NM_000616.4,NM_001195014.2,NM_001195015.2,NM_001195016.2,NM_001195017.2	0	1
-    NM_014240.2	2	1
+    match_site                                                              mismatch_number	alignment_number
+    NM_000616.4,NM_001195014.2,NM_001195015.2,NM_001195016.2,NM_001195017.2 2               2
+    NM_000616.4,NM_001195014.2,NM_001195015.2,NM_001195016.2,NM_001195017.2 1               2
+    NM_000616.4,NM_001195014.2,NM_001195015.2,NM_001195016.2,NM_001195017.2 0               1
+    NM_014240.2                                                             2               1
 
 * ASO-off-finder successfully found the same perfect match from CD4 mRNAs and match from LIMD1 (NM_014240.2) mRNA with 1 mismatch and 1 indel
 
 ![](./v1.1/gggenome_result_CXCL1.png)
 
-    match_site	mismatch_number	alignment_number
-    NM_001511.3,NR_046035.1	2	2
-    NM_001511.3,NR_046035.1	1	2
-    NM_001511.3,NR_046035.1	0	1
-    NM_002090.2	2	1
-    NM_002089.3	2	3
+    match_site              mismatch_number	alignment_number
+    NM_001511.3,NR_046035.1	2	            2
+    NM_001511.3,NR_046035.1	1       	    2
+    NM_001511.3,NR_046035.1	0       	    1
+    NM_002090.2             2               1
+    NM_002089.3             2	            3
 
 * Same result from perfect match from CXCL1 mRNAs and match from CXCL2/3 mRNAs with 2 mismatches
 
@@ -176,8 +176,8 @@ CD4 | GTTTGGGGCCGGCCCAGGCCT | 20 nt
     GTTTGGGGCCGGCCCAGGCCT
     GTTTGGGGCCGGCCCAGGCCT
     NM_014240.2
-    GTTTGGGGCCGGCCCAGGCCT
-    GTTTGGGGCTGGCC-AGGCCT
+    GTTTGGGGC[C]GGCC[C]AGGCCT
+    GTTTGGGGC[T]GGCC[-]AGGCCT
     
 * ASO-off-finder v2.0 shows the same alignment for LIMD1 (NM_014240.2) mRNA with 1 mismatch ('C' > 'T') and 1 indel ('C' > '-')
 

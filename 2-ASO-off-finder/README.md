@@ -51,7 +51,7 @@ By this method, ASOs can modify protein expression or activity of RNAs through s
 
 **1\. Gapmer ASO**
 
-[Fig. 2 Gapmer ASO](./supplement/Gapmer_ASO.png)
+[Fig. 2 Example of the gapmer ASO design](./supplement/Gapmer_ASO.png)
 
 Gapmer ASOs have modifications in the phosphate backbone to support RNAse H activity and in the sugar (ribose) ring for higher affinity (e.g. LNA).
 
@@ -61,7 +61,7 @@ Modified nucleotides are only present in the wing of ASOs. Normal nucleotides ar
 
 **2\. Splice-switching ASO**
 
-[Fig. 3 Splice-switching ASO](./supplement/Splice_ASO.jpeg)
+[Fig. 3 Alternative splicing modulation by splice-swithcing ASO](./supplement/Splice_ASO.jpeg)
 
 Splice-switching ASOs does not use RNAse H-mediated cleavage of target RNAs. Instead, it sterically blocks the target RNA and regulate pre-mRNA splicing and repairing of defective RNA.[^3]
 
@@ -113,10 +113,8 @@ ASO off-target finder | ASO sequence | Target RNA sequence database
 
 * Finding ASO off-target sites is similar to the read alignment problem
 * Apply dynamic programming for approxiamte alignment for matching ASO sequence to target RNA sequences
----
 
 # Benchmark test
-
 ## ASO-off-finder v1.1
 1. Used dataset: RefSeq Human aggregated spliced mRNA sequence, release 18.04 [D3G database](https://d3g.riken.jp/release/18.04/)
 2. Compare result from reference tool, [gggenome](https://gggenome.dbcls.jp/), and ASO-off-finder's output

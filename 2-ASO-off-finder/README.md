@@ -51,7 +51,7 @@ By this method, ASOs can modify protein expression or activity of RNAs through s
 
 **1\. Gapmer ASO**
 
-[Fig. 2 ....](./supplement/Gapmer_ASO.png)
+[Fig. 2 Gapmer ASO](./supplement/Gapmer_ASO.png)
 
 Gapmer ASOs have modifications in the phosphate backbone to support RNAse H activity and in the sugar (ribose) ring for higher affinity (e.g. LNA).
 
@@ -61,7 +61,7 @@ Modified nucleotides are only present in the wing of ASOs. Normal nucleotides ar
 
 **2\. Splice-switching ASO**
 
-[Fig. 3 ....](./supplement/Splice_ASO.jpeg)
+[Fig. 3 Splice-switching ASO](./supplement/Splice_ASO.jpeg)
 
 Splice-switching ASOs does not use RNAse H-mediated cleavage of target RNAs. Instead, it sterically blocks the target RNA and regulate pre-mRNA splicing and repairing of defective RNA.[^3]
 

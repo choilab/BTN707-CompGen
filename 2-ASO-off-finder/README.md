@@ -141,6 +141,7 @@ RefSeq human pre-spliced mRNA, aggregated (18.04) | 1.3 Gbp
 1. Used dataset: RefSeq Human aggregated spliced mRNA sequence, release 18.04 [D3G database](https://d3g.riken.jp/release/18.04/)
 2. Compare result from reference tool, [gggenome](https://gggenome.dbcls.jp/), and ASO-off-finder's output
 3. Use first 20~21 nucleotide sequence from human mRNA sequence as artificial ASO sequences for benchmark test
+4. Maximum allowed mismatch/indels: 2
 
 Original gene | Sequence | Length
 ---- | ---- | ----
@@ -170,7 +171,7 @@ CXCL1 | CACCCCAGCCCTATCCCTTT | 21 nt
 
 ## ASO-off-finder v2.0
 ### Sequence alignment
-* Same dataset (RefSeq Human spliced mRNA aggregated, release 18.04) was used for benchmark test
+* Same dataset (RefSeq Human spliced mRNA aggregated, release 18.04) and option were used for benchmark test
 * Used sequence from CD4 gene from the ASO-off-finder v1.1 benchmark test
 * Compare aligned sequences between gggenome and ASO-off-finder output
 

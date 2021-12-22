@@ -11,6 +11,8 @@ ASO-off-finder is a program that finds target and potential off-target sites in 
   * [Why is the problem biologically important?](#intro3)
 * [Update history](#history)
 * [Algorithm outline](#outline)
+  * [Dynamic programming](#dynamic)
+  * [Sequence indexing](#index)
 * [Benchmark test](#benchmark)
 
 <a name="student"></a>
@@ -106,6 +108,9 @@ Thus, in silico analysis using the human RNA database followed by in vitro expre
 
 ![image](https://user-images.githubusercontent.com/69707020/145952837-ab7720ff-69f8-452b-97dc-b3e0a8fd890d.png)
 
+<a name="dynamic"></a>
+## Dynamic programming
+
 Problem | Query | Reference
 ---- | ---- | ----
 Read alignment problem | Sequenced reads | Reference genome
@@ -116,6 +121,8 @@ ASO off-target finder | ASO sequence | Target RNA sequence database
 * [Description slides from Cousera lecture](./supplement/Dynamic_programming.pdf)
 
 ----
+<a name="index"></a>
+## Sequence indexing
 
 Search space | Total length
 ---- | ----

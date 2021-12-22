@@ -1,9 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[2]:
-
-
 from Bio.Restriction import *
 from Bio.SeqUtils import MeltingTemp as mt
 from Bio.Seq import Seq
@@ -110,14 +107,7 @@ while x < (n+1) and y < (n+1):
         y += 1
         
 print("overlap + dna fragment :", dna_overlap_list[1:], "\n","overlap:", overlap_list)
-exit()
-
-
-# In[ ]:
-
-
-GATCGATGGGCCTATATAGGATCGAAAATCGGTGGCGATCGCCGACTAGGGCTTCGATGCGATGCATATCGCGCGATCGATCGATCGATTTACGTAGCGTAGCTGATGCTTAAGGAGTCCGCTCGAATCGGGCTCCTAGCTGATATTCGATCGATTGCCCCTAAGCTAGCTATCATCCCTAGCCTTAATATTCTCTCGCGCAGATCGATCGGGCAATATCGATCGGATCCGATCCGAAAGCCTAATCGAATCTCTAGAGCTAGCTAATTCGATCGATCTCCTAGAGCTCTAGCTAGCTTTGGGC
-        
+exit()        
             
       while x < (n+1):
     if x == 0:
@@ -176,10 +166,6 @@ GATCGATGGGCCTATATAGGATCGAAAATCGGTGGCGATCGCCGACTAGGGCTTCGATGCGATGCATATCGCGCGATCGA
         y += 1
         continue
 
-
-# In[ ]:
-
-
 # get primer sequence
 def primer_sequence(seq):
     """ primer sequence for each fragment """
@@ -195,16 +181,6 @@ for x in range(1,n0-s):
         print(tm)
         print(x)
         break    
-
-
-# In[2]:
-
-
-len('GATTGCCCCTAAGCTAGCTAT')
-
-
-# In[ ]:
-
 
 
 

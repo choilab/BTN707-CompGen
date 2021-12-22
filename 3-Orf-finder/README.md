@@ -39,6 +39,3 @@ https://user-images.githubusercontent.com/91528102/146112346-113b2c40-063a-44c2-
  - https://www.ncbi.nlm.nih.gov/orffinder/
  - https://github.com/betsig/borf
  - https://www.ncbi.nlm.nih.gov/Taxonomy/Utils/wprintgc.cgi?chapter=tgencodes#SG1
-
-# Benchmark
-https://user-images.githubusercontent.com/91528102/146115168-617f9813-a60a-41cb-81cf-5cb4bd3cc23b.png

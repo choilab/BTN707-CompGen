@@ -42,6 +42,7 @@ def find_orf(frame):
     start_site = []
     index = -1
     orf_end = 0
+    output=[]
     
     while True:
         index = frame_trans.find('M', index + 1)

@@ -117,7 +117,16 @@ ASO off-target finder | ASO sequence | Target RNA sequence database
 
 ----
 
+Search space | Total length
+---- | ----
+Part of human genome (GRCh38) chromosome 1 | 0.8 Mbp
+RefSeq human spliced mRNA, aggregated (18.04) | 78.7 Mbp
+RefSeq human pre-spliced mRNA, aggregated (18.04) | 1.3 Gbp
 
+* With ASO-off-finder v1.0, it takes about 1 minute for ASO off-target finding from 0.8 Mbp sequence
+* Total human (pre-)spliced mRNA sequence is much larger than 0.8 Mbp, meaning running time over several hours
+* Sequence indexing was implemented in ASO-off-finder v2.0, using the pigeonhole principle from Coursera lecture
+* [Description slides from Cousera lecture](./supplement/Pigeonhole.pdf)
 
 # Benchmark test
 ## ASO-off-finder v1.1

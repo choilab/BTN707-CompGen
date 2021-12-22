@@ -24,7 +24,7 @@ http://www.scfbio-iitd.res.in/research/ORF_clip_image002.jpg [^3]
  - ORF 연구를 통해 병원체가 어떤 단백질을 생산하는지 알아낸다면 병원체의 작동 원리를 파악할 수 있고, 때문에 ORF 연구는 치료제와 백신 연구에 중요하다.
  
 # algorithms
-![image](https://user-images.githubusercontent.com/91528102/146112346-113b2c40-063a-44c2-b2e5-531f4e68ccdf.png)
+![image](https://user-images.githubusercontent.com/91528102/147026957-8f0de19f-ee0a-4f45-8c96-3458639f38ce.png)
 
 # Option
  - choose codon table

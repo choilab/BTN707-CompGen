@@ -151,12 +151,12 @@ CXCL1 | CACCCCAGCCCTATCCCTTT | 21 nt
 
 ![](./v1.1/gggenome_result_CXCL1.png)
 
-    match_site              mismatch_number	alignment_number
-    NM_001511.3,NR_046035.1	2	            2
-    NM_001511.3,NR_046035.1	1       	    2
-    NM_001511.3,NR_046035.1	0       	    1
+    match_site              mismatch_number alignment_number
+    NM_001511.3,NR_046035.1 2               2
+    NM_001511.3,NR_046035.1 1               2
+    NM_001511.3,NR_046035.1 0               1
     NM_002090.2             2               1
-    NM_002089.3             2	            3
+    NM_002089.3             2               3
 
 * Same result from perfect match from CXCL1 mRNAs and match from CXCL2/3 mRNAs with 2 mismatches
 

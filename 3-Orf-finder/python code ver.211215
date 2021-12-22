@@ -118,5 +118,6 @@ plt.xlabel('ORF length')
 plt.ylabel('frequency')
 plt.show()
 
-#가장 긴 ORF 서열 찾기
-print(max(orf_nt_list, key = len))
+#가장 긴 ORF-CDS 찾기
+print('>CDS is: \n ORF nucleotide seqeunce: %s\n ORF amino acid seqeunce: %s\n ORF nucleotide lenth: %s\n ORF amino acid length:%s\n \n' 
+                     % (max(orf_nt_list, key = len), max(orf_aa_list, key = len), max(length_list), max(aa_length_list)))

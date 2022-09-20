@@ -14,12 +14,14 @@
   - Section IV STRUCTURAL AND FUNCTIONAL ASSIGNMENT
 ---
 ### 박정준 (NGS sequence informatics)
+* [Bioinformatics and Functional Genomics 3rd Ed.](https://library.korea.ac.kr/datause/ebook/ebook-search-a/?fi1=&q1=Bioinformatics%20and%20Functional%20Genomics) (__Library eBook__) Chap. 9 Analysis of next generation sequence data
 * [R Bioinformatics cookbook : use R and Bioconductor to perform RNAseq, genomics, data visualization, and bioinformatic analysis](https://learning.oreilly.com/library/view/r-bioinformatics-cookbook/9781789950694/) at KU library.  
 * [NGS reads]
 * [Reads QC]
 * [Reads assembly]
 ---
 ### 배준식 (microbiome/amplicon sequence analysis)
+* [Bioinformatics and Functional Genomics 3rd Ed.](https://library.korea.ac.kr/datause/ebook/ebook-search-a/?fi1=&q1=Bioinformatics%20and%20Functional%20Genomics) (__Library eBook__) Chap. 9 Analysis of next generation sequence data
 * [R Bioinformatics cookbook : use R and Bioconductor to perform RNAseq, genomics, data visualization, and bioinformatic analysis](https://learning.oreilly.com/library/view/r-bioinformatics-cookbook/9781789950694/) at KU library.
 * [DADA2](https://benjjneb.github.io/dada2/index.html)
 * [QIIME](http://qiime.org/)

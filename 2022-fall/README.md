@@ -14,6 +14,12 @@
   - Section IV STRUCTURAL AND FUNCTIONAL ASSIGNMENT
 ---
 ### 임찬영 (structural bioinformatics)
+* [UCSF chimeraX](https://www.cgl.ucsf.edu/chimerax/)
 ### 박정준 (NGS sequence informatics)
-### 배준식 (microbiome analysis)
+* [NGS reads]
+* [Reads QC]
+* [Reads assembly]
+### 배준식 (microbiome/amplicon sequence analysis)
+* [DADA2](https://benjjneb.github.io/dada2/index.html)
+* [QIIME](http://qiime.org/)
 

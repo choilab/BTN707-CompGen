@@ -9,7 +9,7 @@
 #### Progress 1 : Pipeline script
 + Pipeline [script](https://github.com/choilab/BTN707-CompGen/blob/main/2022-fall/jjpark/Supplementary%20data/pipeline.py)
 + 스크립트 진행 상황
-  - Input으로 FASTQ(paired), FNA(index, align)를 받을 때 Output으로 bam 파일을 생성함.
+  - Input으로 fastq(paired), fna(index, align)를 받을 때 Output으로 bam 파일을 생성함.
   - 웹에 제공할 파일로, trimming report, bam, aligned log 제공 가능.
 + 보완할 점
   - Gene count table을 만들어야함. (Linux의 Featurecount와, R의 edgeR 중 선택할 것.)

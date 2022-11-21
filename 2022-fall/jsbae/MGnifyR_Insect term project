@@ -1,0 +1,32 @@
+install.packages("devtools")
+source('http://bioconductor.org/biocLite.R')
+biocLite('phyloseq')
+source("http://bioconductor.org/biocLite.R")
+if (!require("BiocManager", quietly = TRUE))
+  install.packages("BiocManager")
+BiocManager::install(version = "3.16")
+a
+yes
+biocLite("phyloseq")
+source("http://bioconductor.org/biocLite.R")
+source("https://raw.githubusercontent.com/joey711/phyloseq/master/inst/scripts/installer.R",
+       local = TRUE)
+yes
+install_github("beadyallen/MGnifyR")
+library("devtools")
+install_github("beadyallen/MGnifyR")
+library(MGnifyR)
+mgnify_client(username = "Webin-63503", password = "qownstlrqkqhz!1", usecache = T, cache_dir = "/desktop/Mgnify_cache_location", warnings = F, use_memcache = F)
+mg <- mgnify_client(cache_dir = "/desktop/Mgnify_cache_location")
+mgnify_query(mg, qtype = "samples", maxhits=10, usecache = T)
+J <- mgnify_query(mg, qtype = "samples", biome_name = "insecta", maxhits=10, usecache = T)
+colnames(J)
+insect_samples = mgnify_query(mg, qtype="samples", biome_name = "insecta", experiment_type = "amplicon",
+                           maxhits=200, usecache = T)
+insect_samples_2 = mgnify_query(mg, qtype="samples", biome_name = "insect", experiment_type = "amplicon",
+                              maxhits=200, usecache = T)
+insect_samples_3 = mgnify_query(mg, qtype="samples", biome_name = "mosquito", experiment_type = "amplicon",
+                                maxhits=10, usecache = T)
+insect_samples_4 = mgnify_query(mg, qtype="samples", sample_name = "insecta", experiment_type = "amplicon",
+                               maxhits=10, usecache = T)
+                               ## Sorting out every insect amplicon data unsolved.

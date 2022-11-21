@@ -19,3 +19,12 @@
     - 옵션 3 : 여러 사용자가 사용할 경우에 대한 대비(쓰레드 분배, 사용자 별 디렉토리 설정) 
    - Pair인데, pairing이 되지 않거나, fna, gff 파일이 올라오지 않을 경우 에러메세지 표시
  
+#### Progress 2 : Simple file upload web app by django
++ 간단하게 web에 upload한 파일들이 leafeon 서버에 저장되는 django script를 만듦 [codes](https://github.com/choilab/BTN707-CompGen/tree/main/2022-fall/jjpark/Supplementary%20data/week2_upload_webapp)
++ 스크립트 진행 상황
+  - 사용자가 여러 파일을 업로드하면, 메모리에 저장된 파일들을 디렉토리에 쓰는 방식으로 구동되는 웹 앱을 생성함.
+
++ 보완할 점
+  - 여러 파일을 업로드 할 때, 구동방식의 문제로 시간이 오래 걸림.
+  - 이용자가 많을 경우, 여러 파일을 동시에 수송하기 힘듦.
+  - 옵션을 추가적으로 생성하지 못하고, 단순히 업로드만 구현됨.

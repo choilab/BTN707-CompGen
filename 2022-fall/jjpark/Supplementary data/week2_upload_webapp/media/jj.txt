@@ -1,0 +1,30 @@
+Deepbgc - journal club : paper 읽고 분석하기 / 화요일에 발표(논문 요약) 10-15min
+paper에서 classify하는 부분에 대한 설명 중점적으로 (random foreset)
+gene - protein (program1) - (method 1) 등으로 정리
+ 	 supplymentary data[raw data total] (같이 볼것)
+	 
+taxid process 완료해서 발표에 추가 
+
+화요일 랩미팅 현주씨 발표 듣기 (pyani) / SPAades, trimgalore assembly 이후과정 
+
+Lacticaseibacillus
+*GCF_000565485.1/1400520 / Lacticaseibacillus fabifermentans T30PCM01 (firmicutes) / taxid검색하면 Lacticaseibacillus라고 나오는데 전체 다운로드 받으면 없음.
+	https://www.ncbi.nlm.nih.gov/genome/?term=txid1400520[Organism:noexp / Lactiplanti-로 분류됨
+	https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1400520 / Lacticasei-로 분류됨
+
+Limosilactobacillus
+GCF_900240275.1/1970790/[Lactobacillus] timonensis (firmicutes) / [Lactobacillus]이여서 Lactobacillus에 분류된것을 제거했음. Taxid 분류로 Limosilactobacillus에 있는듯함.
+	https://www.ncbi.nlm.nih.gov/assembly/GCF_900240275.1/
+
+
+
+Lactobacillus
+GCF_001243975.1 /1601/ Ligilactobacillus agilis / Ligilactobacillus 파일에 있는거 확인함. 다운로드 URL에 Lactobacillus 문자열이 있어서 추가됨. 제거대상
+	https://www.ncbi.nlm.nih.gov/assembly/GCF_001243975.1/
+GCF_000504525.1/1392007/Ligilactobacillus equi DPC 6820	strain=DPC 6820/ 1601 위에거랑 마찬가지. 제거대상
+	https://www.ncbi.nlm.nih.gov/assembly/GCF_000504525.1/
+GCF_900015005.1/1423778/Paucilactobacillus oligofermentans DSM 15707 = LMG 22743/ 분류기준이 애매함. Lactobacillus, paucilactobacillus 둘다 표기됨.
+	https://www.ncbi.nlm.nih.gov/assembly/GCF_900015005.1/
+GCF_003864335.1/2810561/Lentilactobacillus kosonis/ 위의 Paucilactobacillus와 동일
+	https://www.ncbi.nlm.nih.gov/assembly/GCF_003864335.1/
+GCF_900240275.1/ Limosilactobacillus에 작성한 것과 동일한 GCF number

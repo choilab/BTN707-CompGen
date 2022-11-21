@@ -15,5 +15,5 @@
   - Gene count table을 만들어야함. (Linux의 Featurecount와, R의 edgeR 중 선택할 것.)
   - script의 각 부분을 함수로 정의해 옵션(아래 기술함)에 따라 선택적으로 구동되게 해야함.
     - 옵션 1 : Model animal의 경우, indexing과정을 불필요하게 미리 만들어놓은 index를 읽도록 함.
-    - 옵션 2 : paired FASTQ 옵션을 추가
+    - 옵션 2 : one-way 옵션을 추가
     - 옵션 3 : 여러 사용자가 사용할 경우에 대한 대비(쓰레드 분배, 사용자 별 디렉토리 설정) 

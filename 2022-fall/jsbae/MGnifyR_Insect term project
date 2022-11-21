@@ -30,3 +30,6 @@ insect_samples_3 = mgnify_query(mg, qtype="samples", biome_name = "mosquito", ex
 insect_samples_4 = mgnify_query(mg, qtype="samples", sample_name = "insecta", experiment_type = "amplicon",
                                maxhits=10, usecache = T)
                                ## Sorting out every insect amplicon data unsolved.
+insect_samples_mosquito = mgnify_query(mg, qtype="samples", environment_feature="Mosquito gut", experiment_type = "amplicon",
+                                       maxhits=10, usecache = T)
+                               ## Mosquito data sorting by environment feature

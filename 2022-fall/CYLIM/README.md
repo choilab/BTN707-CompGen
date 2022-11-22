@@ -3,16 +3,21 @@ Structurally similar protein finder
 ## 1. Description
 
 1-1. Purpose of program
-- Upload input file(PDB format) to server through internet
+- This program is searching for protein structure homologue from protein structure database using foldseek program
+- File requirement
+- How to use?
+#
+- Upload input file (PDB format) to server through internet
 - Running foldseek on server
 - Make top ranked similarity protein list, and access link to PDB files
+#
 
 1-2. Programs/language
-- Programs  
+- Programs
   - Foldseek : for protein structure similarity comparision
   - Django : to connect backend server (foldseek) and frontend web (html)
 - Language
-  - Python
+  - Python 3
   - HTML
   - Javascript?
 

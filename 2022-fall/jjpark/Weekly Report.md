@@ -38,6 +38,7 @@
   
 
   <img width="785" alt="image" src="https://user-images.githubusercontent.com/97942772/203236730-357880a5-fd7c-4273-aceb-1b439bc10a27.png">
+  <img width="785" alt="image" src="https://user-images.githubusercontent.com/97942772/203238881-b7f848c5-a3ed-4abe-b34a-4fdec52746fa.png">
   <img width="785" alt="image" src="https://user-images.githubusercontent.com/97942772/203238113-a28706ef-2932-4da4-ba3b-8fb7ae7fb4f0.png">
   
   - Django를 통한 업로드 사이트와 Zebrafish fastq file을 1/10 크기로 만든 toy fastq file을 업로드 한 결과. 

@@ -2,6 +2,7 @@
 Insect microbiome analysis using MgnifyR
 
 ==================
+
 Main purpose of this project is to make a thorough analysis of microbiome set between broad amount of insect samples in EBI. 
 ------------------
 ### 1. Mgnify database search / data gathering

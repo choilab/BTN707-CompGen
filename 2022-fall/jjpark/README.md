@@ -17,6 +17,7 @@
   + Trimming & Quality Control을 위한 Tool로서 TrimGalore를 사용함.
   + Alignment를 위한 Tool로서 HISAT2를 사용함.
   + Count gene features 제작을 위한 Tool로서 (Feature Count/edgeR)를 사용함.
+  + Stastical analysis를 위한 Tool로서 GEO2R을 사용함.
  
 ## Additional Functions
 + Paired read와, one-way read의 Input 모두 handling 해야함.

@@ -2,8 +2,8 @@
 ## Week 2 (11/15 ~ 11/22)
 ### Goal 
 + Django tutorial 
-+ Upload application implementation
-+ Pipeline for stored fastq format file 
++ 업로드 기능이 있는 웹 앱 구현
++ 저장된 fastq 파일부터 alignment까지 과정을 한번에 할 수 있는 파이프 라인 설계
 
 ### Progress
 #### Progress 1 : Pipeline script

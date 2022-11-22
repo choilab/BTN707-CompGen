@@ -30,6 +30,6 @@ Current workflow
 
  #### 1. Data search / Import from Database(Mgnify)
      -
- #### 2. Make a query function in MgnifyR environment
+ #### 2. Make a query function in MgnifyR environment / sample information & metadata overall summary
      -
  #### 3. Import data to phyloseq / Make a phylogenic classification of each OTUs from each sample

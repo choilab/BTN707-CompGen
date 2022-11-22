@@ -18,8 +18,9 @@
     - 옵션 1 : Model animal의 경우, indexing과정을 불필요하게 미리 만들어놓은 index를 읽도록 함.
     - 옵션 2 : one-way 옵션을 추가
     - 옵션 3 : 여러 사용자가 사용할 경우에 대한 대비( 분배, 사용자 별 디렉토리 설정) 
+   
   <img width="465" alt="image" src="https://user-images.githubusercontent.com/97942772/203237971-a973a158-f2f3-408d-8c3a-318a93be0182.png">
-
+  - 보라색 표시 input file, 초록색 표시 output file.
  
 #### Progress 2 : Simple file upload web app by django
 + 간단하게 web에 upload한 파일들이 leafeon 서버에 저장되는 django script를 만듦 [codes](https://github.com/choilab/BTN707-CompGen/tree/main/2022-fall/jjpark/Supplementary%20data/week2_upload_webapp)
@@ -33,6 +34,7 @@
 
   <img width="785" alt="image" src="https://user-images.githubusercontent.com/97942772/203236730-357880a5-fd7c-4273-aceb-1b439bc10a27.png">
   <img width="785" alt="image" src="https://user-images.githubusercontent.com/97942772/203238113-a28706ef-2932-4da4-ba3b-8fb7ae7fb4f0.png">
+  - Django를 통한 업로드 사이트와 Zebrafish fastq file을 1/10 크기로 만든 toy fastq file을 업로드 한 결과. 
 
 
 ### Next Week Goal

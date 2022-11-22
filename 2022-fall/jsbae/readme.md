@@ -32,4 +32,4 @@ Current workflow
      -
  #### 2. Make a query function in MgnifyR environment
      -
- #### 3. Import data to phyloseq / 
+ #### 3. Import data to phyloseq / Make a phylogenic classification of each OTUs from each sample

@@ -12,12 +12,12 @@
   - Input으로 fastq(paired), fna(index, align)를 받을 때 Output으로 bam 파일을 생성함.
   - 웹에 제공할 파일로, trimming report, bam, aligned log 제공 가능.
 + 보완할 점
-  - Gene count table을 만들어야함. (Linux의 Featurecount와, R의 edgeR 중 선택할 것.)
+  - Gene count table을 만들어야함.
   - Pair인데, pairing이 되지 않거나, fna, gff 파일이 올라오지 않을 경우 에러메세지 표시
   - script의 각 부분을 함수로 정의해 옵션(아래 기술함)에 따라 선택적으로 구동되게 해야함.
     - 옵션 1 : Model animal의 경우, indexing과정을 불필요하게 미리 만들어놓은 index를 읽도록 함.
     - 옵션 2 : one-way 옵션을 추가
-    - 옵션 3 : 여러 사용자가 사용할 경우에 대한 대비(쓰레드 분배, 사용자 별 디렉토리 설정) 
+    - 옵션 3 : 여러 사용자가 사용할 경우에 대한 대비( 분배, 사용자 별 디렉토리 설정) 
 
  
 #### Progress 2 : Simple file upload web app by django
@@ -32,7 +32,7 @@
 
 ### Next Week Goal
 + Pipeline의 보완
-  - 현재 Pipeline은 gene count table까지 작성하지 못하고, bam 파일까지 작성함. Feature count/edgeR 중 하나를 선택해 gene count table을 만들고, GEO2R을 이용한 간단한 통계 이미지 파일을 만드는 것 까지 보완.
+  - 현재 Pipeline은 gene count table까지 작성하지 못하고, bam 파일까지 작성함. Feature count/countOverlaps 중 하나를 선택해 gene count table을 만들고, GEO2R을 이용한 간단한 통계 이미지 파일을 만드는 것 까지 보완.
 + Pipeline과 업로드 사이트간의 연결 
   - 현재 Pipeline과 web을 통해 저장된 파일들간의 연결이 이뤄지지 못함. Django를 이용한 연결이 필요함. 
 + Web에 Option을 설정하고, Pipeline과 연계

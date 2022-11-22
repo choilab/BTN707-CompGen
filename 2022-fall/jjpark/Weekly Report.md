@@ -29,3 +29,11 @@
   - 여러 파일을 업로드 할 때, 구동방식의 문제로 시간이 오래 걸림.
   - 이용자가 많을 경우, 여러 파일을 동시에 수송하기 힘듦.
   - 옵션을 추가적으로 생성하지 못하고, 단순히 업로드만 구현됨.
+
+### Next Week Goal
++ Pipeline의 보완
+  - 현재 Pipeline은 gene count table까지 작성하지 못하고, bam 파일까지 작성함. Feature count/edgeR 중 하나를 선택해 gene count table을 만들고, GEO2R을 이용한 간단한 통계 이미지 파일을 만드는 것 까지 보완.
++ Pipeline과 업로드 사이트간의 연결 
+  - 현재 Pipeline과 web을 통해 저장된 파일들간의 연결이 이뤄지지 못함. Django를 이용한 연결이 필요함. 
++ Web에 Option을 설정하고, Pipeline과 연계
+  - 현재 Pipeline은 Paired read에 대해 bam file을 만들고, Model animal에 대한 예외를 적용하지 않음. 추가적인 연구 진행이 필요함. 

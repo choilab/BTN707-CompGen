@@ -13,11 +13,12 @@
   - 웹에 제공할 파일로, trimming report, bam, aligned log 제공 가능.
 + 보완할 점
   - Gene count table을 만들어야함. (Linux의 Featurecount와, R의 edgeR 중 선택할 것.)
+  - Pair인데, pairing이 되지 않거나, fna, gff 파일이 올라오지 않을 경우 에러메세지 표시
   - script의 각 부분을 함수로 정의해 옵션(아래 기술함)에 따라 선택적으로 구동되게 해야함.
     - 옵션 1 : Model animal의 경우, indexing과정을 불필요하게 미리 만들어놓은 index를 읽도록 함.
     - 옵션 2 : one-way 옵션을 추가
     - 옵션 3 : 여러 사용자가 사용할 경우에 대한 대비(쓰레드 분배, 사용자 별 디렉토리 설정) 
-   - Pair인데, pairing이 되지 않거나, fna, gff 파일이 올라오지 않을 경우 에러메세지 표시
+
  
 #### Progress 2 : Simple file upload web app by django
 + 간단하게 web에 upload한 파일들이 leafeon 서버에 저장되는 django script를 만듦 [codes](https://github.com/choilab/BTN707-CompGen/tree/main/2022-fall/jjpark/Supplementary%20data/week2_upload_webapp)

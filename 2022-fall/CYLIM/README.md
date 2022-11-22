@@ -1,4 +1,4 @@
-Structural similar protein finder
+Structurally similar protein finder
 ======================================
 ## 1. Description
 

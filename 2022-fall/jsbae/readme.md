@@ -28,8 +28,8 @@ Main purpose of this project is to make a thorough analysis of microbiome set be
 
 Current workflow
 
- 1. Data search / Import from Database(Mgnify)
+ #### 1. Data search / Import from Database(Mgnify)
      -
- 2. Make a query function in MgnifyR environment
+ #### 2. Make a query function in MgnifyR environment
      -
- 3. Import data to phyloseq / 
+ #### 3. Import data to phyloseq / 

@@ -39,3 +39,5 @@
   - 현재 Pipeline은 Paired read에 대해 bam file을 만들고, Model animal에 대한 예외를 적용하지 않음. 추가적인 연구 진행이 필요함.
 + Progress bar 생성
   - 업로드하는 fastq file의 크기가 giga byte 단위기 때문에, Progress bar를 만들고, 업로드가 완료되면 pipeline 구동 버튼을 통한 구동이 필요함. 
++ Counting program의 결정
+  - Multi thread를 사용가능한 Linux feature count/subread, R의 countOverlaps중 선택해야함.

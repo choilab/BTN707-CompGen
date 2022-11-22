@@ -16,8 +16,7 @@ install_github("beadyallen/MGnifyR")
 library("devtools")
 install_github("beadyallen/MGnifyR")
 library(MGnifyR)
-?mgnify_query
-?mgnify_client
+
 mgnify_client(url = "https://www.ebi.ac.uk/metagenomics/api/v1", username = "Webin-63503", password = "qownstlrqkqhz!1", usecache = T, cache_dir = "/desktop/Mgnify_cache_location", warnings = F, use_memcache = F)
 mg <- mgnify_client(cache_dir = "/desktop/Mgnify_cache_location")
 mgnify_query(mg, qtype = "samples", maxhits=10, usecache = T)
@@ -49,18 +48,12 @@ amplicon_accessions <- metadata$analysis_accession[metadata$'analysis_experiment
 ps <- mgnify_get_analyses_phyloseq(mg, amplicon_accessions)
 ps@otu_table
 ps@tax_table
-psglom <- tax_glom(normed_ps, "Order")
-normed_ps <- transform_sample_counts(psglom, function(x) x/sum(x))
-plot_bar(normed_ps, fill="Phylum")
+
 library("phyloseq"); packageVersion("phyloseq")
 library("ggplot2"); packageVersion("ggplot2")
 theme_set(theme_bw())
-?phyloseq
-?otu_table
-?sample_data
-?tax_table
-otumat = matrix(sample(1:100, 100, replace = TRUE), nrow = 10, ncol = 10)
-otumat
+
+
 samp_acc <- insect_studies$accession
 samp_acc
 (an_acc <- mgnify_analyses_from_samples(mg, samp_acc))
@@ -69,5 +62,19 @@ head(metadata)
 colnames(metadata)
 amplicon_accessions <- metadata$analysis_accession[metadata$'analysis_experiment-type'=="amplicon"]
 ps <- mgnify_get_analyses_phyloseq(mg, amplicon_accessions)
+
 ps@otu_table
 ps@tax_table
+
+data(insect_)
+otumat = matrix(sample(1:100, 100, replace = TRUE), nrow = 24, ncol = 225)
+otumat
+
+rownames(otumat) <- paste0("OTU", 1:nrow(otumat))
+colnames(otumat) <- paste0("Sample", 1:ncol(otumat))
+otumat
+
+taxmat = matrix(sample(letters, 24, replace = TRUE), nrow = nrow(otumat), ncol = 7)
+rownames(taxmat) <- rownames(otumat)
+colnames(taxmat) <- c("Domain", "Phylum", "Class", "Order", "Family", "Genus", "Species")
+taxmat

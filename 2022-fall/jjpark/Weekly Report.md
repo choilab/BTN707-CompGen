@@ -18,6 +18,7 @@
     - 옵션 1 : Model animal의 경우, indexing과정을 불필요하게 미리 만들어놓은 index를 읽도록 함.
     - 옵션 2 : one-way 옵션을 추가
     - 옵션 3 : 여러 사용자가 사용할 경우에 대한 대비( 분배, 사용자 별 디렉토리 설정) 
+  <img width="465" alt="image" src="https://user-images.githubusercontent.com/97942772/203237971-a973a158-f2f3-408d-8c3a-318a93be0182.png">
 
  
 #### Progress 2 : Simple file upload web app by django
@@ -29,6 +30,9 @@
   - 여러 파일을 업로드 할 때, 구동방식의 문제로 시간이 오래 걸림.
   - 이용자가 많을 경우, 여러 파일을 동시에 수송하기 힘듦.
   - 옵션을 추가적으로 생성하지 못하고, 단순히 업로드만 구현됨.
+
+  <img width="785" alt="image" src="https://user-images.githubusercontent.com/97942772/203236730-357880a5-fd7c-4273-aceb-1b439bc10a27.png">
+
 
 ### Next Week Goal
 + Pipeline의 보완

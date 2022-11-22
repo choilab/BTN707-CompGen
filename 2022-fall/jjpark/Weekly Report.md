@@ -32,6 +32,7 @@
   - 옵션을 추가적으로 생성하지 못하고, 단순히 업로드만 구현됨.
 
   <img width="785" alt="image" src="https://user-images.githubusercontent.com/97942772/203236730-357880a5-fd7c-4273-aceb-1b439bc10a27.png">
+  <img width="785" alt="image" src="https://user-images.githubusercontent.com/97942772/203238113-a28706ef-2932-4da4-ba3b-8fb7ae7fb4f0.png">
 
 
 ### Next Week Goal

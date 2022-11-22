@@ -1,5 +1,6 @@
 # JSBae
-Insect microbiome analysis using MgnifyR / DADA2
+Insect microbiome analysis using MgnifyR
+
 ==================
 Main purpose of this project is to make a thorough analysis of microbiome set between broad amount of insect samples in EBI. 
 ------------------
@@ -18,4 +19,17 @@ Main purpose of this project is to make a thorough analysis of microbiome set be
    ####  1) phyloseq-ize Data already in MgnifyR.
    ##### * Any data already in an R session can be annoated/coerced to be recognized by phyloseq’s functions and methods.
    ####  2) Set Tax_table, OTU_table for bar plot / phylogenetic tree construction, then import library(phyloseq)
-   ####  3) Check the visualized data with variables, do the further analysis / data modification 
+   ####  3) Check the visualized data with variables, do the further analysis / data modification
+   
+  - Used language/Tool : R / MgnifyR
+  - Target sample : Whole insect sample with 16S rRNA gene sequenced
+
+-----------
+
+Current workflow
+
+ 1. Data search / Import from Database(Mgnify)
+     -
+ 2. Make a query function in MgnifyR environment
+     -
+ 3. Import data to phyloseq / 

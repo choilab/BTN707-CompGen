@@ -1,7 +1,8 @@
 # JSBae
 Insect microbiome analysis using MgnifyR / DADA2
 ==================
-
+Main purpose of this project is to make a thorough analysis of microbiome set between broad amount of insect samples in EBI. 
+------------------
 ### 1. Mgnify database search / data gathering
   #### 1) Take a rough search thorugh the database, see which keyword would match the largest set of data.
    ##### Insect / Insecta or specific nomenclature of organisms

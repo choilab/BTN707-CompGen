@@ -1,9 +1,7 @@
-Insect microbiome data analysis using MgnifyR
-==============================================
-'install.packages("devtools")'
-'source('http://bioconductor.org/biocLite.R')'
-'biocLite('phyloseq')'
-'source("http://bioconductor.org/biocLite.R")'
+install.packages("devtools")
+source('http://bioconductor.org/biocLite.R')
+biocLite('phyloseq')
+source("http://bioconductor.org/biocLite.R")
 if (!require("BiocManager", quietly = TRUE))
   install.packages("BiocManager")
 BiocManager::install(version = "3.16")
@@ -18,10 +16,12 @@ install_github("beadyallen/MGnifyR")
 library("devtools")
 install_github("beadyallen/MGnifyR")
 library(MGnifyR)
-mgnify_client(username = "Webin-63503", password = "qownstlrqkqhz!1", usecache = T, cache_dir = "/desktop/Mgnify_cache_location", warnings = F, use_memcache = F)
+?mgnify_query
+?mgnify_client
+mgnify_client(url = "https://www.ebi.ac.uk/metagenomics/api/v1", username = "Webin-63503", password = "qownstlrqkqhz!1", usecache = T, cache_dir = "/desktop/Mgnify_cache_location", warnings = F, use_memcache = F)
 mg <- mgnify_client(cache_dir = "/desktop/Mgnify_cache_location")
 mgnify_query(mg, qtype = "samples", maxhits=10, usecache = T)
-J <- mgnify_query(mg, qtype = "samples", biome_name = "insecta", maxhits=10, usecache = T)
+J <- mgnify_query(mg, qtype = "samples", biome_name = "insecta", maxhits=200, usecache = T)
 colnames(J)
 insect_samples = mgnify_query(mg, qtype="samples", biome_name = "insecta", experiment_type = "amplicon",
                            maxhits=200, usecache = T)
@@ -31,7 +31,43 @@ insect_samples_3 = mgnify_query(mg, qtype="samples", biome_name = "mosquito", ex
                                 maxhits=10, usecache = T)
 insect_samples_4 = mgnify_query(mg, qtype="samples", sample_name = "insecta", experiment_type = "amplicon",
                                maxhits=10, usecache = T)
-                               ## Sorting out every insect amplicon data unsolved.
 insect_samples_mosquito = mgnify_query(mg, qtype="samples", environment_feature="Mosquito gut", experiment_type = "amplicon",
+                                       maxhits=200, usecache = T)
+insect_samples_mosquito_2 = mgnify_query(mg, qtype="samples", environment_feature="Mosquito gut",
                                        maxhits=10, usecache = T)
-                               ## Mosquito data sorting by environment feature
+insect_samples_5 = mgnify_query(mg, qtype="runs", biome_name="insecta",
+                                maxhits=10, usecache = T)
+mgnify_query(mg, qtype="samples", biome_name = "insecta", experiment_type = "amplicon",
+             maxhits=10, usecache = T)
+samp_acc <- insect_samples_mosquito$accession
+samp_acc
+(an_acc <- mgnify_analyses_from_samples(mg, samp_acc))
+metadata <- mgnify_get_analyses_metadata(mg, an_acc, usecache=T)
+head(metadata)
+colnames(metadata)
+amplicon_accessions <- metadata$analysis_accession[metadata$'analysis_experiment-type'=="amplicon"]
+ps <- mgnify_get_analyses_phyloseq(mg, amplicon_accessions)
+ps@otu_table
+ps@tax_table
+psglom <- tax_glom(normed_ps, "Order")
+normed_ps <- transform_sample_counts(psglom, function(x) x/sum(x))
+plot_bar(normed_ps, fill="Phylum")
+library("phyloseq"); packageVersion("phyloseq")
+library("ggplot2"); packageVersion("ggplot2")
+theme_set(theme_bw())
+?phyloseq
+?otu_table
+?sample_data
+?tax_table
+otumat = matrix(sample(1:100, 100, replace = TRUE), nrow = 10, ncol = 10)
+otumat
+samp_acc <- insect_studies$accession
+samp_acc
+(an_acc <- mgnify_analyses_from_samples(mg, samp_acc))
+metadata <- mgnify_get_analyses_metadata(mg, an_acc, usecache=T)
+head(metadata)
+colnames(metadata)
+amplicon_accessions <- metadata$analysis_accession[metadata$'analysis_experiment-type'=="amplicon"]
+ps <- mgnify_get_analyses_phyloseq(mg, amplicon_accessions)
+ps@otu_table
+ps@tax_table

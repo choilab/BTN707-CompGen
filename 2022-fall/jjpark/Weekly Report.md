@@ -36,4 +36,6 @@
 + Pipeline과 업로드 사이트간의 연결 
   - 현재 Pipeline과 web을 통해 저장된 파일들간의 연결이 이뤄지지 못함. Django를 이용한 연결이 필요함. 
 + Web에 Option을 설정하고, Pipeline과 연계
-  - 현재 Pipeline은 Paired read에 대해 bam file을 만들고, Model animal에 대한 예외를 적용하지 않음. 추가적인 연구 진행이 필요함. 
+  - 현재 Pipeline은 Paired read에 대해 bam file을 만들고, Model animal에 대한 예외를 적용하지 않음. 추가적인 연구 진행이 필요함.
++ Progress bar 생성
+  - 업로드하는 fastq file의 크기가 giga byte 단위기 때문에, Progress bar를 만들고, 업로드가 완료되면 pipeline 구동 버튼을 통한 구동이 필요함. 

@@ -8,7 +8,7 @@
 
 ## 주의점
 
-1. from .abc import (
+1. from .abc import (함수)
 2. settings.py    INSTALLED_APPS    ex) polls.apps.PollsConfig, fold.apps.FoldConfig 
 3. settings.py   Allowed host에 ALLOWED_HOSTS = ['localhost', '163.152.25.210']
 4. Model에 추가한 다음에는    python manage.py makemigrations, python manage.py migrate

@@ -11,15 +11,10 @@ This pipeline finds most similar protein structures using foldseek program. You 
 
 ## Requirements for local install
 
-#### System requirement
-
-Linux(Ubuntu) is recommanded. You can install require programs on Mac, therefore, this pipeline is developed on Ubuntu.
-
-<br/>
 
 #### Program requirement
 
-[foldseek](https://github.com/steineggerlab/foldseek/blob/master/README.md) and [Django](https://www.djangoproject.com/) programs are used in this pipeline. Django transfers uploaded PDB file to server, and foldseek query similar structures.
+[foldseek](https://github.com/steineggerlab/foldseek/blob/master/README.md) and [Django](https://www.djangoproject.com/) programs are used in this pipeline. Django transfers uploaded PDB file to server, and foldseek query similar structures. For system requirement, linux(Ubuntu) is recommanded. You can install require programs on Mac, therefore, this pipeline is developed on Ubuntu.
 
 |Program|version|system requirement|description|
 |---|---|---|---|

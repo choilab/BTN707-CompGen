@@ -1,9 +1,12 @@
 Structurally similar protein finder
 ======================================
 ## 1. Description
+--------------------------------------
 
-1-1. Purpose of program
-- This program is searching for protein structure homologue from protein structure database using foldseek program
+#### 1-1. Purpose of program
+
+
+This program is searching for protein structure homologue from protein structure database using foldseek program
 
 1-2. Detailed descriptions
 - Find similar protein structure on Alphafold Database using foldseek program

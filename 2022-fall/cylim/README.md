@@ -4,53 +4,13 @@ Structurally similar protein finder
 
 1-1. Purpose of program
 - This program is searching for protein structure homologue from protein structure database using foldseek program
-- File requirement
-- How to use?
-#
-- Upload input file (PDB format) to server through internet
-- Running foldseek on server
-- Make top ranked similarity protein list, and access link to PDB files
-#
 
-1-2. Programs/language
-- Programs
-  - Foldseek : for protein structure similarity comparision
-  - Django : to connect backend server (foldseek) and frontend web (html)
-- Language
-  - Python 3
-  - HTML
-  - Javascript?
+1-2. Detailed descriptions
+- Find similar protein structure on Alphafold Database using foldseek program
+- Alphafold database[https://alphafold.ebi.ac.uk/]
+- foldseek github[https://github.com/steineggerlab/foldseek]
+- You can select species DB, and upload your PDB file to query
+- Program will find similar structures based on evalue, bit-score
 
 <br/><br/>
 
-## 2. 진행단계
-
-2-1. Backend 단계
-<br/>
-- Input 파일의 저장 이후부터, Output 파일의 업로드 이전 까지의 과정
-
-- DB
-  - Foldseek 프로그램이 제공하는 pre-constructed Alphafold DB, PDB DB 정상구동 확인 완료
-  - Alphafold model organism의 data 다운로드 완료
-  - 각 대표 species 별로 PDB 파일을 따로 구분하여 다운로드받을 수 있는지 확인중
-
-- Pipeline
-  - Input file을 읽고, Foldseek program을 돌리고, output을 저장하고, glob 함수를 통해 해당하는 PDB 파일을 DB에서 복사
-  - 파이프라인 구축 완료
-<br/>
-
-2-2. Django 단계
-<br/>
-- 업로드된 파일을 저장하고, pipeline의 output을 웹페이지에 올려줘야 함
-- html 파일을 서버에서 호스팅할 수 있게 파이썬 코드를 통해 구현
-
-- html 파일 호스팅 및 편집
-  - 튜토리얼을 통해 장고의 구조 이해
-  - 명령어 및 구조 
-    - django-admin startproject (이름)을 통해 프로젝트 생성
-    - python managy.py runserver (IP주소)를 통해 서버 구동
-    - python manage.py startapp (앱이름) 통해 앱 생성하고 프로젝트 폴더의 apps.py에 앱 추가 후 migration으로 통합
-    - app의 template 폴더에서 html을 주로 호스팅하고, 이를 url.py와 view.py를 통해 백엔드와 연결
-
-- pipeline input
-  - 

@@ -55,3 +55,15 @@
   - 업로드하는 fastq file의 크기가 giga byte 단위기 때문에, Progress bar를 만들고, 업로드가 완료되면 pipeline 구동 버튼을 통한 구동이 필요함. 
 + Counting program의 결정
   - Multi thread를 사용가능한 Linux feature count/subread, R의 countOverlaps중 선택해야함.
+
+
+## Week 2 (11/15 ~ 11/22)
+### Goal 
++ Pipeline의 보완
++ Pipeline과 업로드 사이트간의 연결 
+
+### Progress
+#### Progress 1 : Pipeline Update
++ Pipeline을 web service 중인 Leafeon server에서 구동되기 위해 Pipeline의 보완 및 연결을 실시.
++ 사이트에 Raw file을 업로드 할 시, Trim galore, Hisat indexing, Hisat align까지 구동되어 Leafeon 서버에 파일이 저장됨.
++ bam format file을 웹에서 로컬로 다운로드하는 기능 구현이 필요함.

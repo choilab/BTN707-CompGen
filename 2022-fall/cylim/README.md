@@ -1,7 +1,6 @@
 Structurally similar protein finder
 ======================================
 ## 1. Description
---------------------------------------
 
 #### 1-1. Purpose of program
 

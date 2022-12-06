@@ -1,19 +1,23 @@
 Structurally similar protein finder
 ======================================
 
-## Description
+<br/><br/>
 
-#### 1-1. Purpose of program
+## Brief description
 
+This pipeline finds most similar protein structures using foldseek program. You can upload protein structure file as PDB format. Sspf query uploaded structure in [Alphafold DB](https://alphafold.ebi.ac.uk/). Options to select DB by species, to query using PDB ID instead of PDB file are developing.
 
-This program is searching for protein structure homologue from protein structure database using foldseek program
+<br/>
 
-1-2. Detailed descriptions
-- Find similar protein structure on Alphafold Database using foldseek program
-- Alphafold database[https://alphafold.ebi.ac.uk/]
-- foldseek github[https://github.com/steineggerlab/foldseek]
-- You can select species DB, and upload your PDB file to query
-- Program will find similar structures based on evalue, bit-score
+## Requirements for local install
+
+#### System requirement
+
+Linux(Ubuntu) is recommanded. You can install require programs on Mac, therefore, this pipeline is developed on Ubuntu.
+
+#### Program requirement
+
+[foldseek](https://github.com/steineggerlab/foldseek/blob/master/README.md) and [Django](https://www.djangoproject.com/) programs are used in this pipeline. Django transfers uploaded PDB file to server, and foldseek query similar structures.
 
 <br/><br/>
 

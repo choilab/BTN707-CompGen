@@ -25,8 +25,14 @@ This pipeline finds most similar protein structures using foldseek program. You 
 
 #### Program installation
 
-    # conda install 
-
+    # conda install foldseek
+    # conda install django
+    # django-admin startproject (your project name)
+ 
+Then, clone sourcecode file on your project, go to your project folder which contains manage.py. and do
+ 
+    # python manage.py makemigration
+    # python manage.py migrate
 
 
 

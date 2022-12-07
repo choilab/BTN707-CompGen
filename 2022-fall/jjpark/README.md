@@ -18,9 +18,12 @@ The figure below explains comprehensive roadmap for experimental design and anal
 
 After sequencing, for differentially expressed genes(DEGs) analysis, several computational processes are required. 
 Computational processes are divided into Quality control, Read alignment, Quantification, Visualiztion.
-Raw read quality control(QC) is a process that checks sequence quality, GC content, adaptor presence, excessive k-mer presence, duplicated read, etc. for sequencing error, PCR artifact, contamination. 
+### Quality Control
+Raw read quality control(QC) is a process that checks sequence quality, GC content, adaptor presence, excessive k-mer presence, duplicated read, etc. for sequencing error, PCR artifact, contamination. (Conesa, A. et al.(2016))
+Low quality bases/reads are get rid off during quality control. The representative software is FASTQC.
 
 
+### Read alignment
 
 
 ## Purpose 

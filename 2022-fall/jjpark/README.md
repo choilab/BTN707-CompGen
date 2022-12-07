@@ -12,19 +12,47 @@ The RNA-seq workflow is shown in the figure below.
  
 ## RNA-seq roadmap
 The figure below explains comprehensive roadmap for experimental design and analysis using Illumina sequencing.
-![image](https://user-images.githubusercontent.com/97942772/206102252-0cc8748a-8050-4d07-ae91-a6a5724faeda.png)
+
+<br/>
+
+![image](https://user-images.githubusercontent.com/97942772/206102252-0cc8748a-8050-4d07-ae91-a6a5724faeda.png)  
+
 
 [Reference : Conesa, A., Madrigal, P., Tarazona, S. et al. A survey of best practices for RNA-seq data analysis. Genome Biol 17, 13 (2016).](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-016-0881-8)]
 
 After sequencing, for differentially expressed genes(DEGs) analysis, several computational processes are required. 
-Computational processes are divided into Quality control, Read alignment, Quantification, Visualiztion.
+Computational processes are divided into Quality control, Read alignment, Quantification.
 ### Quality Control
 Raw read quality control(QC) is a process that checks sequence quality, GC content, adaptor presence, excessive k-mer presence, duplicated read, etc. for sequencing error, PCR artifact, contamination. (Conesa, A. et al.(2016))
 Low quality bases/reads are get rid off during quality control. The representative software is FASTQC.
+### Read Alignment 
+In this step, filtered reads are aligned to reference genome. One of the most important parameter is overall alignment rate. If few reads are contaminated, so that read sequence contain sequences which is derived from other species, the rate of alignment of the reference genome is low. Additionally, alternative splicing should be considered.
+The FASTQ file format, the format for raw reads with containing quality score and sequence information, used as input. Additionally reference genome's FASTA format file is required also. After read alignment, user get BAM format file as a output. Which containing location of reference genome, sequence of query read, mapping quality. The representative softwares are STAR, HISAT2.
+### Quantification
+Reading BAM file let us obtain expression for each gene. BUt we can't use this raw count table, because raw count doesn't consider transcript's length, total read's count, sequencing bias. For example, if the gene length of the reference genome is long, a lot of reads will be bound probably. So normalization step is necessary. Below table is showing few normalize value for quantification. After quantification, 
+
+|Normalized value|description|Equation|
+|-|-|-|
+|RPKM|reads per kilobase of exon model per million reads|numReads / ( geneLength/1000 * totalNumReads/1,000,000 )|
+|FPKM|fragment per kilobase of exon model per million mapped reads|numFragment / ( geneLength/1000 * totalNumFragments/1,000,000 )|
+|TPM|transcript per million|10^6 * RPKM/Sum(RPKM)|
+
+[ZZhao S, Ye Z, Stanton R. Misuse of RPKM or TPM normalization when comparing across samples and sequencing protocols. RNA. 2020 Aug;26(8):903-909.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7373998/)
+
+Few softwares stands for quantification, Featurecounts, edgeR.
+
+<br/>
+
+After all these processes, User can get normalized expresseion dataset, which is available for analysis and visualizaiton.
 
 
-### Read alignment
 
+
+
+
+# -----
+## Purpose of WebApp
+Mentioned computational processes may not be easy for wet lab scientist. So that I service Wep App which can process all computational processes 
 
 ## Purpose 
 + RNA-seq data analysis workflow는 아래와 같음.

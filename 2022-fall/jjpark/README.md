@@ -1,5 +1,5 @@
 # Web Application for one-touch RNA-seq analysis 
-## Purpose
+## Purpose 
 + RNA-seq data analysis workflow는 아래와 같음.
  1. Sequencing reads
  2. Trimming & Quality Control (TrimGalore)
@@ -24,3 +24,5 @@
 + Model animal(Human, Zebra fish, Mouse 등..)의 경우 input으로 reference genome의 gff,fa 파일을 넣어주지 않고, running할 수 있는 환경을 만들어야함.
 + SRA serial number을 넣어줄 때, SRA 데이터를 다운로드해 running하게 해야함.
 + GEO2R의 소스코드를 사용해 gene count table을 input으로 간단한 통계를 제공해야함.
+
+## RNA-seq 

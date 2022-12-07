@@ -9,6 +9,17 @@ This pipeline finds most similar protein structures using foldseek program. You 
 
 <br/>
 
+## Purpose of program
+
+
+##### https://alevelbiolo<hi>gy.co.uk/notes/functions-of-proteins/
+
+Protein is most important functional polymer in living organisms. function of proteins is determined by structure. 
+
+Alphafold predicted protein structures of known protein coading genes in Uniprot DB. Protein structures of protein coading genes in 16 model organisms and 32 global health proteomes predicted by alphafold are provided on [Alphafold-EBI database](https://alphafold.ebi.ac.uk/download). 
+
+
+
 ## Requirements for local install
 
 
@@ -34,10 +45,6 @@ Then, clone sourcecode file on your project, go to your project folder which con
     # python manage.py makemigration
     # python manage.py migrate
 
-
-## Purpose of program
-
-Alphafold predicted 
 
 
 <br/><br/>

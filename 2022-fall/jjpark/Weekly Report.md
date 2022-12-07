@@ -68,4 +68,4 @@
 + 사이트에 Raw file을 업로드 할 시, Trim galore, Hisat indexing, Hisat align까지 구동되어 Leafeon 서버에 파일이 저장됨.
 + bam format file을 웹에서 로컬로 다운로드하는 기능 구현이 필요함.
 <img width="785" alt="image" src="https://user-images.githubusercontent.com/97942772/206071543-5b9f757a-5cc0-4faa-9565-e9385b25aa50.png">
-  + Input으로 웹에서 paired fastq 파일 2개, reference genome으로 사용할 fna  파일 1개를 넣었을 때, 아웃풋으로 trimmed fastq(.fq), hisat-index 파일, bam 파일이 저장됨.  
+  - Input으로 웹에서 paired fastq 파일 2개, reference genome으로 사용할 fna  파일 1개를 넣었을 때, 아웃풋으로 trimmed fastq(.fq), hisat-index 파일, bam 파일이 저장됨.  

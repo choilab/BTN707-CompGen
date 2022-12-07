@@ -11,7 +11,7 @@ This pipeline finds most similar protein structures using foldseek program. You 
 
 ## Purpose of program!
 
-[Functions-of-Proteins](https://user-images.githubusercontent.com/104611489/206113025-4ea7216d-eba0-4b06-8469-02c96e29154d.png)
+(https://user-images.githubusercontent.com/104611489/206113025-4ea7216d-eba0-4b06-8469-02c96e29154d.png)
 
 ##### http<hi>s://alevelbiolo<hi>gy.co.uk/notes/functions-of-proteins/
 

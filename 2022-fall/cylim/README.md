@@ -12,7 +12,7 @@ This pipeline finds most similar protein structures using foldseek program. You 
 ## Purpose of program
 
 
-##### https://alevelbiolo<hi>gy.co.uk/notes/functions-of-proteins/
+##### http<hi>s://alevelbiolo<hi>gy.co.uk/notes/functions-of-proteins/
 
 Protein is most important functional polymer in living organisms. function of proteins is determined by structure. 
 

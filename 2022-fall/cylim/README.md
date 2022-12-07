@@ -9,14 +9,14 @@ This pipeline finds most similar protein structures using foldseek program. You 
 
 <br/>
 
-## Purpose of program
+## Purpose of program!
 
+[Functions-of-Proteins](https://user-images.githubusercontent.com/104611489/206113025-4ea7216d-eba0-4b06-8469-02c96e29154d.png)
 
 ##### http<hi>s://alevelbiolo<hi>gy.co.uk/notes/functions-of-proteins/
 
-Protein is most important functional polymer in living organisms. function of proteins is determined by structure. 
-
-Alphafold predicted protein structures of known protein coading genes in Uniprot DB. Protein structures of protein coading genes in 16 model organisms and 32 global health proteomes predicted by alphafold are provided on [Alphafold-EBI database](https://alphafold.ebi.ac.uk/download). 
+Protein is most important functional polymer in living organisms. Determining function of protein is main goal of modern biology. Protein contains not only sequencial information like DNA/RNA, but also structural information. Chemical properties are determined by structure and functions are determined by chemical properties. 
+Alphafold predicted protein structures of known protein coading genes in Uniprot DB. Protein structures of protein coading genes in 16 model organisms and 32 global health proteomes predicted by alphafold are provided on [Alphafold-EBI database](https://alphafold.ebi.ac.uk/download). Many protein structure comparing tools exist, however, 
 
 
 

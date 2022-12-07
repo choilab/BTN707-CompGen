@@ -22,16 +22,10 @@
 
 2-1. Backend 단계
 <br/>
-- Input 파일의 저장 이후부터, Output 파일의 업로드 이전 까지의 과정
-
-- DB
-  - Foldseek 프로그램이 제공하는 pre-constructed Alphafold DB, PDB DB 정상구동 확인 완료
-  - Alphafold model organism의 data 다운로드 완료
-  - 각 대표 species 별로 PDB 파일을 따로 구분하여 다운로드받을 수 있는지 확인중
 
 - Pipeline
   - Input file을 읽고, Foldseek program을 돌리고, output을 저장하고, glob 함수를 통해 해당하는 PDB 파일을 DB에서 복사
-  - 파이프라인 구축 완료
+  - 파일이 저장된 이후부터 웹으로 전달하기 전까지의, backend 파이프라인 구축 완료
 <br/>
 
 2-2. Django 단계

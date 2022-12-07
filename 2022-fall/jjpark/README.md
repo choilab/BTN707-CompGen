@@ -26,3 +26,12 @@
 + GEO2R의 소스코드를 사용해 gene count table을 input으로 간단한 통계를 제공해야함.
 
 ## RNA-seq 
+RNA-seq is a technique for analysis transcriptome and difference in expression. According to central dogma(1958, Francis Harry Compton Crick), transcript(mRNA) transfer to protein. RNA-seq is a method judging that the higher the number of transcripts, the more expression.
+The RNA-seq workflow is shown in the figure below.  
+
+![image](https://user-images.githubusercontent.com/97942772/206076146-42bd9580-c9e9-4512-ba3e-a34089f32777.png)
+
+(Wang et. al, RNA-Seq: a revolutionary tool for transcriptomics, Nat. Rev. Genetics 10, 57-63, 2009))
+ 
+ Extract mRNA from query sample. After fragmenting mRNA or synthesizing cDNA with mRNA, create a library by attaching necessary sequences for sequencing such as adapters. Perform a NGS(Next generation sequencing), generate short sequencing data, called read.
+ Next stage for RNA-seq is a mapping, attach read to the reference sequence (species from this sample originated). (Wang et al,.(2019)) 

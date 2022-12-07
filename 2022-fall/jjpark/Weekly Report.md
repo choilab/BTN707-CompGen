@@ -70,3 +70,4 @@
 <img width="785" alt="image" src="https://user-images.githubusercontent.com/97942772/206071543-5b9f757a-5cc0-4faa-9565-e9385b25aa50.png">
 
   - Input으로 웹에서 paired fastq 파일 2개, reference genome으로 사용할 fna  파일 1개를 넣었을 때, 아웃풋으로 trimmed fastq(.fq), hisat-index 파일, bam 파일이 저장됨.  
++ 소스코드는 [Supplementary data](https://github.com/choilab/BTN707-CompGen/tree/main/2022-fall/jjpark/Supplementary%20data/week4_complete)의 Week4에 저장.

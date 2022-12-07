@@ -25,6 +25,8 @@ This pipeline finds most similar protein structures using foldseek program. You 
 
 #### Program installation
 
+    # conda install
+
 
 
 

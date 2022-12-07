@@ -35,6 +35,9 @@ Then, clone sourcecode file on your project, go to your project folder which con
     # python manage.py migrate
 
 
+## Purpose of program
+
+Alphafold predicted 
 
 
 <br/><br/>

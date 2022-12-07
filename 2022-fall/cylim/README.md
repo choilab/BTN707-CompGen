@@ -14,7 +14,7 @@ This pipeline finds most similar protein structures using foldseek program. You 
 ![Functions-of-Proteins](https://user-images.githubusercontent.com/104611489/206116011-6b5dfe67-fb69-4ba0-9674-ce4688776528.png)
 
 
-##### functions of protein (http<hi>s://alevelbiolo<hi>gy.co.uk/notes/functions-of-proteins/)
+##### functions of protein (reference : http<hi>s://alevelbiolo<hi>gy.co.uk/notes/functions-of-proteins/)
 
 Protein is most important functional polymer in living organisms. Determining function of protein is main goal of modern biology. Protein contains not only sequencial information like DNA/RNA, but also structural information. Chemical properties are determined by structure and functions are determined by chemical properties. 
 

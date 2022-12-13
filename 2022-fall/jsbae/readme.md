@@ -41,8 +41,11 @@ Current workflow
  
  <img width="612" alt="image" src="https://user-images.githubusercontent.com/113403504/207232060-572b8160-f673-49a8-ab87-8bf4c4da8de0.png">
  
- #### Bar plot figure showing microbiome community of insecta amplicon samples(380ea) in phylum level.
+ ##### Bar plot figure showing microbiome community of insecta amplicon samples(380ea) in Phylum level.
 
+<img width="915" alt="image" src="https://user-images.githubusercontent.com/113403504/207233734-7eea138f-f1c8-465f-b591-5bfe998a4ba1.png">
+
+ ##### Bar plot figure showing microbiome community of insecta amplicon samples(380ea) in Class level.
  
  
  

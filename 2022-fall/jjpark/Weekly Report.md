@@ -90,3 +90,9 @@
  
  + 소스코드는 [Supplementary data](https://github.com/choilab/BTN707-CompGen/tree/main/2022-fall/jjpark/Supplementary%20data/week5_shiny_try3/my_app)에 저장.
  + Service URL : http://leafeon.korea.ac.kr:8001/
+
+#### Next Week Goal
++ Progress Bar : Trimming, Indexing, Align 과정은 Human genome의 경우 수 시간이 소요됨. 그러나, 해당 과정이 끝남 만을 표시하고 과정 중임을 표시하지 못함.
++ Alert Code : 잘못된 형식의 파일을 넣거나, 요구되는 파일의 형식을 지키지 않을 때 코드가 안 돌아갈 뿐 이유를 웹에 띄우지 못함. 
++ Additional functions : Model Animal을 사용할 때 indexing 과정을 생략하거나, SRA 등에서 FASTQ 파일을 사용할 수 있도록 하는 기능 추가 필요.
++ Manual Update : Web Application의 목적 (git hub link), 지켜야 할 양식/Input파일의 종류 등을 웹에 명시하고자함.

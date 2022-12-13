@@ -1,80 +1,67 @@
-install.packages("devtools")
-source('http://bioconductor.org/biocLite.R')
-biocLite('phyloseq')
-source("http://bioconductor.org/biocLite.R")
-if (!require("BiocManager", quietly = TRUE))
+install.packages("devtools")  # Devtool 다운로드
+source('http://bioconductor.org/biocLite.R') # Bioconductor에서 가져오기
+if (!require("BiocManager", quietly = TRUE)) # Biomanager 다운로드
   install.packages("BiocManager")
 BiocManager::install(version = "3.16")
-a
-yes
-biocLite("phyloseq")
+
+biocLite("phyloseq") # bioclite로 phyloseq 다운로드
 source("http://bioconductor.org/biocLite.R")
 source("https://raw.githubusercontent.com/joey711/phyloseq/master/inst/scripts/installer.R",
        local = TRUE)
-yes
-install_github("beadyallen/MGnifyR")
+
+install_github("beadyallen/MGnifyR") #제작자 Github 경로로 MgnifyR 다운로드
 library("devtools")
 install_github("beadyallen/MGnifyR")
-library(MGnifyR)
+library(MGnifyR) # MgnifyR library 실행
 
-mgnify_client(url = "https://www.ebi.ac.uk/metagenomics/api/v1", username = "Webin-63503", password = "qownstlrqkqhz!1", usecache = T, cache_dir = "/desktop/Mgnify_cache_location", warnings = F, use_memcache = F)
-mg <- mgnify_client(cache_dir = "/desktop/Mgnify_cache_location")
-mgnify_query(mg, qtype = "samples", maxhits=10, usecache = T)
-J <- mgnify_query(mg, qtype = "samples", biome_name = "insecta", maxhits=200, usecache = T)
-colnames(J)
+mgnify_client() # Mgnify 클라이언트 실행
+mgnify_client(username = "Webin-63754", password = "Ranger0908*", usecache = T) # Mgnify 웹페이지 로그인
+mg <- mgnify_client(usecache = T, cache_dir = "~/Desktop/MGnifyR_cache") # 캐시 사용 및 디렉토리 설정
+
+
+mgnify_query(mg, qtype = "samples", maxhits=10, usecache = T) # 쿼리함수로 데이터 불러오기
+J <- mgnify_query(mg, qtype = "samples", biome_name = "insecta", maxhits=200, usecache = T) # samples / insecta / maxhit 설정(0보다 작을시 불러오는 데이터 제한 없음)
+colnames(J) # 불러온 데이터 나열
 insect_samples = mgnify_query(mg, qtype="samples", biome_name = "insecta", experiment_type = "amplicon",
-                           maxhits=200, usecache = T)
-insect_samples_2 = mgnify_query(mg, qtype="samples", biome_name = "insect", experiment_type = "amplicon",
                               maxhits=200, usecache = T)
-insect_samples_3 = mgnify_query(mg, qtype="samples", biome_name = "mosquito", experiment_type = "amplicon",
-                                maxhits=10, usecache = T)
-insect_samples_4 = mgnify_query(mg, qtype="samples", sample_name = "insecta", experiment_type = "amplicon",
-                               maxhits=10, usecache = T)
-insect_samples_mosquito = mgnify_query(mg, qtype="samples", environment_feature="Mosquito gut", experiment_type = "amplicon",
-                                       maxhits=200, usecache = T)
-insect_samples_mosquito_2 = mgnify_query(mg, qtype="samples", environment_feature="Mosquito gut",
-                                       maxhits=10, usecache = T)
-insect_samples_5 = mgnify_query(mg, qtype="runs", biome_name="insecta",
-                                maxhits=10, usecache = T)
-mgnify_query(mg, qtype="samples", biome_name = "insecta", experiment_type = "amplicon",
-             maxhits=10, usecache = T)
-samp_acc <- insect_samples_mosquito$accession
+
+samp_acc <- insect_samples$accession # sample로 설정한 qtype을 변환
 samp_acc
-(an_acc <- mgnify_analyses_from_samples(mg, samp_acc))
-metadata <- mgnify_get_analyses_metadata(mg, an_acc, usecache=T)
-head(metadata)
-colnames(metadata)
+(an_acc <- mgnify_analyses_from_samples(mg, samp_acc)) # sample anaylses 데이터를 an_acc로 설정
+metadata <- mgnify_get_analyses_metadata(mg, an_acc, usecache=T) # 설정한 파라미터?에 대한 metadata 가져오기
+head(metadata) # 앞부분 보여주는거
+colnames(metadata) # metadata 내용 나열
+metadata$'analysis_analysis-status' # metadata 내용 선택적으로 보여주기
+table(metadata$'analysis_instrument-model') # table 형태
+metadata[metadata$'analysis_instrument-model' == "Illumina HiSeq 2500",] # 예시
+
 amplicon_accessions <- metadata$analysis_accession[metadata$'analysis_experiment-type'=="amplicon"]
 ps <- mgnify_get_analyses_phyloseq(mg, amplicon_accessions)
-ps@otu_table
-ps@tax_table
+ps@otu_table # OTU table view (샘플 개수, taxa 개수)
+ps@tax_table # OTU를 기준으로 한 taxa 테이블 view, kindom ~ genus까지 나열
 
-library("phyloseq"); packageVersion("phyloseq")
-library("ggplot2"); packageVersion("ggplot2")
-theme_set(theme_bw())
+tax_table(ps)
+otu_table(ps)
+sample_data(ps)
+tax_table(ps)
 
+library(phyloseq) # Barplot 그리는 단계
+psglom <- tax_glom(ps, "Order")
+normed_ps <- transform_sample_counts(psglom, function(x) x/sum(x))
 
-samp_acc <- insect_studies$accession
-samp_acc
-(an_acc <- mgnify_analyses_from_samples(mg, samp_acc))
-metadata <- mgnify_get_analyses_metadata(mg, an_acc, usecache=T)
-head(metadata)
-colnames(metadata)
-amplicon_accessions <- metadata$analysis_accession[metadata$'analysis_experiment-type'=="amplicon"]
-ps <- mgnify_get_analyses_phyloseq(mg, amplicon_accessions)
+plot_bar(normed_ps, fill="Phylum") # Phylum level에서 sample들의 microbiome 구성 비교
+plot_bar(normed_ps, fill="Class")
+plot_bar(normed_ps, fill="Order")
+plot_bar(normed_ps, fill="Genus") # 이거는 안된다..왜일까? Genus level까지는 bar로 표현이 안되는거 같기도 하다
 
-ps@otu_table
-ps@tax_table
+ord <- ordinate(ps, "NMDS", "bray") # NMDS (Non-metric multidimensional scaling / Bray-Curtis dissimilarity method 사용
+plot_ordination(ps, ord) + geom_point(aes(color=as.numeric(sample_latitude)), size=8) + theme_bw() # numeric() 함수 안에 들어가는
+plot_ordination(ps, ord) + geom_point(aes(color=as.numeric(sample_longitude)), size=8) + theme_bw()
+plot_tree(ps, size="abundance", sizebase=2, label.tips="taxa_names") # 
 
-data(insect_)
-otumat = matrix(sample(1:100, 100, replace = TRUE), nrow = 24, ncol = 225)
-otumat
-
-rownames(otumat) <- paste0("OTU", 1:nrow(otumat))
-colnames(otumat) <- paste0("Sample", 1:ncol(otumat))
-otumat
-
-taxmat = matrix(sample(letters, 24, replace = TRUE), nrow = nrow(otumat), ncol = 7)
-rownames(taxmat) <- rownames(otumat)
-colnames(taxmat) <- c("Domain", "Phylum", "Class", "Order", "Family", "Genus", "Species")
-taxmat
+mgnify_get_analyses_results(mg, acc_list, retrievelist = c("go-slim", "taxonomy-ssu"))
+acc_list <- metadata$analysis_accession[metadata$'analysis_experiment-type' == "amplicon"]
+                                       
+func_results <- mgnify_get_analyses_results(mg, acc_list, retrievelist = c("go-slim", "taxonomy-ssu" ))
+names(func_results)
+func_results$'go_slim'

@@ -50,10 +50,10 @@ After all these processes, User can get normalized expresseion dataset, which is
 ## Purpose of WebApp
 Mentioned computational processes may not be easy for wet lab scientist. So that I service Wep App which can process all computational processes. As a result of this web application, User can get gene count table with one-click.
 ### Programs used for WebApp
- + Trimming & Quality Control : [TrimGalore v 0.6.6](https://github.com/FelixKrueger/TrimGalore)
- + Alignment to reference genome : [HISAT2 v 2.2.1](http://daehwankimlab.github.io/hisat2/)
- + Count gene fetures : [FeatureCount v 2.0.0](https://rnnh.github.io/bioinfo-notebook/docs/featureCounts.html)
- + WebApplication : [Shiny for python v alpha](https://shiny.rstudio.com/py/)
+ + Trimming & Quality Control : [TrimGalore (v0.6.6)](https://github.com/FelixKrueger/TrimGalore)
+ + Alignment to reference genome : [HISAT2 (v2.2.1)](http://daehwankimlab.github.io/hisat2/)
+ + Count gene fetures : [FeatureCount (v2.0.0)](https://rnnh.github.io/bioinfo-notebook/docs/featureCounts.html)
+ + WebApplication : [Shiny for python (v alpha)](https://shiny.rstudio.com/py/)
 
 
 --------------------------------------------------------------

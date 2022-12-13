@@ -47,7 +47,8 @@ Current workflow
 
  ##### Bar plot figure showing microbiome community of insecta amplicon samples(380ea) in Class level.
  
- 
- 
+ <img width="915" alt="image" src="https://user-images.githubusercontent.com/113403504/207234355-2df28d22-159f-4cde-b88c-191f57eb7cb9.png">
+
+ ##### Bar plot figure showing microbiome community of insecta amplicon samples(380ea) in Order level.
  
  

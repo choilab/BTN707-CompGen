@@ -66,3 +66,10 @@ Current workflow
 <img width="697" alt="image" src="https://user-images.githubusercontent.com/113403504/207237220-b6decca3-7a4e-42c0-86ef-ace9e9a35436.png">
 
 ##### 2) Plot organization showing sample collected latitude 
+
+
+#### * Goal for next week
+
+##### 1) Make readable visualization in case of plot bar
+##### 2) Draw plot phylogenetic tree with obtained OTUs of samples 
+##### 3) Make visualization which shows comparision between sample with different parameters of metadata

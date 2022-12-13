@@ -58,3 +58,11 @@ Current workflow
  <img width="921" alt="image" src="https://user-images.githubusercontent.com/113403504/207235814-a42c772c-282d-4098-9286-246a63e97669.png">
 
 ##### 5. Bar plot figure showing microbiome community of insecta amplicon samples(380ea) in Genus level.
+
+<img width="697" alt="image" src="https://user-images.githubusercontent.com/113403504/207236484-3fb6c92e-b9f1-49d6-9f4c-f7f58a0cfd7b.png">
+
+##### 1) Plot organization showing sample collected longitude 
+
+<img width="697" alt="image" src="https://user-images.githubusercontent.com/113403504/207237220-b6decca3-7a4e-42c0-86ef-ace9e9a35436.png">
+
+##### 2) Plot organization showing sample collected latitude 

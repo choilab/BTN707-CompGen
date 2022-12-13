@@ -29,7 +29,12 @@ Main purpose of this project is to make a thorough analysis of microbiome set be
 Current workflow
 
  #### 1. Data search / Import from Database(Mgnify)
-     -
+     - 380 analysis datas retrieved from Mgnify database, make a data repository in User PC.
  #### 2. Make a query function in MgnifyR environment / sample information & metadata overall summary
-     -
- #### 3. Import data to phyloseq / Make a phylogenic classification of each OTUs from each sample
+     - Define it to Insect microbiome 16S rRNA amplicon data, also retrieve metadata of each sample.
+ #### 3. Import data to phyloseq / Make a phylogenic classification of each sample.
+     - OTU based-analysis / Making an microbiome community analysis of whole sample bulk.
+ #### 4. Visualizing data with multi-aspects of metadata parameters.
+     - Showing Bar plot / Plot ordination / Plot tree / Plot heatmap with diverse parameters to make a comparision between samples
+ 
+ 

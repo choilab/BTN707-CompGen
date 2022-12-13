@@ -57,7 +57,7 @@
   - Multi thread를 사용가능한 Linux feature count/subread, R의 countOverlaps중 선택해야함.
 
 
-## Week 2 (11/15 ~ 11/22)
+## Week 4 (11/29 ~ 12/6)
 ### Goal 
 + Pipeline의 보완
 + Pipeline과 업로드 사이트간의 연결 
@@ -71,3 +71,22 @@
 
   - Input으로 웹에서 paired fastq 파일 2개, reference genome으로 사용할 fna  파일 1개를 넣었을 때, 아웃풋으로 trimmed fastq(.fq), hisat-index 파일, bam 파일이 저장됨.  
 + 소스코드는 [Supplementary data](https://github.com/choilab/BTN707-CompGen/tree/main/2022-fall/jjpark/Supplementary%20data/week4_complete)의 Week4에 저장.
+
+## Week 5 (12/6 ~ 12/13)
+### Goal
++ Pipeline 완성
++ Alpha version web service 구동
+
+### Progress
+#### Progress 1 : Pipeline Update
++ 이전에 Django를 사용한 Web Application 제작에 UI 가시성이 좋지 않고, 스크립트 작성에 어려움이 있어 Shiny for python으로 구동 프로그램을 변경.
++ Shiny for python에 맞게 Pipeline Update
+
+#### Progress 2 : Web Application Service
++ Input으로 FASTQ (paired only)를 넣어줄 때, quality control, indexing, align까지의 과정을 Leafeon server에서 진행하고, (Thread 12개 사용) 결과물인 BAM format file을 유저가 다운로드 받을 수 있게 구현함.
+
+<img width="785" alt="image" src="https://user-images.githubusercontent.com/97942772/207236845-a3bc3ed6-8fd1-45d6-8ab0-96aa86673117.png">
+  - Input으로 로컬에서 웹으로 2개의 paired FASTQ file을 업로드하고, 아웃풋으로 bam파일을 다운로드 받았다.(하단) Reference genome FASTA 파일의 크기가 크기 때문에, 미리 서버에 업로드 하였고, 업로드 된 reference genome의 indexing 및 align의 대상으로 삼는 과정은 버튼을 누르면 구동되게 구현하였다. 
+ 
+ + 소스코드는 [Supplementary data](https://github.com/choilab/BTN707-CompGen/tree/main/2022-fall/jjpark/Supplementary%20data/week5_shiny_try3/my_app)에 저장.
+ + Service URL : http://leafeon.korea.ac.kr:8001/

@@ -73,3 +73,24 @@ Current workflow
 ##### 1) Make readable visualization in case of plot bar
 ##### 2) Draw plot phylogenetic tree with obtained OTUs of samples 
 ##### 3) Make visualization which shows comparision between sample with different parameters of metadata
+
+----------------------------------------------------------------------------------------------------------
+
+<img width="667" alt="Screen Shot 2022-12-20 at 4 24 24 PM" src="https://user-images.githubusercontent.com/113403504/208607933-a1285169-c99e-4ec7-a86d-a97e83c718f9.png">
+
+<img width="671" alt="Screen Shot 2022-12-20 at 4 24 43 PM" src="https://user-images.githubusercontent.com/113403504/208607974-464cd7c4-8838-4c80-bc04-13eb1a8f0504.png">
+
+##### Output creation using R markdown
+
+## Remaining procedure
+
+### 1. Usable options of sample metadata for analysis between samples are not enough
+### 2. Limit of analysis scope due to low diversity of host species
+### 3. Detailed analysis of result should be done
+### 4. Phylogenetic tree construction should be done
+### 5. Output using R markdown should be done
+
+
+
+
+

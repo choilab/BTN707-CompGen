@@ -1,4 +1,26 @@
-# Web Application for one-touch RNA-seq analysis 
+# OCRWA (One - Click RNA-seq pipeline Web APP)
+## Purpose of WebApp
+Computational processes (adapter trimming, aligning, counting) may not be easy for wet lab scientist. So that we service Wep App which can process all computational processes. As a result of this web application, User can get gene count table with one-click.
+
+<img width="785" alt="image" src="https://user-images.githubusercontent.com/97942772/208585551-f58d4257-5af4-44bd-93fd-e07d6294022c.png">
+
+## Usage
++ We service on [leafeon.korea.ac.kr:8001](http://leafeon.korea.ac.kr:8001/). 
+
+## Programs used for WebApp
+ + Trimming & Quality Control : [TrimGalore (v0.6.6)](https://github.com/FelixKrueger/TrimGalore)
+ + Alignment to reference genome : [HISAT2 (v2.2.1)](http://daehwankimlab.github.io/hisat2/)
+ + Count gene fetures : [FeatureCount (v2.0.0)](https://rnnh.github.io/bioinfo-notebook/docs/featureCounts.html)
+ + WebApplication : [Shiny for python (v alpha)](https://shiny.rstudio.com/py/)
+
+## Requirement for launching.
+ + [TrimGalore (v0.6.6)](https://github.com/FelixKrueger/TrimGalore)
+ + [HISAT2 (v2.2.1)](http://daehwankimlab.github.io/hisat2/)
+ + [FeatureCount (v2.0.0)](https://rnnh.github.io/bioinfo-notebook/docs/featureCounts.html)
+ + [Shiny for python (v alpha)](https://shiny.rstudio.com/py/)
+ + We made index for alignment in some model animals, Homo sapiens, Mus musculus, Danio rerio. Please download FNA file of these animals in [NCBI refseq](https://www.ncbi.nlm.nih.gov/refseq/), and use command "hisat2-build" to make index of them before launching.
+
+# ABOUT RNA-seq
 ## RNA-seq 
 RNA-seq is a technique for analysis transcriptome and difference in expression. According to central dogma(1958, Francis Harry Compton Crick), transcript(mRNA) transfer to protein. RNA-seq is a method judging that the higher the number of transcripts, the more expression.
 The RNA-seq workflow is shown in the figure below.  
@@ -47,18 +69,3 @@ After all these processes, User can get normalized expresseion dataset, which is
 
 <br/>
 
-## Purpose of WebApp
-Mentioned computational processes may not be easy for wet lab scientist. So that I service Wep App which can process all computational processes. As a result of this web application, User can get gene count table with one-click.
-### Programs used for WebApp
- + Trimming & Quality Control : [TrimGalore (v0.6.6)](https://github.com/FelixKrueger/TrimGalore)
- + Alignment to reference genome : [HISAT2 (v2.2.1)](http://daehwankimlab.github.io/hisat2/)
- + Count gene fetures : [FeatureCount (v2.0.0)](https://rnnh.github.io/bioinfo-notebook/docs/featureCounts.html)
- + WebApplication : [Shiny for python (v alpha)](https://shiny.rstudio.com/py/)
-
-
---------------------------------------------------------------
-## Additional Functions
-+ Paired read와, one-way read의 Input 모두 handling 해야함.
-+ Model animal(Human, Zebra fish, Mouse 등..)의 경우 input으로 reference genome의 gff,fa 파일을 넣어주지 않고, running할 수 있는 환경을 만들어야함.
-+ SRA serial number을 넣어줄 때, SRA 데이터를 다운로드해 running하게 해야함.
-+ GEO2R의 소스코드를 사용해 gene count table을 input으로 간단한 통계를 제공해야함.

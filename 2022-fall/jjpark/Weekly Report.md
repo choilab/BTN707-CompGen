@@ -98,3 +98,23 @@
 + Manual Update : Web Application의 목적 (git hub link), 지켜야 할 양식/Input파일의 종류 등을 웹에 명시하고자함.
 + Additional functions : Model Animal을 사용할 때 indexing 과정을 생략하거나, SRA 등에서 FASTQ 파일을 사용할 수 있도록 하는 기능 추가 필요.
 
+## Week 6 (12/13 ~ 12/20)
+## Goal
++ Launcing alpha version 
+
+### Progress
+#### Progress 1 : Pipeline Update
++ Model animal, Homo sapiens, Mus musculus, Danio rerio의 경우, indexing의 과정을 생략하고, fna와 gtf 등의 파일 업로드가 불필요하게끔 만듦.
++ 업로드한 파일의 양식이 지켜지지 않았을 경우, 워닝 메세지를 띄우게 함. 
+
+
+#### Progress 2 : UI Update 
++ 웹 앱의 설명과 이름, 사용법을 표시함. 
++ 깃허브 링크 추가.
+
+### Problems
++ Progress bar
+  - 현재 구동되는 방식은 하나의 큰 함수 내에서 파이프라인이 돌아가게 설계됨. 중간 단계에서 진행상황을 유저에게 업데이트하기 어려운 점이 있음.
++ Visuallizaiton & Normalization
+  - Visualiztion & Normalization 이용하기 위한 edgeR 코드를 사용하려면, 해당 R 코드 내에 input 인자를 다르게 넣어줘야함. 파이썬 환경에서 해당 작업에 어려운 점이 있음.
+  - Python에서 작동하는 visualization & normalization 프로그램 HTseq의 사용을 하려했으나, RNA-seq 사용의 최적화(tRNA 등의 non-coding RNA를 제거하는 작업)에 차질이 있음.

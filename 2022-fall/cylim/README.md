@@ -5,21 +5,24 @@ Structurally similar protein finder
 
 ## Brief description
 
-This pipeline finds most similar protein structures using foldseek program. You can upload protein structure file as PDB format. Sspf query uploaded structure in [Alphafold DB](https://alphafold.ebi.ac.uk/). Options to select DB by species, to query using PDB ID instead of PDB file are developing.
+You can upload protein structure file as PDB format. Sspf query uploaded structure in [Alphafold DB](https://alphafold.ebi.ac.uk/) using [foldseek](https://github.com/steineggerlab/foldseek). Options to select DB by species, to query using PDB ID instead of PDB file are developing.
 
 <br/>
 
 ## Purpose of program
 
+#### Importance of protein structure
+
+Protein is most important functional polymer in living organisms. Determining function of protein is one of main goal of modern biology. Protein contains not only sequencial information like DNA/RNA, but also structural information. Chemical properties are determined by structure and functions are determined by chemical properties. 
 
 
-##### functions of protein (reference : http<hi>s://alevelbiolo<hi>gy.co.uk/notes/functions-of-proteins/)
+#### One step querying
 
-Protein is most important functional polymer in living organisms. Determining function of protein is main goal of modern biology. Protein contains not only sequencial information like DNA/RNA, but also structural information. Chemical properties are determined by structure and functions are determined by chemical properties. 
+![capture1](https://user-images.githubusercontent.com/104611489/208577494-eb42bbb0-21c8-491a-914b-d82e91a6215c.png)
 
-Alphafold predicted protein structures of known protein coading genes in Uniprot DB. Protein structures of protein coading genes in 16 model organisms and 32 global health proteomes predicted by alphafold are provided on [Alphafold-EBI database](https://alphafold.ebi.ac.uk/download). Many protein structure comparing tools exist, however, downloading structure data, running program and 3D viewing output protein is time consuming steps. This pipeline cut down these steps to one step. 
+Alphafold predicted protein structures of genes in Uniprot DB. Protein structures of protein coading genes in 16 model organisms and 32 global health proteomes predicted by alphafold are provided on [Alphafold-EBI database](https://alphafold.ebi.ac.uk/download). Many protein structure comparing tools exist, however, downloading structure data, running program and 3D visualization of output protein is time consuming steps. This pipeline cut down these steps to one step. 
 
-
+<br/><br/>
 
 ## Requirements for local install
 

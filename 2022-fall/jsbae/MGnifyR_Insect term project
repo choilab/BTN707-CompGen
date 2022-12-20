@@ -77,3 +77,181 @@ biomformat::read_biom(":")
 import_biom(BIOMfilename = "SRS1321708_format_json") # 이건 어떻게 하는지 확인해 
 data(mg) # 데이터값 바꿔주기
 gp.ch = subset_taxa(GlobalPatterns, Phylum == "Chlamydiae") # 어느 taxa level의 수준에서 bar plot 만들지?
+
+
+prune_samples(samples = colnames(otu_table(ps))[1:50], ps)
+ps_sample50 <-prune_samples(samples = colnames(otu_table(ps))[1:50], ps)
+
+top20 <- names(sort(taxa_sums(ps_sample50), decreasing=TRUE))[1:50]
+ps.top20 <- transform_sample_counts(ps_sample50, function(OTU) OTU/sum(OTU))
+ps.top20 <- prune_taxa(top20, ps.top20)
+
+
+plot_bar(ps.top20, fill="Phylum") + theme(axis.text.x=element_blank(),
+                                             axis.ticks.x=element_blank())
+
+plot_bar(ps.top20, fill="Class") + theme(axis.text.x=element_blank(),
+                                       axis.ticks.x=element_blank())
+
+plot_bar(ps.top20, fill="Family") + theme(axis.text.x=element_blank(),
+                                        axis.ticks.x=element_blank())
+plot_bar(ps.top20, fill="Order") + theme(axis.text.x=element_blank(),
+                                       axis.ticks.x=element_blank())
+plot_bar(ps.top20, fill="Genus") + theme(axis.text.x=element_blank(),
+                                         axis.ticks.x=element_blank())
+ 
+prune_samples(samples = colnames(otu_table(ps))[51:100], ps)
+ps_sample100 <-prune_samples(samples = colnames(otu_table(ps))[51:100], ps)
+
+top20 <- names(sort(taxa_sums(ps_sample50), decreasing=TRUE))[51:100]
+ps.top20 <- transform_sample_counts(ps_sample100, function(OTU) OTU/sum(OTU))
+ps.top20 <- prune_taxa(top20, ps.top20)
+
+
+plot_bar(ps.top20, fill="Phylum") + theme(axis.text.x=element_blank(),
+                                          axis.ticks.x=element_blank())
+
+plot_bar(ps.top20, fill="Class") + theme(axis.text.x=element_blank(),
+                                         axis.ticks.x=element_blank())
+
+
+plot_bar(ps.top20, fill="Family") + theme(axis.text.x=element_blank(),
+                                          axis.ticks.x=element_blank())
+
+
+plot_bar(ps.top20, fill="Order") + theme(axis.text.x=element_blank(),
+                                         axis.ticks.x=element_blank())
+
+plot_bar(ps.top20, fill="Genus") + theme(axis.text.x=element_blank(),
+                                         axis.ticks.x=element_blank())
+
+prune_samples(samples = colnames(otu_table(ps))[101:150], ps)
+ps_sample150 <-prune_samples(samples = colnames(otu_table(ps))[101:150], ps)
+
+top20 <- names(sort(taxa_sums(ps_sample150), decreasing=TRUE))[101:150]
+ps.top20 <- transform_sample_counts(ps_sample150, function(OTU) OTU/sum(OTU))
+ps.top20 <- prune_taxa(top20, ps.top20)
+
+
+plot_bar(ps.top20, fill="Phylum") + theme(axis.text.x=element_blank(),
+                                          axis.ticks.x=element_blank())
+
+plot_bar(ps.top20, fill="Class") + theme(axis.text.x=element_blank(),
+                                         axis.ticks.x=element_blank())
+
+
+plot_bar(ps.top20, fill="Family") + theme(axis.text.x=element_blank(),
+                                          axis.ticks.x=element_blank())
+
+
+plot_bar(ps.top20, fill="Order") + theme(axis.text.x=element_blank(),
+                                         axis.ticks.x=element_blank())
+
+plot_bar(ps.top20, fill="Genus") + theme(axis.text.x=element_blank(),
+                                         axis.ticks.x=element_blank())
+
+prune_samples(samples = colnames(otu_table(ps))[151:200], ps)
+ps_sample200 <-prune_samples(samples = colnames(otu_table(ps))[151:200], ps)
+
+top20 <- names(sort(taxa_sums(ps_sample200), decreasing=TRUE))[151:200]
+ps.top20 <- transform_sample_counts(ps_sample200, function(OTU) OTU/sum(OTU))
+ps.top20 <- prune_taxa(top20, ps.top20)
+
+
+plot_bar(ps.top20, fill="Phylum") + theme(axis.text.x=element_blank(),
+                                          axis.ticks.x=element_blank())
+
+plot_bar(ps.top20, fill="Class") + theme(axis.text.x=element_blank(),
+                                         axis.ticks.x=element_blank())
+
+
+plot_bar(ps.top20, fill="Family") + theme(axis.text.x=element_blank(),
+                                          axis.ticks.x=element_blank())
+
+
+plot_bar(ps.top20, fill="Order") + theme(axis.text.x=element_blank(),
+                                         axis.ticks.x=element_blank())
+
+plot_bar(ps.top20, fill="Genus") + theme(axis.text.x=element_blank(),
+                                         axis.ticks.x=element_blank())
+
+prune_samples(samples = colnames(otu_table(ps))[201:250], ps)
+ps_sample250 <-prune_samples(samples = colnames(otu_table(ps))[201:250], ps)
+
+top20 <- names(sort(taxa_sums(ps_sample250), decreasing=TRUE))[201:250]
+ps.top20 <- transform_sample_counts(ps_sample250, function(OTU) OTU/sum(OTU))
+ps.top20 <- prune_taxa(top20, ps.top20)
+
+
+plot_bar(ps.top20, fill="Phylum") + theme(axis.text.x=element_blank(),
+                                          axis.ticks.x=element_blank())
+
+plot_bar(ps.top20, fill="Class") + theme(axis.text.x=element_blank(),
+                                         axis.ticks.x=element_blank())
+
+
+plot_bar(ps.top20, fill="Family") + theme(axis.text.x=element_blank(),
+                                          axis.ticks.x=element_blank())
+
+
+plot_bar(ps.top20, fill="Order") + theme(axis.text.x=element_blank(),
+                                         axis.ticks.x=element_blank())
+
+plot_bar(ps.top20, fill="Genus") + theme(axis.text.x=element_blank(),
+                                         axis.ticks.x=element_blank())
+
+prune_samples(samples = colnames(otu_table(ps))[251:300], ps)
+ps_sample300 <-prune_samples(samples = colnames(otu_table(ps))[251:300], ps)
+
+top20 <- names(sort(taxa_sums(ps_sample300), decreasing=TRUE))[251:300]
+ps.top20 <- transform_sample_counts(ps_sample300, function(OTU) OTU/sum(OTU))
+ps.top20 <- prune_taxa(top20, ps.top20)
+
+
+plot_bar(ps.top20, fill="Phylum") + theme(axis.text.x=element_blank(),
+                                          axis.ticks.x=element_blank())
+
+plot_bar(ps.top20, fill="Class") + theme(axis.text.x=element_blank(),
+                                         axis.ticks.x=element_blank())
+
+
+plot_bar(ps.top20, fill="Family") + theme(axis.text.x=element_blank(),
+                                          axis.ticks.x=element_blank())
+
+
+plot_bar(ps.top20, fill="Order") + theme(axis.text.x=element_blank(),
+                                         axis.ticks.x=element_blank())
+
+plot_bar(ps.top20, fill="Genus") + theme(axis.text.x=element_blank(),
+                                         axis.ticks.x=element_blank())
+
+prune_samples(samples = colnames(otu_table(ps))[1:350], ps)
+ps_sample350 <-prune_samples(samples = colnames(otu_table(ps))[1:350], ps)
+
+top20 <- names(sort(taxa_sums(ps_sample350), decreasing=TRUE))[1:350]
+ps.top20 <- transform_sample_counts(ps_sample350, function(OTU) OTU/sum(OTU))
+ps.top20 <- prune_taxa(top20, ps.top20)
+
+
+plot_bar(ps.top20, fill="Phylum") + theme(axis.text.x=element_blank(),
+                                          axis.ticks.x=element_blank())
+
+plot_bar(ps.top20, fill="Class") + theme(axis.text.x=element_blank(),
+                                         axis.ticks.x=element_blank())
+
+
+plot_bar(ps.top20, fill="Family") + theme(axis.text.x=element_blank(),
+                                          axis.ticks.x=element_blank())
+
+
+plot_bar(ps.top20, fill="Order") + theme(axis.text.x=element_blank(),
+                                         axis.ticks.x=element_blank())
+
+plot_bar(ps.top20, fill="Genus") + theme(axis.text.x=element_blank(),
+                                         axis.ticks.x=element_blank())
+
+
+
+
+metadata$`sample_host-tax-id`
+plot_bar(ps.top20, fill="Genus") + theme(axis.text.x=element_blank()) + facet_wrap(~sample_host.taxid, scales="free_x")

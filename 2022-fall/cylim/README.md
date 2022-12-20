@@ -45,7 +45,7 @@ Alphafold predicted protein structures of genes in Uniprot DB. Protein structure
 
     # conda install foldseek
     # conda install django
-    # django-admin startproject (your project name)
+    # django-admin startproject sspf
  
 Then, clone sourcecode file on your project, go to your project folder which contains manage.py. and do
  

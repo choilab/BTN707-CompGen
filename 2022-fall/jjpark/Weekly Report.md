@@ -103,6 +103,8 @@
 + Launcing alpha version 
 
 ### Progress
+<img width="785" alt="image" src="https://user-images.githubusercontent.com/97942772/208587904-8fbecadf-fa45-4691-b0f3-e6f6d55bf499.png">
+
 #### Progress 1 : Pipeline Update
 + Model animal, Homo sapiens, Mus musculus, Danio rerio의 경우, indexing의 과정을 생략하고, fna와 gtf 등의 파일 업로드가 불필요하게끔 만듦.
 + 업로드한 파일의 양식이 지켜지지 않았을 경우, 워닝 메세지를 띄우게 함. 

@@ -18,7 +18,8 @@ Protein is most important functional polymer in living organisms. Determining fu
 
 #### One step querying
 
-![capture1](https://user-images.githubusercontent.com/104611489/208577494-eb42bbb0-21c8-491a-914b-d82e91a6215c.png)
+![스크린샷 2022-12-20 12-36-55](https://user-images.githubusercontent.com/104611489/208578315-6b1aef1b-b21d-4b70-ae81-8ab905334d9d.png)
+
 
 Alphafold predicted protein structures of genes in Uniprot DB. Protein structures of protein coading genes in 16 model organisms and 32 global health proteomes predicted by alphafold are provided on [Alphafold-EBI database](https://alphafold.ebi.ac.uk/download). Many protein structure comparing tools exist, however, downloading structure data, running program and 3D visualization of output protein is time consuming steps. This pipeline cut down these steps to one step. 
 
@@ -53,4 +54,8 @@ Then, clone sourcecode file on your project, go to your project folder which con
 
 
 <br/><br/>
+
+
+
+
 

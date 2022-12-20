@@ -37,7 +37,6 @@ Alphafold predicted protein structures of genes in Uniprot DB. Protein structure
 |---|---|---|---|
 |foldseek|3.915ef7d|Linux, Mac||
 |Django|4.1.3|Linux, Mac, Windows||
-|Molstar||Web|only web pipeline, not local|
     
 <br/>
 

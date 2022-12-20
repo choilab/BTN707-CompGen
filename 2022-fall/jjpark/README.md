@@ -20,7 +20,7 @@ Computational processes (adapter trimming, aligning, counting) may not be easy f
  + [Shiny for python (v alpha)](https://shiny.rstudio.com/py/)
  + We made index for alignment in some model animals, Homo sapiens, Mus musculus, Danio rerio. Please download FNA file of these animals in [NCBI refseq](https://www.ncbi.nlm.nih.gov/refseq/), and use command "hisat2-build" to make index of them before launching.
  + [Python](https://www.python.org/)
- + Download module from github supplementary data. Running command
+ + Download module from github supplementary data. Running command [app.py](https://github.com/choilab/BTN707-CompGen/blob/main/2022-fall/jjpark/Supplementary%20data/final_ver.py)
  
  <pre>
  <code>

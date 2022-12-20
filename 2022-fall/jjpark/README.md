@@ -22,9 +22,11 @@ Computational processes (adapter trimming, aligning, counting) may not be easy f
  + [Python](https://www.python.org/)
  + Download module from github supplementary data. Running command
  
- '''
- shiny run --reload --host <your host> --port <your port> app.py
- '''
+ <pre>
+ <code>
+ shiny run --reload --host "your host" --port "your port" app.py
+ </code>
+ </pre>
 
 <br>
 </br>

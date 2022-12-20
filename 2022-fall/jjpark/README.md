@@ -20,6 +20,11 @@ Computational processes (adapter trimming, aligning, counting) may not be easy f
  + [Shiny for python (v alpha)](https://shiny.rstudio.com/py/)
  + We made index for alignment in some model animals, Homo sapiens, Mus musculus, Danio rerio. Please download FNA file of these animals in [NCBI refseq](https://www.ncbi.nlm.nih.gov/refseq/), and use command "hisat2-build" to make index of them before launching.
 
+<br>
+</br>
+
+------------------------------------------------
+------------------------------------------------
 # ABOUT RNA-seq
 ## RNA-seq 
 RNA-seq is a technique for analysis transcriptome and difference in expression. According to central dogma(1958, Francis Harry Compton Crick), transcript(mRNA) transfer to protein. RNA-seq is a method judging that the higher the number of transcripts, the more expression.

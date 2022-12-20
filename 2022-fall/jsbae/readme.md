@@ -84,11 +84,11 @@ Current workflow
 
 ## Remaining procedure
 
-### 1. Usable options of sample metadata for analysis between samples are not enough
-### 2. Limit of analysis scope due to low diversity of host species
-### 3. Detailed analysis of result should be done
-### 4. Phylogenetic tree construction should be done
-### 5. Output using R markdown should be done
+#### 1. Usable options of sample metadata for analysis between samples are not enough
+#### 2. Limit of analysis scope due to low diversity of host species
+#### 3. Detailed analysis of result should be done
+#### 4. Phylogenetic tree construction should be done
+#### 5. Output using R markdown should be done
 
 
 

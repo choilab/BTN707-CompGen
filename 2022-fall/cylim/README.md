@@ -1,8 +1,8 @@
-Structurally similar protein finder
-======================================
-
 [![Python Version](https://img.shields.io/badge/python-3.11-brightgreen.svg)](https://python.org)
 [![Django Version](https://img.shields.io/badge/django-4.1.x-brightgreen.svg)](https://djangoproject.com)
+
+Structurally similar protein finder
+======================================
 
 <br/><br/>
 

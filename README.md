@@ -1,4 +1,7 @@
-## BTN707 Computational Genomics
+## IBT610 Computational Genomics (previously BTN707)
+
+### Textbook
+* KU library - [Introduction to Computational Genomics : A Case Studies Approach](https://library.korea.ac.kr/detail/?cid=CAT000045342204&ctype=m)
 
 ### Term project guideline
 

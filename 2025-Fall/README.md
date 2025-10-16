@@ -3,6 +3,10 @@
 * [pubMLST](https://pubmlst.org/multilocus-sequence-typing) - genomic MLST analysis
 * [download-and-install](https://www.ncbi.nlm.nih.gov/datasets/docs/v2/command-line-tools/download-and-install/) genomic dataset from NCBI
 
+## tools
+* [usegalaxy.org](https://galaxy-main.usegalaxy.org/)
+* [k-base](https://www.kbase.us/)
+
 # Common Questions to Answer
 ## general comparative genomics
 1. What portion (%) of genes are identified as membrane-bound/cell surface/secreted proteins?

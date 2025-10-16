@@ -1,19 +1,20 @@
-# Lactobacillus Genome Statistics (as of October 16, 2025, NCBI)
+# Lactobacillus Genome Statistics (NCBI, October 16, 2025)
 
-Below is a summary table of the current status of Lactobacillus genome registration, downloadability, and annotation. All statistics are sourced from the official NCBI Assembly Genome Browser.
+An updated summary of Lactobacillus genomes available on the NCBI Assembly Genome Browser, including registration, availability for download, and annotation status. This table also includes the official reference genome count.
 
-| Category                         | Count  | Description                                                                |
-| --------------------------------- | ------ | -------------------------------------------------------------------------- |
-| Total genome assemblies           | 5,427  | All registered genomes, regardless of assembly level (includes drafts)     |
-| Downloadable assemblies           | 5,427  | All genomes are available for download on the NCBI datasets portal         |
-| Annotated genomes (GenBank/RefSeq)| 3,329  | Assemblies with either GenBank submitter annotation or NCBI RefSeq annotation |
-| RefSeq-annotated genomes (PGAP)   | 2,326  | Genomes annotated by the NCBI Prokaryotic Genome Annotation Pipeline (PGAP) |
+| Category                                   | Count  | Description                                                                |
+| ------------------------------------------- | ------ | -------------------------------------------------------------------------- |
+| Total genome assemblies                     | 5,427  | All registered Lactobacillus genomes (includes drafts and complete)        |
+| Downloadable genome assemblies              | 5,427  | All assemblies can be downloaded directly via NCBI datasets portal         |
+| Annotated genomes (GenBank/RefSeq)          | 3,329  | Assemblies with annotation either from GenBank submitters or NCBI RefSeq   |
+| NCBI RefSeq-annotated genomes               | 2,326  | Assemblies specifically annotated by NCBI RefSeq, usually via PGAP         |
+| Official reference genomes                  | 49     | Genomes officially designated as NCBI Reference Genomes                    |
 
-- **All genomes listed are downloadable directly from the NCBI datasets page**
-- **Annotated genomes** include those with annotations provided by GenBank submitters or NCBI RefSeq
-- **RefSeq-annotated genomes** are those specifically processed by NCBI's PGAP
+- Most annotated genomes have both GenBank submitter and NCBI RefSeq annotation
+- “NCBI RefSeq-annotated” means annotation by NCBI using their Prokaryotic Genome Annotation Pipeline (PGAP)
+- “Reference genomes” are curated, high-quality representatives for each species
 
 > Data source:  
-> [NCBI Lactobacillus Assembly Genome Browser (taxon 1578)](https://www.ncbi.nlm.nih.gov/datasets/genome/?taxon=1578) (Accessed: October 16, 2025)
+> [NCBI Lactobacillus Assembly Genome Browser (taxon 1578)](https://www.ncbi.nlm.nih.gov/datasets/genome/?taxon=1578) (Accessed: 2025-10-16)[118][119][120]
 
 *Data obtained from NCBI, compiled and written with assistance from Perplexity AI.*

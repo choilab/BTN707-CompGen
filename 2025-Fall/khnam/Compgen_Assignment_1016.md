@@ -24,6 +24,6 @@ Selecting the lower assembly level (e.g. chromosome, scaffold), the number of ge
 2. Search *Staphylococcus epidermidis*
 3. Set filter : Assembly level = Complete genome
 4. Choose the strain you want
-5. Download genome -> format: .fna(genome sequence), .gff(annotation features) 
+5. Download genome -> format: .fna (genome sequence), .gff (annotation features) 
 
 The 100 Refseq genomes of *S.epidermidis* are downloaded

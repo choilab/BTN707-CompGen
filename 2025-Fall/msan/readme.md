@@ -17,4 +17,11 @@ An updated summary of Lactobacillus genomes available on the NCBI Assembly Genom
 > Data source:  
 > [NCBI Lactobacillus Assembly Genome Browser (taxon 1578)](https://www.ncbi.nlm.nih.gov/datasets/genome/?taxon=1578) (Accessed: 2025-10-16)[118][119][120]
 
+- Use the web UI and select:
+    - **Source:** "All" 
+    - **Assembly level:** Chromosome and Complete
+    - **File types:** FASTA, GTF, GFF, GBFF, CDS FASTA, Protein FASTA, Assembly report
+
+> The downloadable file will be named `ncbi_dataset.zip`.
+
 *Data obtained from NCBI, compiled and written with assistance from Perplexity AI.*

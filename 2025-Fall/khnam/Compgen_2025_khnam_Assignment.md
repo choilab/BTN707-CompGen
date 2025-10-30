@@ -165,3 +165,142 @@ done < final_124_genome_list.txt
 
 echo "Copying of 124 representative genomes complete."
 ```
+
+---
+
+## 5. Pairwise ANI Analysis and Heatmap (124 Genomes)
+
+**Goal:** To calculate the all-versus-all Average Nucleotide Identity (ANI) for the final 124 representative genomes and visualize the similarity matrix as a heatmap.
+
+### 5-1. Activate Conda Environment
+
+We will use `fastani` again, so we can reuse the `ani_env` environment.
+
+```bash
+# Activate the environment containing fastani
+conda activate ani_env
+```
+
+### 5-2. Running FastANI on 124 Genomes
+
+First, we need to create a new list file containing the paths to our 124 representative genomes.
+
+```bash
+# Create a new list file for the 124 genomes in Rep_genomes/
+find ./Rep_genomes/ -name "*.fna" > genome_list_124.txt
+
+# Run fastani all-versus-all
+# -ql: query list (124 genomes)
+# -rl: reference list (124 genomes)
+# -o: output file
+# -t: threads
+nohup fastani --ql genome_list_124.txt --rl genome_list_124.txt -o ani_results_124.tsv -t 8 &
+```
+
+> ```bash
+> tail -f nohup.out
+> ```
+
+### 5-3. Visualizing ANI Results as a Heatmap (Python)
+
+The output `ani_results_124.tsv` is in a "long" format. We will use a Python script to convert this into a "wide" matrix and plot it.
+
+#### Python Environment Setup
+
+This script requires `pandas`, `seaborn`, and `matplotlib`. If they are not in your `ani_env`, install them.
+
+```bash
+# Install plotting libraries (if not already installed)
+conda install pandas seaborn matplotlib
+```
+
+#### Python Script (`create_ani_heatmap.py`)
+
+Save the following code as `create_ani_heatmap.py` and run it.
+
+```python
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+# --- 1. Load and Process Data ---
+
+# Define the path to the FastANI output file
+input_file = 'ani_results_124.tsv'
+
+print(f"Loading data from {input_file}...")
+# FastANI output has no header
+df = pd.read_csv(
+    input_file,
+    sep='\t',
+    header=None,
+    names=["Query", "Reference", "ANI", "Mappings", "Total_Fragments"]
+)
+
+# We only need the three key columns
+ani_df = df[['Query', 'Reference', 'ANI']]
+
+# --- 2. Create the ANI Matrix (Pivoting) ---
+
+# To make a square heatmap, we must pivot the data
+print("Pivoting data to create ANI matrix...")
+ani_matrix = ani_df.pivot(
+    index='Query',
+    columns='Reference',
+    values='ANI'
+)
+
+# The matrix is only "half" full (Query vs Ref). We must
+# fill the other half (Ref vs Query) to make it symmetrical.
+ani_matrix_symmetric = ani_matrix.combine_first(ani_matrix.T)
+
+# Fill diagonal with 100 (self-comparison)
+# We can fill with NaN and then fillna(100)
+ani_matrix_symmetric.fillna(100, inplace=True)
+
+print("Matrix successfully created.")
+
+# --- 3. Clean Genome Names (Optional, but recommended) ---
+
+# Clean up genome names (e.g., remove './Rep_genomes/' and '.fna')
+# This makes the labels (if you choose to show them) cleaner.
+clean_names = [name.split('/')[-1].replace('.fna', '') for name in ani_matrix_symmetric.columns]
+ani_matrix_symmetric.columns = clean_names
+ani_matrix_symmetric.index = clean_names
+
+# --- 4. Generate and Save Heatmap ---
+
+print("Generating heatmap... This may take a moment for 124 genomes.")
+
+# Set the figure size
+plt.figure(figsize=(20, 18))
+
+# Create the heatmap using Seaborn
+sns.heatmap(
+    ani_matrix_symmetric,
+    cmap='viridis',     # 'viridis' is a good color map
+    vmin=95,            # Set min value for color bar (ANI > 95% is species threshold)
+    maxv=100,           # Set max value for color bar
+    annot=False,        # Do not show annotations (too many)
+    xticklabels=False,  # Hide X-axis labels (too many)
+    yticklabels=False   # Hide Y-axis labels (too many)
+)
+
+plt.title('ANI Heatmap (124 Representative Genomes)', fontsize=20)
+plt.xlabel('Genomes')
+plt.ylabel('Genomes')
+
+# Save the final plot as a PNG file
+output_image = 'ANI_heatmap_124.png'
+plt.savefig(output_image, dpi=300, bbox_inches='tight')
+
+print(f"Heatmap successfully saved to {output_image}")
+```
+
+#### Running the script
+
+```bash
+python create_ani_heatmap.py
+```
+
+This will produce the final image file named `ANI_heatmap_124.png`.

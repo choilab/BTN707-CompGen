@@ -2,6 +2,11 @@
 ## NCBI genome database (manual search)
 * As of 10/16/2025, 5038 annotated genomes, 1792 scaffold level, 319 chromosome level, 283 complete genome...
   - [search result](https://www.ncbi.nlm.nih.gov/datasets/genome/?taxon=1282&annotated_only=true&refseq_annotation=true&genbank_annotation=true)
+---
+<img width="580" height="376" alt="image" src="https://github.com/user-attachments/assets/296b846d-a800-4682-b76c-2b947f13d281" />
+
+
+---
 ## Using ChatGPT
 ## 1. how many Staphylococcus epidermidis genomes are publicly available for pan-genome analysis?
 There isn't a single fixed number, because it depends on what one counts (complete genomes vs. draft assemblies, with metadata, etc.), and the number keeps increasing. Here’s a summary of what I found, plus an estimate of recent numbers:

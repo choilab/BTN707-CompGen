@@ -24,4 +24,7 @@ An updated summary of Lactobacillus genomes available on the NCBI Assembly Genom
 
 > The downloadable file will be named `ncbi_dataset.zip`.
 
-*Data obtained from NCBI, compiled and written with assistance from Perplexity AI.*
+>주요 결과 요약
+항목	개수	설명
+초기 다운로드 유전체	2,976개	Lactiplantibacillus plantarum 종 전체
+최종 대표 균주	195개	SKANI 100% ANI 기준으로 중복 제거 완료

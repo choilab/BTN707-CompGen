@@ -26,4 +26,4 @@ Selecting the lower assembly level (e.g. chromosome, scaffold), the number of ge
 4. Choose the strain you want
 5. Download genome -> format: .fna (genome sequence), .gff (annotation features) 
 
-The 100 Refseq genomes of *S.epidermidis* are downloaded
+The 272 Refseq genomes of *S.epidermidis* are downloaded

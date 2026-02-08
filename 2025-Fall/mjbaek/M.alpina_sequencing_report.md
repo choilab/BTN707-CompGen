@@ -107,7 +107,10 @@
 - basecalling 이후의 fastq파일
 
 ### Parameters(QC 결과 반영)
-- min_length 5000, min_mean_q 12, keep percent=25%(최상위 품질 리드 중심으로 약 25%만 유지=target bases 4GB), mean_q_weight 20
+- min_length 5000, min_mean_q 12
+- keep percent: 25%
+  - 충분한 coverage(>400×)를 확보했기 때문에, 전체 데이터 중 assembly 기여도가 가장 높은 상위 25% 리드만 유지
+- mean_q_weight 20
 
 ### Output
 - filtered.fastq
@@ -211,7 +214,7 @@ Assembly 단계에서 남을 수 있는 미세한 base-level 오류를 제거하
 
 ---
 
-## 8. Completeness Assessment
+## 10. Completeness Assessment
 
 ### Purpose
 조립된 게놈이 생물학적으로 얼마나 완전한지 평가하기 위해,
@@ -260,7 +263,6 @@ Assembly 단계에서 남을 수 있는 미세한 base-level 오류를 제거하
 
 - **N50**: **~3 Mb**
   - contig의 절반 이상이 3 Mb 이상의 길이를 가짐
-  - 장거리 구조 분석 및 염색체 수준 연구에 유리한 품질
 
 ---
 

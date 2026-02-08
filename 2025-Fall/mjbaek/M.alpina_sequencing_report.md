@@ -10,7 +10,7 @@
 - **Flow cell ID**: FBE72537
 - **Library kit**: Ligation Sequencing Kit DNA V14 (SQK-LSK114)
 
-### 🧠 Target Genome Characteristics
+### Target Genome Characteristics
 - **Estimated genome size**: ~38–40 Mb
 - **GC content**: ~50–52%
 - **Genomic features**:
@@ -24,17 +24,17 @@
 
 ## 2️⃣ Sample Preparation & Library Input Estimation
 
-### 🧪 DNA Quality Check (gDNA 추출 후)
+###  DNA Quality Check (gDNA 추출 후)
 - **Gel electrophoresis**: High-molecular-weight DNA 확인
 - **NanoDrop (A260/280)**: 1.864
 - **Qubit concentration**: 38.8 ng/µL
 
-### 📦 Library Loading 정보
+###  Library Loading 정보
 - **Library concentration**: 20.4 ng/µL
 - **Loading volume**: 12 µL
 - **Assumed mean fragment length**: ~39 kb
 
-#### 🧮 Molarity Estimation
+####  Molarity Estimation
 - ~0.78 pmol/µL
 - **Total loaded amount**: ~9.36 fmol
 
@@ -67,6 +67,7 @@
 
 ### 🛠 Tool & Model
 - **Basecaller**: Dorado v5.2.0
+> Dorado는 Nanopore의 raw electrical signal을 딥러닝 모델을 이용해 염기서열로 변환하는 basecaller
 - **Model**: r1041_e82_400bps_sup
 
 | 파라미터 | 의미 |
@@ -76,10 +77,6 @@
 | 400bps | Sequencing speed |
 | sup | Super high accuracy model |
 
-### 🧠 원리
-> Dorado는 Nanopore의 raw electrical signal을  
-> 딥러닝 모델을 이용해 염기서열로 변환하는 basecaller로,  
-> `sup` 모델은 높은 정확도를 우선시한 설정이다.
 
 ---
 
@@ -87,11 +84,9 @@
 
 ### 🛠 사용 툴
 - **Falco**
+> read 품질, 길이 분포, Q-score를 요약 분석
 - **NanoPlot**
-
-### 🧠 툴 원리
-- **Falco**: read 품질, 길이 분포, Q-score를 요약 분석
-- **NanoPlot**: read 길이와 품질의 상관관계를 시각적으로 확인
+> read 길이와 품질의 상관관계를 시각적으로 확인
 
 ### 📊 Raw Read QC 결과
 - **Total bases**: ~16.8 Gb
@@ -105,7 +100,7 @@
 
 ## 6️⃣ Read Filtering Strategy (Filtlong)
 
-### 🧠 필터링 기준 설정 배경
+###  필터링 기준 설정 배경
 
 #### 📌 품질 기준 (Falco 기반)
 - 평균 Q-score 12 미만 read가 다수 존재
@@ -127,15 +122,13 @@
 
 ### 🛠 Tool
 - **Filtlong**
+> Filtlong은 read의 길이와 품질을 종합적으로 평가하여 assembly에 가장 유리한 read를 우선적으로 유지한다.
 
 ### ⚙️ Parameters
 - `min_length = 5000`
 - `min_mean_q = 12`
 - `keep_percent = 25`
 - `mean_q_weight = 20`
-
-🧠 Filtlong은 read의 길이와 품질을 종합적으로 평가하여  
-assembly에 가장 유리한 read를 우선적으로 유지한다.
 
 ### 📁 Output
 - `filtered.fastq`
@@ -168,13 +161,12 @@ assembly에 가장 유리한 read를 우선적으로 유지한다.
 
 ### 🛠 Tool
 - **Flye**
+>Flye는 long-read 기반 overlap graph를 구성하여 반복서열을 고려한 genome assembly를 수행한다.
 
 ### ⚙️ Configuration
 - **Mode**: `nano-hq`
 - **Minimum overlap length**: 5000 bp
 
-🧠 Flye는 long-read 기반 overlap graph를 구성하여  
-반복서열을 고려한 genome assembly를 수행한다.
 
 ### 📁 Output
 - `assembly.fasta`
@@ -185,8 +177,6 @@ assembly에 가장 유리한 read를 우선적으로 유지한다.
 
 ### 🛠 Tool
 - **Medaka**
-
-### 🧠 원리
 > Medaka는 원본 Nanopore read를 assembly에 재정렬하여  
 > 딥러닝 모델 기반으로 indel 및 substitution 오류를 보정한다.
 
@@ -203,6 +193,8 @@ assembly에 가장 유리한 read를 우선적으로 유지한다.
 
 ### 🛠 Tool
 - **BUSCO + miniprot**
+> 조립된 genome 서열에 대해 진핵생물에서 보편적으로 보존된 필수 단백질 서열을 단백질 기반으로 정렬하여,
+> 해당 단백질을 암호화할 수 있는 유전자 구조가 실제로 존재하는지를 평가
 
 ### ⚙️ Configuration
 - **Lineage**: Eukaryota

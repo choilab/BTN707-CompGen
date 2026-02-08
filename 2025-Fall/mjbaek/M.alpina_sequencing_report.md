@@ -128,10 +128,6 @@
 ### Purpose
 - Filtlong filtering 이후 데이터 품질 변화 확인
 
----
-
-### NanoPlot Summary (After Filtering)
-
 #### Data Yield
 - **Total reads**: 273,145
 - **Total bases**: 4.20 Gb
@@ -160,11 +156,9 @@
 - **Longest read**: 208,053 bp (Q ≈ 19)
 - 상위 초장기 리드들이 Q-score 18–20 범위 유지
 
----
-
 ### Interpretation
 
-- 필터링 이후 전체 데이터량은 감소했으나, assembly에 기여도가 높은 리드만 유지됨
+- 필터링 이후 assembly에 기여도가 높은 리드만 유지됨
 - read N50 및 평균 길이 증가로 long-read assembly에 유리한 분포 형성
 - 평균 Q-score ~24 수준으로 base-level error 감소 기대
 

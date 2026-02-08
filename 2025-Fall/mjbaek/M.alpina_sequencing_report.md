@@ -222,7 +222,7 @@
 - Nanopore 단독 데이터로 **높은 연속성(contig 18개)** 확보
 - BUSCO completeness **99.2%**로 매우 우수한 품질
 - NCBI reference (GCA_977091265.1)와 비교 시:
-  - genome size 유사
-  - contig 수 감소 → **더 높은 연속성 확보**
+  - genome size 유사(39.7Mb)
+  - contig 수 감소(22) → **더 높은 연속성 확보**
 
-🚀 본 assembly는 유전자 예측, 비교유전체 분석 등 후속 분석에 적합함
+본 assembly는 유전자 예측, 비교유전체 분석 등 후속 분석에 적합함

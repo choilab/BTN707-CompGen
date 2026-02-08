@@ -270,7 +270,7 @@ Assembly 단계에서 남을 수 있는 미세한 base-level 오류를 제거하
 
 본 Nanopore 기반 분석과 고품질 read 위주의 assembly로 **높은 연속성(N50 ~3 Mb)**과 **완전성(BUSCO C 99.2%)**을 만족하는 genome 서열을 확보했다.
 NCBI에서 확인한 M.alpina(id: GCA_977091265.1)와 분석을 비교해보았을 때,
-<img width="950" height="1208" alt="image" src="https://github.com/user-attachments/assets/4bf23429-3753-4aa8-867e-4c8695e9a332" />
+<img width="400" height="600" alt="image" src="https://github.com/user-attachments/assets/4bf23429-3753-4aa8-867e-4c8695e9a332" />
 
 전체 genome 크기가 유사하며, contig는 우리가 확보한 contig가 더 적기에, 연속성이 높은 dna를 확보했다고 할 수 있다.
 

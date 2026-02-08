@@ -1,8 +1,8 @@
-# Mortierella alpina Genome Assembly Using ONT Long-Read Sequencing
+# Mortierella alpina genome sequencing and assembly report
 
-## 1. Sequencing Overview
+## 1. Background
 
-### Platform & Chemistry
+### Platform 
 - **Sequencing platform**: Oxford Nanopore Technologies (ONT)
 - **Flow cell**: FLO-MIN114 (R10.4.1)
 - **Flow cell ID**: FBE72537
@@ -30,7 +30,7 @@
 **Molarity estimation**:
 - ~0.78 pmol/µL
 - Total loaded amount: ~9.36 fmol
-> This input amount falls within the ONT-recommended range (5–10 fmol), supporting sufficient pore occupancy without overloading.
+> 해당 DNA의 양은 ONT protocol에서 추천하는 범위(5–10 fmol)에 속함.
 
 ---
 
@@ -45,7 +45,6 @@
 - Configured: 72 hours  
 - Actual runtime: ~57.5 hours  
 - Pore activity: ~80% initially, dropped to ~10% before termination
-
 > 이론적으로 충분한 양의 데이터(>15 Gb, 350x)를 얻었고, active한 pore가 10% 대로 내려왔을 때 sequencing stop.
 
 ---
@@ -55,13 +54,13 @@
 ### Tool & Model
 - **Basecaller**: Dorado
 - **Version**: v5.2.0
-- **Model**: `r1041_e82_400bps_sup`
+- **Model**: r1041_e82_400bps_sup
 
 **Model parameters**:
-- `r1041`: R10.4.1 flow cell
-- `e82`: Kit V14-compatible pore chemistry
-- `400bps`: sequencing speed
-- `sup`: super high accuracy model
+- r1041: R10.4.1 flow cell
+- e82: Kit V14-compatible pore chemistry
+- 400bps: sequencing speed
+- sup: super high accuracy model
 
 ### Output
 - FASTQ files containing basecalled reads
@@ -108,13 +107,10 @@
 - basecalling 이후의 fastq파일
 
 ### Parameters(QC 결과 반영)
-- `min_length 5000`
-- `min_mean_q 12`
-- `keep percent=25%'(최상위 품질 리드 중심으로 약 25%만 유지=target bases 4GB)
-- `mean_q_weight 20`
+- min_length 5000, min_mean_q 12, keep percent=25%(최상위 품질 리드 중심으로 약 25%만 유지=target bases 4GB), mean_q_weight 20
 
 ### Output
-- `filtered.fastq`
+- filtered.fastq
 
 ---
 
@@ -124,7 +120,7 @@
 - NanoPlot
 
 ### Input
-- `filtered.fastq`
+- filtered.fastq
 
 ### Purpose
 - Filtlong filtering 이후 데이터 품질 변화 확인
@@ -177,22 +173,19 @@
 - Flye
 
 ### Input
-- `filtered.fastq`
+- filtered.fastq
 
 ### Mode
-- `--nano-hq` (Nanopore high-quality reads)
+- nano-hq (Nanopore high-quality reads)
 
 ### Key Parameter
 - **Minimum overlap length: 5000 bp**
-
-### Rationale
-- Filtlong에서 최소 read length를 5 kb로 설정했으므로
-  assembly 단계에서도 동일한 기준을 적용
+- Filtlong에서 최소 read length를 5 kb로 설정했으므로 assembly 단계에서도 동일한 기준을 적용
 - 짧은 overlap으로 인한 잘못된 contig 연결 방지
 - 고신뢰 overlap 기반 assembly graph 생성 목적
 
 ### Output
-- `assembly.fasta`
+- assembly.fasta
 
 
 ## 9. Polishing (Error Correction)
@@ -206,9 +199,9 @@
 Assembly 단계에서 남을 수 있는 미세한 base-level 오류를 제거하는 과정이다.
 
 ### Configuration
-- **Model**: `r1041_e82_400bps_sup_v5.2.0`
-- **Input**: `assembly.fasta` (Flye 결과)
-- **Output**: `consensus.fasta`
+- **Model**: r1041_e82_400bps_sup_v5.2.0
+- **Input**: assembly.fasta (Flye 결과)
+- **Output**: consensus.fasta
 
 ### Result
 - 최종 consensus 서열 크기: **~37.5 MB**
@@ -273,20 +266,9 @@ Assembly 단계에서 남을 수 있는 미세한 base-level 오류를 제거하
 
 ## Final Assessment
 
-본 Nanopore 기반 게놈 조립은  
-**높은 연속성(N50 ~3 Mb)**과 **매우 우수한 완전성(BUSCO C 99.2%)**을 동시에 만족한다.
+본 Nanopore 기반 분석과 고품질 read 위주의 assembly로 **높은 연속성(N50 ~3 Mb)**과 **매우 우수한 완전성(BUSCO C 99.2%)**을 만족하는 genome 서열을 확보했다.
 
-Filtlong 기반의 엄격한 품질 필터링,
-Flye의 long-read 최적화 조립,
-Medaka를 이용한 정밀 polishing이 유기적으로 작동하여
-생물학적 신뢰도가 높은 진핵생물 게놈 assembly를 구축하는 데 성공하였다.
 
-본 assembly는:
-- 유전자 예측 및 기능 분석
-- 2차 대사산물 클러스터 탐색
-- 비교 유전체 분석
-
-등의 후속 분석에 충분히 활용 가능한 **publication-level genome**으로 평가된다.
 
   
 

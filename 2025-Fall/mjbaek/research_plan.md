@@ -20,7 +20,7 @@
 
 본 연구의 궁극적 목표는 다음과 같다.
 
-> **E. coli에서 버섯 bioluminescent pathway, 특히 Hispidin synthase가 안정적으로 발현·활성될 수 있는 최적 조건을 규명하고, 재현성 있는 발광 시스템을 구축한다.**
+> **E. coli에서 버섯 bioluminescent pathway, 특히 Hispidin synthase가 안정적으로 발현·활성될 수 있는 최적 조건을 규명하고, 재현성 있는 히스피딘 생산 시스템을 구축한다.**
 
 이를 위해 두 가지 큰 전략이 존재한다.
 - 전략 1. Promoter Engineering 기반 발현 강도 최적화

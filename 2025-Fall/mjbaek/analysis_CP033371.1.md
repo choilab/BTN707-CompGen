@@ -15,7 +15,7 @@ Accessory genome 기반 계통수에서
 
 ---
 
-# 2️⃣ Accessory Genome 기반 분석
+## 2️⃣ Accessory Genome 기반 분석
 
 ## 📂 (1) 입력 데이터
 
@@ -49,7 +49,7 @@ Accessory genome 기반 계통수에서
 
 ---
 
-# 3️⃣ Core Genome 기반 분석
+## 3️⃣ Core Genome 기반 분석
 
 Accessory 기반 아웃라이어 현상이 실제 계통학적 분화를 의미하는지 검증하기 위해 core genome 분석 수행.
 
@@ -80,7 +80,7 @@ Accessory 기반 아웃라이어 현상이 실제 계통학적 분화를 의미�
 
 ---
 
-# 4️⃣ 종합 해석
+## 4️⃣ 종합 해석
 
 | 분석 기준 | CP033371.1 특징 |
 |------------|----------------|
@@ -92,7 +92,7 @@ Accessory 기반 아웃라이어 현상이 실제 계통학적 분화를 의미�
 
 ---
 
-# 5️⃣ Accessory Genome 기반 기능 분석 (CP033371.1)
+## 5️⃣ Accessory Genome 기반 기능 분석 (CP033371.1)
 
 CP033371.1이 pangenome 분석에서 outlier로 분리된 원인을 확인하기 위해  
 gene presence/absence matrix 기반으로 특이 유전자를 추출하고,  
@@ -165,7 +165,7 @@ COG category별 유전자 수를 집계하였다.
 
 ---
 
-# 6️⃣ 기능적 패턴 요약
+## 6️⃣ 기능적 패턴 요약
 
 - 대사 관련 기능군(E, G, F)에서는 결여 유전자 비율이 높게 나타남
 - 번역(J) 및 조효소(H) 관련 기능군에서는 고유 유전자 비율이 상대적으로 높게 나타남
@@ -174,7 +174,7 @@ COG category별 유전자 수를 집계하였다.
 
 ---
 
-# 7️⃣ Discussion: CP033371.1의 기능적 특성과 Fresh milk 환경
+## 7️⃣ Discussion: CP033371.1의 기능적 특성과 Fresh milk 환경
 
 CP033371.1은 fresh milk에서 분리된 균주이며,  
 Accessory genome 분석에서 다른 균주들과 구별되는 기능 조성 차이를 보였다.
@@ -218,7 +218,7 @@ Fresh milk는 비교적 안정된 영양 환경이며
 
 ---
 
-# 🔎 종합적으로
+## 🔎 종합적으로
 
 Core genome에서는 큰 계통적 분화가 관찰되지 않았으나,  
 Accessory genome 수준에서는 기능 조성 차이가 명확하였다.

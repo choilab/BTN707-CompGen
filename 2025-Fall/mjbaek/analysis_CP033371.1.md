@@ -32,6 +32,7 @@ Accessory genome 기반 계통수에서
 ### 결과
 
 <img width="1800" height="1490" alt="image" src="https://github.com/user-attachments/assets/7f6955f9-6a40-41b4-a5c4-f596ef2c4af1" />
+### Figure 1. 각 ID에 해당하는 유전자의 presence, absence의 matix파일로 나타낸 힛맵
 
 
 ### 📊 관찰 결과 (heatmap기반 수치화)
@@ -90,33 +91,84 @@ Accessory 기반 아웃라이어 현상이 실제 계통학적 분화를 의미�
 
 ---
 
-# 5️⃣ 결론
+# 5️⃣ Accessory Genome 기반 기능 분석 (CP033371.1)
 
-CP033371.1은:
-
-- 🧬 Core genome 수준에서는 정상적인 종내 변이 범위
-- 📦 Accessory genome 구성에서 상대적으로 큰 차이 존재
-
-따라서 accessory 기반 계통수에서의 아웃라이어 현상은  
-**gene gain/loss에 의해 발생한 gene content 기반 분화 현상**으로 판단된다.
+CP033371.1이 pangenome 분석에서 outlier로 분리된 원인을 확인하기 위해  
+gene presence/absence matrix 기반으로 특이 유전자를 추출하고,  
+해당 유전자들의 기능 정보를 eggNOG annotation 결과와 매칭하여 분석하였다.
 
 ---
 
-# 6️⃣ 🎯 다음 분석 목표: eggNOG 기능 분류 기반 비교
+## 📌 (1) 입력 데이터
 
-Accessory genome 차이가 단순한 유전자 수 차이인지,  
-아니면 특정 기능군의 선택적 소실/확장인지 규명하기 위해  
-**eggNOG functional annotation 기반 비교 분석**을 수행할 예정이다.
-
-## 🔬 목표
-
-1. CP033371.1 특이 유전자(115개)의 기능군 분류
-2. CP033371.1에서 결손된 374개 유전자의 기능군 분류
-3. COG category별 enrichment 분석
-4. 기능군별 비율 비교 시각화 (barplot 또는 heatmap)
+- Roary output: `gene_presence_absence.csv`
+- eggNOG annotation 결과 파일 (전체 유전자 대상)
+- 분석 대상 샘플: CP033371.1
 
 ---
 
-## 📝 한 문장 요약
+## 🧬 (2) 유전자 추출 과정
 
-> CP033371.1은 core genome에서는 정상 범위에 속하지만, accessory genome 구성에서 기능적 차이를 보이며, 이를 eggNOG 기반 기능 분류 분석을 통해 정밀하게 규명할 예정이다.
+### ① Presence/Absence 기반 코드 추출
+
+`gene_presence_absence.csv` 파일에서 Python 스크립트를 이용하여 다음 두 그룹을 정의하였다:
+
+- 🧬 CP033371.1에만 존재하고, 다른 모든 샘플에는 없는 유전자 → 115개
+- ❌ CP033371.1에만 없고, 다른 모든 샘플에는 존재하는 유전자 → 374개
+
+즉, CP033371.1에만 있거나 없는 액세서리 중에 액세서리 유전자들을 확보했다.
+
+---
+
+### ② eggNOG 결과의 coog와 매칭
+
+- 위에서 추출한 유전자를 eggNOG annotation 결과 파일과 매칭
+
+---
+
+## 📊 (3) COG category 기반 기능 분포 분석
+
+각 유전자 그룹(115 / 374)에 대해  
+COG category별 유전자 수를 집계하였다.
+
+### 🔻 CP033371.1 결여 유전자 (n = 374)
+
+상대적으로 높은 비율을 보인 COG category:
+
+- E: 아미노산 운반 및 대사
+- G: 탄수화물 운반 및 대사
+- F: 뉴클레오타이드 운반 및 대사
+
+---
+
+### 🔺 CP033371.1 고유 유전자 (n = 115)
+
+상대적으로 높은 비율을 보인 COG category:
+
+- J: 번역, 리보솜 구조 및 생합성
+- H: 조효소 운반 및 대사
+
+---
+
+<img width="1490" height="989" alt="image" src="https://github.com/user-attachments/assets/cdff17ea-85f7-472e-b979-70e80c136b8c" />
+
+### Figure 2. CP033371.1 특이 유전자의 COG category 분포
+
+- X축: COG category
+- Y축: 유전자 수
+- 그룹 비교:
+  - Unique(present) genes (115)
+  - Absent genes (374)
+
+해당 figure는 presence/absence 기반으로 정의된 두 유전자 그룹 간 cog 기능군 조성 차이를 시각적으로 비교하기 위해 작성되었다.
+
+---
+
+# 6️⃣ 기능적 패턴 요약
+
+- 대사 관련 기능군(E, G, F)에서는 결여 유전자 비율이 높게 나타남
+- 번역(J) 및 조효소(H) 관련 기능군에서는 고유 유전자 비율이 상대적으로 높게 나타남
+  
+이는 CP033371.1이 다른 균주들과 accessory gene 기능 조성 측면에서 차이를 보인다는 것을 의미한다.
+
+
